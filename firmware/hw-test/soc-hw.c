@@ -1,26 +1,56 @@
+//////////////////////////////////////////////////////////////////////
+////                                                              ////
+////  soc-hw.c                                                    ////
+////                                                              ////
+////  Este archivo hace parte del trabajo realizado para el       ////
+////  proyecto de curso de Electronica Digital II		  ////
+////  Universidad Nacional de Colombia - 2015    		  ////
+////  					                          ////
+////                                                              ////
+////  Autores:                                                    ////
+////      - Andrés Mondragón (afmondragonc@unal.edu.co)		  ////
+////      - Sthefania Moreno (stmorenore@unal.edu.co)             ////
+////      - Luis Antonio Rodriguez (luiarodriguezper@unal.edu.co) ////
+////                                                              ////
+////  Información adicional en: 				  ////
+////  https://sites.google.com/site/edigital2unal/proyectos/      ////
+////  	                                                          ////
+////                                                              ////
+//////////////////////////////////////////////////////////////////////
+////                                                              ////
+//// Copyright (C) 2015 Authors                                   ////
+////                                                              ////
+//// This source file may be used and distributed without         ////
+//// restriction provided that this copyright statement is not    ////
+//// removed from the file and that any derivative work contains  ////
+//// the original copyright notice and the associated disclaimer. ////
+////                                                              ////
+//// This source file is free software; you can redistribute it   ////
+//// and/or modify it under the terms of the GNU Lesser General   ////
+//// Public License as published by the Free Software Foundation; ////
+//// either version 2.1 of the License, or (at your option) any   ////
+//// later version.                                               ////
+////                                                              ////
+//// This source is distributed in the hope that it will be       ////
+//// useful, but WITHOUT ANY WARRANTY; without even the implied   ////
+//// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR      ////
+//// PURPOSE.  See the GNU Lesser General Public License for more ////
+//// details.                                                     ////
+////                                                              ////
+//////////////////////////////////////////////////////////////////////
+
+
 #include "soc-hw.h"
+
+// Direcciones de los perifericos utilizados
 
 uart_t  *uart0  = (uart_t *)   0x20000000;
 timer_t *timer0 = (timer_t *)  0x30000000;
 gpio_t  *gpio0  = (gpio_t *)   0x40000000;
-//uart_t  *uart1  = (uart_t *)   0x20000000;
 spi_t   *spi0   = (spi_t *)    0x50000000;
-//i2c_t   *i2c0   = (i2c_t *)    0x70000000;
 
 isr_ptr_t isr_table[32];
 
-void prueba()
-{
-	   uart0->rxtx=30;
-	   timer0->tcr0 = 0xAA;
-	   gpio0->ctrl=0x55;
-	   spi0->rxtx=1;
-	   spi0->nop1=2;
-	   spi0->cs=3;
-	   spi0->divisor=4;
-	   spi0->nop2=5;
-
-}
 void tic_isr();
 /***************************************************************************
  * IRQ handling
@@ -56,9 +86,53 @@ void isr_unregister(int irq)
 	isr_table[irq] = &isr_null;
 }
 
-/***************************************************************************
- * TIMER Functions
- */
+//**************************************************************************
+// Estructura del periferico SPI
+//**************************************************************************
+
+void spi_init(uint32_t constdiv)
+{
+
+	spi0->DEVIDE = constdiv; // Definición de la frecuencia del reloj sclk
+	
+	// Parametros iniciales del registro de control
+	spi0->CTRL |= 0x0A << CHAR_LEN; 
+	spi0->CTRL |= 0x00 << GO_BSY;
+	spi0->CTRL |= 0x00 << Rx_NEG;
+	spi0->CTRL |= 0x00 << Tx_NEG;
+	spi0->CTRL |= 0x00 << LSB;
+	spi0->CTRL |= 0x00 << IE;
+	spi0->CTRL |= 0x00 << ASS;
+}
+
+uint32_t spi_readByte(uint8_t cs){
+	spi0->SS = cs; // Selección del esclavo al cual se le va a pedir información
+	spi0->CTRL |= EN << GO_BSY; // Señal ENABLE para inicio de lectura
+	while((spi0->CTRL >> GO_BSY) & EN);
+	spi0->SS = 0;
+	return spi0->RxTx0; //Retorno de información por el registro RXTX0
+	
+}
+
+//*************************************************************************
+// Estructura del periferico GPIO
+//*************************************************************************
+
+void gpio_init()
+{
+	gpio0->dir=0x0ff;
+}
+
+uint8_t gpio_read()
+{
+	return gpio0->read;
+}
+
+
+//***************************************************************************
+// Estructura del periferico TIMER 
+//**************************************************************************
+
 void msleep(uint32_t msec)
 {
 	uint32_t tcr;
@@ -111,18 +185,10 @@ void tic_init()
 }
 
 
-/***************************************************************************
- * UART Functions
- */
-void uart_init()
-{
-	//uart0->ier = 0x00;  // Interrupt Enable Register
-	//uart0->lcr = 0x03;  // Line Control Register:    8N1
-	//uart0->mcr = 0x00;  // Modem Control Register
-
-	// Setup Divisor register (Fclk / Baud)
-	//uart0->div = (FCPU/(57600*16));
-}
+//***************************************************************************
+// Estructura del periferico UART 
+//***************************************************************************
+void uart_init(){}
 
 char uart_getchar()
 {   

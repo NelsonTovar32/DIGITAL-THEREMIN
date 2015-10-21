@@ -1,0 +1,29 @@
+Command line:
+   DIGPOT_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49265
+
+Mon Oct 05 08:47:07 2015
+
+
+ Elaboration Time: 0.171875 sec
+
+ Current Memory Usage: 988.013 Meg
+
+ Total Signals          : 16
+ Total Nets             : 25
+ Total Signal Drivers   : 8
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 11
+ Total Traceable Variables  : 26
+ Total Scalar Nets and Variables : 131
+Total Line Count : 47
+
+ Total Simulation Time: 0.171875 sec
+
+ Current Memory Usage: 988.013 Meg
+
+Mon Oct 05 08:47:10 2015
+

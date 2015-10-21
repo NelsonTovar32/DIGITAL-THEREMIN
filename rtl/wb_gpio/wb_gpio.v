@@ -42,8 +42,7 @@ module wb_gpio(
 
    parameter gpio_dir_reset_val = 0;
    parameter gpio_o_reset_val = 0;
-   
-   
+      
    parameter wb_dat_width = 32;
    parameter wb_adr_width = 32; // 2^32 bytes addressable
    
@@ -63,7 +62,6 @@ module wb_gpio(
    inout [gpio_io_width-1:0] gpio_io;
    //Interupt
 
-
    // Internal registers
    reg [gpio_io_width-1:0]   gpio_dir;
 
@@ -74,8 +72,6 @@ module wb_gpio(
 //Wisbone logical Interface
 
    
-
-
    wire wb_rd = wb_stb_i & wb_cyc_i & ~wb_we_i;
    wire wb_wr = wb_stb_i & wb_cyc_i &  wb_we_i;
 
@@ -91,6 +87,7 @@ module wb_gpio(
 	 assign gpio_i[i] = gpio_io[i]; //(gpio_dir[i]) ? gpio_o[i] : ;
 	 end
    endgenerate
+
   //Interupt Mask
 /*
   assign interrupt_mask = ~gpio_dir & wb_dat_o;
@@ -105,7 +102,7 @@ module wb_gpio(
   rising_edge_detect r7(.clk(clk),.signal(interrupt_mask[7]),.pulse(vec_interrupt[7]));
   
   assign irq=|vec_interrupt;
- */ 
+ */
    // GPIO data out register
    always @(posedge clk)begin
      if (rst)begin
@@ -115,7 +112,7 @@ module wb_gpio(
      end
      else begin 
         ack<=0;
-        if (wb_rd & ~ack) begin             //Read cycle
+        if (wb_rd & ~ack) begin             //Read cycle: Lectura de los pines input del GPIO
          ack<=1;
          case(wb_adr_i[3:2])
           2'b00:begin  
@@ -127,9 +124,10 @@ module wb_gpio(
         end
 
         else if (wb_wr & ~ack ) begin  
-            ack <= 1;                          //Write cycle
+            ack <= 1;                          //Write cycle: Selección de dirección y escritura de los pines output del GPIO
             case(wb_adr_i[3:2])
-             2'b01: gpio_o   <= wb_dat_i[7:0];
+	     // 2'b00 - No operation
+             2'b01: gpio_o   <= wb_dat_i[7:0]; 
              2'b10: gpio_dir <= wb_dat_i[7:0];
             endcase
         end
@@ -148,6 +146,7 @@ module wb_gpio(
   if(interrupt_mask==reg_interrupt) irq<=0;
   else irq<=1;  
 */  
+
 endmodule 
         
 /*       

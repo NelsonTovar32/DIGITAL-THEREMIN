@@ -1,0 +1,113 @@
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+xst -intstyle ise -ifn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.xst" -ofn "D:/DIGITAL-ISE/SENSOR_HCSR04/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 LOGIC.ngc LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.xst" -ofn "/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.syr" 
+xst -intstyle ise -ifn "/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.xst" -ofn "/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 "LOGIC.ngc" LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 
+xst -intstyle ise -ifn "/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.xst" -ofn "/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc terminales.ucf -p xc6slx45-csg324-3 "LOGIC.ngc" LOGIC.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LOGIC_map.ncd LOGIC.ngd LOGIC.pcf 
+par -w -intstyle ise -ol high -mt off LOGIC_map.ncd LOGIC.ncd LOGIC.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LOGIC.twx LOGIC.ncd -o LOGIC.twr LOGIC.pcf -ucf terminales.ucf 
+bitgen -intstyle ise -f LOGIC.ut LOGIC.ncd 

@@ -1,3 +1,46 @@
+//////////////////////////////////////////////////////////////////////
+////                                                              ////
+////  soc-hw.h                                                    ////
+////                                                              ////
+////  Este archivo hace parte del trabajo realizado para el       ////
+////  proyecto de curso de Electronica Digital II		  ////
+////  Universidad Nacional de Colombia - 2015    		  ////
+////  					                          ////
+////                                                              ////
+////  Autores:                                                    ////
+////      - Andrés Mondragón (afmondragonc@unal.edu.co)		  ////
+////      - Sthefania Moreno (stmorenore@unal.edu.co)             ////
+////      - Luis Antonio Rodriguez (luiarodriguezper@unal.edu.co) ////
+////                                                              ////
+////  Información adicional en: 				  ////
+////  https://sites.google.com/site/edigital2unal/proyectos/      ////
+////  	                                                          ////
+////                                                              ////
+//////////////////////////////////////////////////////////////////////
+////                                                              ////
+//// Copyright (C) 2015 Authors                                   ////
+////                                                              ////
+//// This source file may be used and distributed without         ////
+//// restriction provided that this copyright statement is not    ////
+//// removed from the file and that any derivative work contains  ////
+//// the original copyright notice and the associated disclaimer. ////
+////                                                              ////
+//// This source file is free software; you can redistribute it   ////
+//// and/or modify it under the terms of the GNU Lesser General   ////
+//// Public License as published by the Free Software Foundation; ////
+//// either version 2.1 of the License, or (at your option) any   ////
+//// later version.                                               ////
+////                                                              ////
+//// This source is distributed in the hope that it will be       ////
+//// useful, but WITHOUT ANY WARRANTY; without even the implied   ////
+//// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR      ////
+//// PURPOSE.  See the GNU Lesser General Public License for more ////
+//// details.                                                     ////
+////                                                              ////
+//////////////////////////////////////////////////////////////////////
+
+
+
 #ifndef SPIKEHW_H
 #define SPIKEHW_H
 
@@ -72,14 +115,14 @@ void tic_init();
  * GPIO0
  */
 typedef struct {
-	volatile uint32_t ctrl;
-	volatile uint32_t dummy1;
-	volatile uint32_t dummy2;
-	volatile uint32_t dummy3;
-	volatile uint32_t in;
-	volatile uint32_t out;
-	volatile uint32_t oe;
+	volatile uint32_t read;
+	volatile uint32_t write;
+	volatile uint32_t dir;
 } gpio_t;
+
+void gpio_init();
+uint8_t gpio_read();
+
 
 /***************************************************************************
  * UART0
@@ -99,28 +142,41 @@ void uart_putstr(char *str);
 char uart_getchar();
 
 /***************************************************************************
- * SPI0
+* SPI0
  */
+//Bits of CTRL register
+#define CHAR_LEN 0x00
+#define GO_BSY	 0x08
+#define Rx_NEG	 0x09
+#define Tx_NEG	 0x0A
+#define LSB		 0x0B
+#define IE		 0x0C
+#define ASS		 0x0D
+
+#define EN		 0x01
+#define OFF		 0x00
 
 typedef struct {
-   volatile uint32_t rxtx;
-   volatile uint32_t nop1;
-   volatile uint32_t cs;
-   volatile uint32_t nop2;
-   volatile uint32_t divisor;
+   volatile uint32_t RxTx0;
+   volatile uint32_t RxTx1;
+   volatile uint32_t RxTx2;
+   volatile uint32_t RxTx3;
+   volatile uint32_t CTRL;
+   volatile uint32_t DEVIDE;
+   volatile uint32_t SS;
 } spi_t;
 
-void spi_init();
-void spi_putchar(char c);
-char spi_getchar();
-
+void spi_init(uint32_t constdiv);
+uint32_t spi_readByte(uint8_t cs);
+void spi_writeByte(uint8_t data, uint8_t cs);
 
 /***************************************************************************
  * Pointer to actual components
  */
 extern timer_t  *timer0;
 extern uart_t   *uart0; 
-extern gpio_t   *gpio0; 
+extern gpio_t   *gpio0;
+extern spi_t 	*spi0; 
 extern uint32_t *sram0; 
 
 #endif // SPIKEHW_H

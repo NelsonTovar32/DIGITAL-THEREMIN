@@ -1,0 +1,6 @@
+verilog isim_temp "PULSE.v"
+verilog isim_temp "leds.v"
+verilog isim_temp "HCSR04.v"
+verilog isim_temp "clk_simple.v"
+verilog isim_temp "LOGIC.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

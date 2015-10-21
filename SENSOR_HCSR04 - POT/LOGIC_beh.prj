@@ -1,0 +1,6 @@
+verilog work "PULSE.v"
+verilog work "leds.v"
+verilog work "HCSR04.v"
+verilog work "clk_simple.v"
+verilog work "LOGIC.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

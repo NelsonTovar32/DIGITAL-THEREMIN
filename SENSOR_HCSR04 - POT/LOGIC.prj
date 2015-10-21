@@ -1,0 +1,8 @@
+verilog work "PULSE.v"
+verilog work "mux41.v"
+verilog work "HCSR04.v"
+verilog work "demux14.v"
+verilog work "DECtoBIN.v"
+verilog work "clk_simple.v"
+verilog work "BCDtoSSEG.v"
+verilog work "LOGIC.v"
