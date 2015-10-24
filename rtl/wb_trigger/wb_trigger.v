@@ -29,15 +29,14 @@ module wb_trigger
 // Actual TRIGGER engine
 //---------------------------------------------------------------------------
 
-reg [3:0]  t_sel1;
-reg [3:0]  t_sel2;
+
 reg [8:0] set_trig;
 
 trigger_top trigger0(
 	.clk( clk ),
 	.reset( reset ),
-	.t_sel1( t_sel1 ),
-	.t_sel2( t_sel2 ),
+	.t_sel1( set_trig[3:0] ),
+	.t_sel2( set_trig[7:4] ),
 	.clr( set_trig[8] ),
 	.trig_o( trig_o)
 );
@@ -67,7 +66,7 @@ begin
 		if (wb_wr & ~ack ) 
 			begin
 			ack <= 1;
-			if (wb_adr_i[3:2] == 2'b01) 
+			if (wb_adr_i[2] == 1'b0) 
 				begin
 				set_trig <= wb_dat_i[8:0];
 				end

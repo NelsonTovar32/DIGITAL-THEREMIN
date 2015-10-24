@@ -31,12 +31,12 @@ module wb_trigger
 
 reg [3:0]  t_sel1;
 reg [3:0]  t_sel2;
-
+reg [8:0] set_trig;
 
 trigger_top trigger0(
 	.clk( clk ),
 	.reset( reset ),
-	.tsel_1( t_sel1 ),
+	.t_sel1( t_sel1 ),
 	.t_sel2( t_sel2 ),
 	.clr( set_trig[8] ),
 	.trig_o( trig_o)
@@ -45,7 +45,6 @@ trigger_top trigger0(
 //---------------------------------------------------------------------------
 // 
 //---------------------------------------------------------------------------
-reg [8:0] set_trig = { clr, t_sel1, t_sel2};
 
 
 wire wb_wr = wb_stb_i & wb_cyc_i &  wb_we_i;
