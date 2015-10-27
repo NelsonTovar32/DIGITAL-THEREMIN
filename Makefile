@@ -1,4 +1,4 @@
-XILINXCADROOT  = /opt/Xilinx/14.7/ISE_DS/ISE
+XILINXCADROOT  = /opt/Xilinx/13.4/ISE_DS/ISE
 
 VINCDIR=                                  \
 	-I../rtl/wb_conbus                 \
@@ -39,7 +39,11 @@ SRC=                                      \
 	../rtl/wb_spi/spi_shift.v	\
 	../rtl/wb_spi/spi_clgen.v	\
 	../rtl/wb_conbus/conbus.v          \
-	../rtl/wb_conbus/conbus_arb.v      
+	../rtl/wb_conbus/conbus_arb.v      \
+	../rtl/wb_trigger/wb_trigger.v	  \
+	../rtl/wb_trigger/trigger_top.v \
+	../rtl/wb_trigger/trigger_pulse.v \
+	../rtl/wb_trigger/div_frec_adj.v    	
 	#../rtl/wb_spi/spi_defines.v	\	
 	#../rtl/wb_spi/timescale.v	\
 	#../rtl/wb_i2c/i2c_master_wb_top.v  \

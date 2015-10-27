@@ -48,6 +48,7 @@ uart_t  *uart0  = (uart_t *)   0x20000000;
 timer_t *timer0 = (timer_t *)  0x30000000;
 gpio_t  *gpio0  = (gpio_t *)   0x40000000;
 spi_t   *spi0   = (spi_t *)    0x50000000;
+trigger_t *trigger0 = (trigger_t *) 0x60000000;
 
 isr_ptr_t isr_table[32];
 

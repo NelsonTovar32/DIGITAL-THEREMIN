@@ -1,7 +1,7 @@
-INFILE=/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/build/system-routed.ncd
-OUTFILE=/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/build/system.bit
-FAMILY=Artix7
-PART=xc7a100t-3csg324
-WORKINGDIR=/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/build
+INFILE=/home/manu/LM32/DIGITAL_THEREMIN/build/system-routed.ncd
+OUTFILE=/home/manu/LM32/DIGITAL_THEREMIN/build/system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/manu/LM32/DIGITAL_THEREMIN/build
 LICENSE=WebPack
-USER_INFO=210933927_0_0_244
+USER_INFO=210933213_0_0_530

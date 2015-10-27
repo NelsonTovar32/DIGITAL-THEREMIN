@@ -4,8 +4,8 @@
 //-----------------------------------------------------
 module uart #(
 	parameter          freq_hz = 100000000,
-//	parameter          baud    = 115200
-	parameter          baud    = 31250
+	parameter          baud    = 1152000
+//	parameter          baud    = 31250
 ) (
 	input              reset,
 	input              clk,

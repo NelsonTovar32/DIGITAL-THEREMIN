@@ -10,8 +10,8 @@ module system
 //	parameter   bootram_file     = "../firmware/arch_examples/image.ram",
 //	parameter   bootram_file     = "../firmware/boot0-serial/image.ram",
 	parameter   bootram_file     = "../firmware/hw-test/image.ram",
-	parameter   clk_freq         = 50000000
-	parameter   uart_baud_rate   = 31250
+	parameter   clk_freq         = 50000000,
+	parameter   uart_baud_rate   = 1152000
 ) (
 	input             clk,
 	// Debug 
@@ -26,7 +26,8 @@ module system
 	input             spi_miso, 
 	output            spi_mosi,
 	output            spi_clk,
-	output [3:0]      spi_cs
+	output [3:0]      spi_cs,
+	output		  trigger_o
 	
 	
 
@@ -181,7 +182,7 @@ conbus #(
 	.s2_addr(3'b011),	// timer    0x30000000 
 	.s3_addr(3'b100),   	// gpio     0x40000000 
 	.s4_addr(3'b101),	// spi      0x50000000 
-	.s5_addr(3'b110)	// i2c      0x60000000 
+	.s5_addr(3'b110)	// trigger  0x60000000 
 ) conbus0(
 	.sys_clk( clk ),
 	.sys_rst( rst ),
@@ -415,6 +416,31 @@ wb_gpio gpio0 (
 	// GPIO
 	.gpio_io(gpio0_io)
 );
+//---------------------------------------------------------------------------
+// trigger0
+//---------------------------------------------------------------------------
+wire trig_o;
+
+wb_trigger trigger0 (
+	.clk( clk ),
+	.reset( rst ),
+	//
+	.wb_adr_i( trigger0_adr ),
+	.wb_dat_i( trigger0_dat_w ),
+	.wb_dat_o( trigger0_dat_r ),
+	.wb_stb_i( trigger0_stb ),
+	.wb_cyc_i( trigger0_cyc ),
+	.wb_we_i(  trigger0_we ),
+	.wb_sel_i( trigger0_sel ),
+	.wb_ack_o( trigger0_ack ), 
+
+	.trig_o( trig_o )
+
+);
+
+//-
+
+
 
 //----------------------------------------------------------------------------
 // Mux UART wires according to sw[0]
@@ -429,5 +455,6 @@ assign spi_clk = spi0_clk;
 assign spi_cs = spi0_cs;
 
 assign gpio_io = gpio0_io;
+assign trigger_o = trig_o;
 
 endmodule 
