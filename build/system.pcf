@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.87xd on Mon Oct 26 12:21:46 2015
+// Written by: Map O.87xd on Tue Oct 27 12:23:15 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -518,7 +518,8 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "uart0/uart0/rx_bitcount_0" BEL "uart0/uart0/rx_bitcount_1" BEL
         "uart0/uart0/tx_bitcount_3" BEL "uart0/uart0/tx_bitcount_2" BEL
         "uart0/uart0/tx_bitcount_1" BEL "uart0/uart0/tx_bitcount_0" BEL
-        "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
+        "uart0/uart0/enable16_counter_2" BEL "uart0/uart0/enable16_counter_1"
+        BEL "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
         "uart0/uart0/rx_data_6" BEL "uart0/uart0/rx_data_5" BEL
         "uart0/uart0/rx_data_4" BEL "uart0/uart0/rx_data_3" BEL
         "uart0/uart0/rx_data_2" BEL "uart0/uart0/rx_data_1" BEL
@@ -623,7 +624,8 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "trigger_0/set_trig_6" BEL "trigger_0/set_trig_5" BEL
         "trigger_0/set_trig_4" BEL "trigger_0/set_trig_3" BEL
         "trigger_0/set_trig_2" BEL "trigger_0/set_trig_1" BEL
-        "trigger_0/set_trig_0" BEL "trigger_0/trigger0/div1/counter_24" BEL
+        "trigger_0/set_trig_0" BEL "trigger_0/trigger0/div1/counter_25" BEL
+        "trigger_0/trigger0/div1/counter_24" BEL
         "trigger_0/trigger0/div1/counter_23" BEL
         "trigger_0/trigger0/div1/counter_22" BEL
         "trigger_0/trigger0/div1/counter_21" BEL
@@ -648,6 +650,7 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "trigger_0/trigger0/div1/counter_2" BEL
         "trigger_0/trigger0/div1/counter_1" BEL
         "trigger_0/trigger0/div1/counter_0" BEL
+        "trigger_0/trigger0/div2/counter_25" BEL
         "trigger_0/trigger0/div2/counter_24" BEL
         "trigger_0/trigger0/div2/counter_23" BEL
         "trigger_0/trigger0/div2/counter_22" BEL

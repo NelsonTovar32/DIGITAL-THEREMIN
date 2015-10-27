@@ -39,7 +39,7 @@ rst=0;
 
 			//clk 100MHz
 			case (num)
-			4'b0000: begin p <= 26'd499; end // 10us
+			4'b0000: begin p <= 26'd449; end // 10us
 			4'b0001: begin p <= 26'd999; end // 20us
 			4'b0010: begin p <= 26'd2499999; end // 50ms
 			4'b0011: begin p <= 26'd3749999;end // 100ms 

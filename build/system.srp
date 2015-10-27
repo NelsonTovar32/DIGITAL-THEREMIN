@@ -149,15 +149,15 @@ Parsing module <div_frec_adj>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 178: Port m0_cti_i is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 360: Port wb_err_o is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 175: Port m0_cti_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 357: Port wb_err_o is not connected to this instance
 
 Elaborating module <system>.
 
 Elaborating module <conbus(s_addr_w=3,s0_addr=3'b0,s1_addr=3'b010,s2_addr=3'b011,s3_addr=3'b100,s4_addr=3'b101,s5_addr=3'b110)>.
 
 Elaborating module <conbus_arb>.
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 240: Assignment to gpio0_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 237: Assignment to gpio0_sel ignored, since the identifier is never used
 
 Elaborating module <lm32_cpu>.
 
@@ -185,19 +185,19 @@ Elaborating module <lm32_mc_arithmetic>.
 
 Elaborating module <lm32_interrupt>.
 WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 283: Assignment to lm32i_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 284: Assignment to lm32i_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 285: Assignment to lm32i_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 297: Assignment to lm32d_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 298: Assignment to lm32d_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 299: Assignment to lm32d_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 280: Assignment to lm32i_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 281: Assignment to lm32i_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 282: Assignment to lm32i_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 294: Assignment to lm32d_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 295: Assignment to lm32d_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 296: Assignment to lm32d_bte ignored, since the identifier is never used
 
 Elaborating module <wb_bram(adr_width=12,mem_file_name="../firmware/hw-test/image.ram")>.
 Reading initialization file \"../firmware/hw-test/image.ram\".
 
-Elaborating module <wb_uart(clk_freq=50000000,baud=1152000)>.
+Elaborating module <wb_uart(clk_freq=100000000,baud=1152000)>.
 
-Elaborating module <uart(freq_hz=50000000,baud=1152000)>.
+Elaborating module <uart(freq_hz=100000000,baud=1152000)>.
 WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 39: Result of 32-bit expression is truncated to fit in 16-bit target.
 WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 88: Result of 5-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
@@ -210,9 +210,9 @@ WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v
 Elaborating module <spi_clgen>.
 
 Elaborating module <spi_shift>.
-WARNING:HDLCompiler:189 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 364: Size mismatch in connection of port <wb_adr_i>. Formal port size is 5-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 361: Size mismatch in connection of port <wb_adr_i>. Formal port size is 5-bit while actual signal size is 32-bit.
 
-Elaborating module <wb_timer(clk_freq=50000000)>.
+Elaborating module <wb_timer(clk_freq=100000000)>.
 
 Elaborating module <wb_gpio>.
 
@@ -221,16 +221,16 @@ Elaborating module <wb_trigger>.
 Elaborating module <trigger_top>.
 
 Elaborating module <div_frec_adj>.
-WARNING:HDLCompiler:91 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 18: Signal <num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 55: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:91 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 41: Signal <num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 80: Result of 27-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <trigger_pulse>.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 150: Net <lm32i_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 151: Net <lm32d_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 153: Net <lm32i_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 154: Net <lm32d_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 171: Net <gpio0_intr> does not have a driver.
-WARNING:HDLCompiler:552 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 186: Input port m0_cti_i[2] is not connected on this instance
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 147: Net <lm32i_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 148: Net <lm32d_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 150: Net <lm32i_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 151: Net <lm32d_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 168: Net <gpio0_intr> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 183: Input port m0_cti_i[2] is not connected on this instance
 WARNING:Xst:2972 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 483. All outputs of instance <simtrace> of block <lm32_simtrace> are unconnected in block <lm32_cpu>. Underlying logic will be removed.
 
 =========================================================================
@@ -240,25 +240,25 @@ WARNING:Xst:2972 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 4
 Synthesizing Unit <system>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/system.v".
         bootram_file = "../firmware/hw-test/image.ram"
-        clk_freq = 50000000
+        clk_freq = 100000000
         uart_baud_rate = 1152000
 WARNING:Xst:2898 - Port 'm0_cti_i', unconnected in block instance 'conbus0', is tied to GND.
 WARNING:Xst:2898 - Port 'm1_cti_i', unconnected in block instance 'conbus0', is tied to GND.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 186: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 186: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 186: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 186: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 186: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 186: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 186: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 270: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 270: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 270: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 270: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 270: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 270: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 360: Output port <wb_err_o> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 360: Output port <wb_int_o> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 357: Output port <wb_err_o> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 357: Output port <wb_int_o> of the instance <spi0> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <lm32i_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32d_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32i_err> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -602,7 +602,7 @@ Unit <wb_bram> synthesized.
 
 Synthesizing Unit <wb_uart>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v".
-        clk_freq = 50000000
+        clk_freq = 100000000
         baud = 1152000
 WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -650,7 +650,7 @@ Unit <wb_uart> synthesized.
 
 Synthesizing Unit <uart>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v".
-        freq_hz = 50000000
+        freq_hz = 100000000
         baud = 1152000
     Found 1-bit register for signal <uart_rxd1>.
     Found 1-bit register for signal <uart_rxd2>.
@@ -755,7 +755,7 @@ Unit <spi_shift> synthesized.
 
 Synthesizing Unit <wb_timer>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v".
-        clk_freq = 50000000
+        clk_freq = 100000000
 WARNING:Xst:647 - Input <wb_adr_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_dat_i<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -861,10 +861,10 @@ Synthesizing Unit <div_frec_adj>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v".
     Found 26-bit register for signal <counter>.
     Found 1-bit register for signal <clk_out>.
-    Found 26-bit adder for signal <counter[25]_GND_40_o_add_3_OUT> created at line 55.
+    Found 26-bit adder for signal <counter[25]_GND_40_o_add_3_OUT> created at line 80.
 WARNING:Xst:737 - Found 1-bit latch for signal <rst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit comparator equal for signal <GND_40_o_p[31]_equal_2_o> created at line 44
-    Found 32-bit comparator greater for signal <p[31]_GND_40_o_LessThan_3_o> created at line 49
+    Found 32-bit comparator equal for signal <GND_40_o_p[31]_equal_2_o> created at line 69
+    Found 32-bit comparator greater for signal <p[31]_GND_40_o_LessThan_3_o> created at line 74
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  27 D-type flip-flop(s).
@@ -1350,23 +1350,19 @@ WARNING:Xst:2677 - Node <lm0/load_store_unit/d_adr_o_14> of sequential type is u
 WARNING:Xst:2677 - Node <lm0/load_store_unit/d_adr_o_13> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <lm0/load_store_unit/d_adr_o_12> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <spi0/wb_int_o> of sequential type is unconnected in block <system>.
-WARNING:Xst:1710 - FF/Latch <trigger_0/trigger0/div2/counter_25> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <trigger_0/trigger0/div1/counter_25> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_1> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_4> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_2> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_3> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_5> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_6> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_9> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_7> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_8> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_12> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_10> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_11> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_15> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <uart0/uart0/enable16_counter_14> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_13> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_14> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_15> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_11> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_10> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_12> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_8> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_7> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_9> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_6> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_5> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_3> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_4> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_10> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_10> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_11> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_11> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_12> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_12> 
@@ -1438,7 +1434,7 @@ INFO:Xst:2261 - The FF/Latch <lm0/multiplier/multiplier_29> in Unit <system> is 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 29.
+Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 30.
 Forward register balancing over carry chain lm0/Mcompar_cmp_zero_cy<0>
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_0> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_8_BRB2> <lm0/load_store_unit/store_data_m_16_BRB0> <lm0/load_store_unit/store_data_m_24_BRB4> 
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_1> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_9_BRB2> <lm0/load_store_unit/store_data_m_17_BRB0> <lm0/load_store_unit/store_data_m_25_BRB4> 
@@ -1504,8 +1500,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1321
- Flip-Flops                                            : 1321
+# Registers                                            : 1325
+ Flip-Flops                                            : 1325
 
 =========================================================================
 
@@ -1528,27 +1524,27 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2446
+# BELS                             : 2466
 #      GND                         : 1
 #      INV                         : 36
-#      LUT1                        : 141
-#      LUT2                        : 180
-#      LUT3                        : 234
-#      LUT4                        : 288
-#      LUT5                        : 300
-#      LUT6                        : 617
-#      MUXCY                       : 354
+#      LUT1                        : 143
+#      LUT2                        : 181
+#      LUT3                        : 264
+#      LUT4                        : 291
+#      LUT5                        : 275
+#      LUT6                        : 618
+#      MUXCY                       : 358
 #      MUXF7                       : 5
 #      VCC                         : 1
-#      XORCY                       : 289
-# FlipFlops/Latches                : 1323
+#      XORCY                       : 293
+# FlipFlops/Latches                : 1327
 #      FD                          : 35
-#      FDC                         : 209
+#      FDC                         : 211
 #      FDCE                        : 753
 #      FDE                         : 71
 #      FDP                         : 16
 #      FDPE                        : 34
-#      FDR                         : 15
+#      FDR                         : 17
 #      FDRE                        : 120
 #      FDS                         : 3
 #      FDSE                        : 65
@@ -1572,18 +1568,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1311  out of  18224     7%  
- Number of Slice LUTs:                 1924  out of   9112    21%  
-    Number used as Logic:              1796  out of   9112    19%  
+ Number of Slice Registers:            1315  out of  18224     7%  
+ Number of Slice LUTs:                 1936  out of   9112    21%  
+    Number used as Logic:              1808  out of   9112    19%  
     Number used as Memory:              128  out of   2176     5%  
        Number used as RAM:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2158
-   Number with an unused Flip Flop:     847  out of   2158    39%  
-   Number with an unused LUT:           234  out of   2158    10%  
-   Number of fully used LUT-FF pairs:  1077  out of   2158    49%  
-   Number of unique control sets:        45
+ Number of LUT Flip Flop pairs used:   2171
+   Number with an unused Flip Flop:     856  out of   2171    39%  
+   Number with an unused LUT:           235  out of   2171    10%  
+   Number of fully used LUT-FF pairs:  1080  out of   2171    49%  
+   Number of unique control sets:        46
 
 IO Utilization: 
  Number of IOs:                          21
@@ -1617,7 +1613,7 @@ Clock Information:
 -----------------------------------+---------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                 | Load  |
 -----------------------------------+---------------------------------------+-------+
-clk                                | BUFGP                                 | 1384  |
+clk                                | BUFGP                                 | 1388  |
 trigger_0/trigger0/div2/clk_out    | NONE(trigger_0/trigger0/pulse/delay_0)| 3     |
 trigger_0/trigger0/div1/rst        | NONE(trigger_0/trigger0/div1/rst)     | 1     |
 trigger_0/trigger0/div2/rst        | NONE(trigger_0/trigger0/div2/rst)     | 1     |
@@ -1644,7 +1640,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 12.519ns (frequency: 79.882MHz)
-  Total number of paths / destination ports: 1333640 / 3238
+  Total number of paths / destination ports: 1335179 / 3244
 -------------------------------------------------------------------------
 Delay:               12.519ns (Levels of Logic = 3)
   Source:            lm0/multiplier/muliplicand_7 (FF)
@@ -1688,10 +1684,10 @@ Delay:               1.165ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div1/rst'
-  Clock period: 2.554ns (frequency: 391.514MHz)
+  Clock period: 2.568ns (frequency: 389.348MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.554ns (Levels of Logic = 1)
+Delay:               2.568ns (Levels of Logic = 1)
   Source:            trigger_0/trigger0/div1/rst (LATCH)
   Destination:       trigger_0/trigger0/div1/rst (LATCH)
   Source Clock:      trigger_0/trigger0/div1/rst rising
@@ -1702,18 +1698,18 @@ Delay:               2.554ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               1   0.498   0.579  trigger_0/trigger0/div1/rst (trigger_0/trigger0/div1/rst)
-     INV:I->O             28   0.206   1.234  trigger_0/trigger0/div1/rst_inv1_INV_0 (trigger_0/trigger0/div1/rst_G)
+     INV:I->O             29   0.206   1.249  trigger_0/trigger0/div1/rst_inv1_INV_0 (trigger_0/trigger0/div1/rst_G)
      LD:D                      0.037          trigger_0/trigger0/div1/rst
     ----------------------------------------
-    Total                      2.554ns (0.741ns logic, 1.813ns route)
-                                       (29.0% logic, 71.0% route)
+    Total                      2.568ns (0.741ns logic, 1.827ns route)
+                                       (28.9% logic, 71.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div2/rst'
-  Clock period: 2.554ns (frequency: 391.514MHz)
+  Clock period: 2.568ns (frequency: 389.348MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.554ns (Levels of Logic = 1)
+Delay:               2.568ns (Levels of Logic = 1)
   Source:            trigger_0/trigger0/div2/rst (LATCH)
   Destination:       trigger_0/trigger0/div2/rst (LATCH)
   Source Clock:      trigger_0/trigger0/div2/rst rising
@@ -1724,15 +1720,15 @@ Delay:               2.554ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               1   0.498   0.579  trigger_0/trigger0/div2/rst (trigger_0/trigger0/div2/rst)
-     INV:I->O             28   0.206   1.234  trigger_0/trigger0/div2/rst_inv1_INV_0 (trigger_0/trigger0/div2/rst_G)
+     INV:I->O             29   0.206   1.249  trigger_0/trigger0/div2/rst_inv1_INV_0 (trigger_0/trigger0/div2/rst_G)
      LD:D                      0.037          trigger_0/trigger0/div2/rst
     ----------------------------------------
-    Total                      2.554ns (0.741ns logic, 1.813ns route)
-                                       (29.0% logic, 71.0% route)
+    Total                      2.568ns (0.741ns logic, 1.827ns route)
+                                       (28.9% logic, 71.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1303 / 1287
+  Total number of paths / destination ports: 1305 / 1289
 -------------------------------------------------------------------------
 Offset:              5.752ns (Levels of Logic = 2)
   Source:            rst (PAD)
@@ -1743,7 +1739,7 @@ Offset:              5.752ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1144   1.222   2.606  rst_IBUF (rst_IBUF)
+     IBUF:I->O          1143   1.222   2.606  rst_IBUF (rst_IBUF)
      LUT6:I0->O           32   0.203   1.291  timer0/_n0187<7>3 (timer0/_n0187)
      FDRE:R                    0.430          timer0/wb_dat_o_0
     ----------------------------------------
@@ -1801,8 +1797,8 @@ Clock to Setup on destination clock clk
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
 clk                        |   12.519|         |         |         |
-trigger_0/trigger0/div1/rst|    2.947|         |         |         |
-trigger_0/trigger0/div2/rst|    2.947|         |         |         |
+trigger_0/trigger0/div1/rst|    2.961|         |         |         |
+trigger_0/trigger0/div2/rst|    2.961|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock trigger_0/trigger0/div1/rst
@@ -1810,7 +1806,7 @@ Clock to Setup on destination clock trigger_0/trigger0/div1/rst
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-trigger_0/trigger0/div1/rst|    2.554|         |         |         |
+trigger_0/trigger0/div1/rst|    2.568|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock trigger_0/trigger0/div2/clk_out
@@ -1827,21 +1823,21 @@ Clock to Setup on destination clock trigger_0/trigger0/div2/rst
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-trigger_0/trigger0/div2/rst|    2.554|         |         |         |
+trigger_0/trigger0/div2/rst|    2.568|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.84 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.71 secs
  
 --> 
 
 
-Total memory usage is 409796 kilobytes
+Total memory usage is 410140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  330 (   0 filtered)
+Number of warnings :  326 (   0 filtered)
 Number of infos    :  107 (   0 filtered)
 

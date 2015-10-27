@@ -1,13 +1,8 @@
 Release 13.4 Drc O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Oct 26 12:22:22 2015
+Tue Oct 27 12:23:49 2015
 
 drc -z system-routed.ncd
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   trigger_0/trigger0/div2/clk_out is sourced by a combinatorial pin. This is
-   not good design practice. Use the CE pin to control the loading of data into
-   the flip-flop.
-DRC detected 0 errors and 1 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.
