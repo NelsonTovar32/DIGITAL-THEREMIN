@@ -30,7 +30,7 @@ module wb_trigger
 //---------------------------------------------------------------------------
 
 
-reg [8:0] set_trig;
+reg [8:0] set_trig= 9'b000000010;
 
 trigger_top trigger0(
 	.clk( clk ),

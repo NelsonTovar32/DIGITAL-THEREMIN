@@ -1,5 +1,5 @@
-Release 14.7 - xst P.20131013 (lin64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> 
 
 TABLE OF CONTENTS
@@ -33,7 +33,7 @@ Input Format                       : MIXED
 
 ---- Target Parameters
 Output File Name                   : "system.ngc"
-Target Device                      : xc7a100t-3csg324
+Target Device                      : xc6slx16-3csg324
 
 ---- Source Options
 Top Module Name                    : system
@@ -46,127 +46,130 @@ RTL Output                         : yes
 
 =========================================================================
 
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
 
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/system.v" into library work
 Parsing module <system>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" into library work
 Parsing module <lac>.
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 23. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 24. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 25. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 86. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 87. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 88. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 89. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 90. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 91. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/lac.v" Line 92. parameter declaration becomes local in lac with formal parameter declaration list
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v" into library work
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 23. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 24. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 25. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 86. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 87. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 88. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 89. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 90. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 91. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 92. parameter declaration becomes local in lac with formal parameter declaration list
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" into library work
 Parsing module <uart>.
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v" Line 24. parameter declaration becomes local in uart with formal parameter declaration list
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/dp_ram.v" into library work
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 24. parameter declaration becomes local in uart with formal parameter declaration list
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/dp_ram.v" into library work
 Parsing module <dp_ram>.
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/dp_ram.v" Line 20. parameter declaration becomes local in dp_ram with formal parameter declaration list
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_cpu.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system_conf.v" included at line 28.
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/dp_ram.v" Line 20. parameter declaration becomes local in dp_ram with formal parameter declaration list
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/system_conf.v" included at line 28.
 Parsing module <lm32_cpu>.
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_functions.v" included at line 423.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_instruction_unit.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 423.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_instruction_unit>.
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_functions.v" included at line 291.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_decoder.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 291.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_decoder>.
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_functions.v" included at line 298.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_simtrace.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 10.
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 298.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_simtrace.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 10.
 Parsing module <lm32_simtrace>.
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_functions.v" included at line 63.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_load_store_unit.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 63.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_load_store_unit.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_load_store_unit>.
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_functions.v" included at line 208.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_adder.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 208.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_adder.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_adder>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_addsub.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 23.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_addsub.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 23.
 Parsing module <lm32_addsub>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_logic_op.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_logic_op.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_logic_op>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_shifter.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_shifter.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_shifter>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_multiplier.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_multiplier.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_multiplier>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_mc_arithmetic.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_mc_arithmetic.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_mc_arithmetic>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_interrupt.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system_conf.v" included at line 24.
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 25.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_interrupt.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/system_conf.v" included at line 24.
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 25.
 Parsing module <lm32_interrupt>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_ram.v" into library work
-Parsing verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_include.v" included at line 23.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_ram.v" into library work
+Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 23.
 Parsing module <lm32_ram>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_bram/wb_bram.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" into library work
 Parsing module <wb_bram>.
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_bram/wb_bram.v" Line 25. parameter declaration becomes local in wb_bram with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_bram/wb_bram.v" Line 26. parameter declaration becomes local in wb_bram with formal parameter declaration list
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_uart/wb_uart.v" into library work
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" Line 25. parameter declaration becomes local in wb_bram with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" Line 26. parameter declaration becomes local in wb_bram with formal parameter declaration list
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v" into library work
 Parsing module <wb_uart>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_timer/wb_timer.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v" into library work
 Parsing module <wb_timer>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_gpio/wb_gpio.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_gpio/wb_gpio.v" into library work
 Parsing module <wb_gpio>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_spi/spi_top.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v" into library work
 Parsing module <spi_top>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_spi/spi_shift.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_shift.v" into library work
 Parsing module <spi_shift>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_spi/spi_clgen.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_clgen.v" into library work
 Parsing module <spi_clgen>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_conbus/conbus.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus.v" into library work
 Parsing module <conbus>.
-Analyzing Verilog file "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_conbus/conbus_arb.v" into library work
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus_arb.v" into library work
 Parsing module <conbus_arb>.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v" into library work
+Parsing module <wb_trigger>.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_top.v" into library work
+Parsing module <trigger_top>.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_pulse.v" into library work
+Parsing module <trigger_pulse>.
+Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" into library work
+Parsing module <div_frec_adj>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 168: Port m0_cti_i is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 350: Port wb_err_o is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 175: Port m0_cti_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 357: Port wb_err_o is not connected to this instance
 
 Elaborating module <system>.
 
 Elaborating module <conbus(s_addr_w=3,s0_addr=3'b0,s1_addr=3'b010,s2_addr=3'b011,s3_addr=3'b100,s4_addr=3'b101,s5_addr=3'b110)>.
 
 Elaborating module <conbus_arb>.
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 230: Assignment to gpio0_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 246: Assignment to i2c0_dat_w ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 247: Assignment to i2c0_adr ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 248: Assignment to i2c0_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 249: Assignment to i2c0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 250: Assignment to i2c0_cyc ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 251: Assignment to i2c0_stb ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 237: Assignment to gpio0_sel ignored, since the identifier is never used
 
 Elaborating module <lm32_cpu>.
 
 Elaborating module <lm32_instruction_unit(associativity=1,sets=512,bytes_per_line=16,base_address=0,limit=0)>.
-"/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_instruction_unit.v" Line 699. $display Instruction bus error. Address: 0
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_cpu.v" Line 461: Assignment to pc_x ignored, since the identifier is never used
+"/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v" Line 699. $display Instruction bus error. Address: 0
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 461: Assignment to pc_x ignored, since the identifier is never used
 
 Elaborating module <lm32_simtrace>.
-WARNING:HDLCompiler:1499 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_simtrace.v" Line 20: Empty module <lm32_simtrace> remains a black box.
+WARNING:HDLCompiler:1499 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_simtrace.v" Line 20: Empty module <lm32_simtrace> remains a black box.
 
 Elaborating module <lm32_decoder>.
-WARNING:HDLCompiler:413 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_decoder.v" Line 559: Result of 32-bit expression is truncated to fit in 30-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v" Line 559: Result of 32-bit expression is truncated to fit in 30-bit target.
 
 Elaborating module <lm32_load_store_unit(associativity=1,sets=512,bytes_per_line=16,base_address=0,limit=0)>.
 
@@ -181,81 +184,81 @@ Elaborating module <lm32_multiplier>.
 Elaborating module <lm32_mc_arithmetic>.
 
 Elaborating module <lm32_interrupt>.
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 273: Assignment to lm32i_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 274: Assignment to lm32i_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 275: Assignment to lm32i_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 287: Assignment to lm32d_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 288: Assignment to lm32d_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 289: Assignment to lm32d_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 280: Assignment to lm32i_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 281: Assignment to lm32i_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 282: Assignment to lm32i_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 294: Assignment to lm32d_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 295: Assignment to lm32d_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 296: Assignment to lm32d_bte ignored, since the identifier is never used
 
 Elaborating module <wb_bram(adr_width=12,mem_file_name="../firmware/hw-test/image.ram")>.
 Reading initialization file \"../firmware/hw-test/image.ram\".
 
-Elaborating module <wb_uart(clk_freq=100000000,baud=31250)>.
+Elaborating module <wb_uart(clk_freq=100000000,baud=1152000)>.
 
-Elaborating module <uart(freq_hz=100000000,baud=31250)>.
-WARNING:HDLCompiler:413 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v" Line 39: Result of 32-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v" Line 88: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v" Line 135: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v" Line 138: Result of 5-bit expression is truncated to fit in 4-bit target.
+Elaborating module <uart(freq_hz=100000000,baud=1152000)>.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 39: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 88: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 135: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 138: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <spi_top>.
-WARNING:HDLCompiler:413 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_spi/spi_top.v" Line 348: Result of 7-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v" Line 348: Result of 7-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <spi_clgen>.
 
 Elaborating module <spi_shift>.
-WARNING:HDLCompiler:189 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 354: Size mismatch in connection of port <wb_adr_i>. Formal port size is 5-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 361: Size mismatch in connection of port <wb_adr_i>. Formal port size is 5-bit while actual signal size is 32-bit.
 
 Elaborating module <wb_timer(clk_freq=100000000)>.
 
 Elaborating module <wb_gpio>.
-WARNING:HDLCompiler:634 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 69: Net <i2c0_dat_r[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 132: Net <i2c0_ack> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 140: Net <lm32i_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 141: Net <lm32d_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 143: Net <lm32i_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 144: Net <lm32d_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 161: Net <gpio0_intr> does not have a driver.
-WARNING:HDLCompiler:552 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" Line 176: Input port m0_cti_i[2] is not connected on this instance
-WARNING:Xst:2972 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_cpu.v" line 483. All outputs of instance <simtrace> of block <lm32_simtrace> are unconnected in block <lm32_cpu>. Underlying logic will be removed.
+
+Elaborating module <wb_trigger>.
+
+Elaborating module <trigger_top>.
+
+Elaborating module <div_frec_adj>.
+WARNING:HDLCompiler:91 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 41: Signal <num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 80: Result of 27-bit expression is truncated to fit in 26-bit target.
+
+Elaborating module <trigger_pulse>.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 147: Net <lm32i_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 148: Net <lm32d_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 150: Net <lm32i_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 151: Net <lm32d_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 168: Net <gpio0_intr> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 183: Input port m0_cti_i[2] is not connected on this instance
+WARNING:Xst:2972 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 483. All outputs of instance <simtrace> of block <lm32_simtrace> are unconnected in block <lm32_cpu>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/system.v".
         bootram_file = "../firmware/hw-test/image.ram"
         clk_freq = 100000000
-        uart_baud_rate = 31250
+        uart_baud_rate = 1152000
 WARNING:Xst:2898 - Port 'm0_cti_i', unconnected in block instance 'conbus0', is tied to GND.
 WARNING:Xst:2898 - Port 'm1_cti_i', unconnected in block instance 'conbus0', is tied to GND.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s5_dat_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s5_adr_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s5_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s5_we_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s5_cyc_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 176: Output port <s5_stb_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 260: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 260: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 260: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 260: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 260: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 260: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 350: Output port <wb_err_o> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/system.v" line 350: Output port <wb_int_o> of the instance <spi0> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <i2c0_dat_r> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <i2c0_ack> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 357: Output port <wb_err_o> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 357: Output port <wb_int_o> of the instance <spi0> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <lm32i_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32d_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32i_err> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -266,7 +269,7 @@ WARNING:Xst:653 - Signal <gpio0_intr> is used but never assigned. This sourceles
 Unit <system> synthesized.
 
 Synthesizing Unit <conbus>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_conbus/conbus.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus.v".
         s_addr_w = 3
         s0_addr = 3'b000
         s1_addr = 3'b010
@@ -279,7 +282,7 @@ Synthesizing Unit <conbus>.
 Unit <conbus> synthesized.
 
 Synthesizing Unit <conbus_arb>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_conbus/conbus_arb.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus_arb.v".
         grant0 = 7'b0000001
         grant1 = 7'b0000010
         grant2 = 7'b0000100
@@ -306,7 +309,7 @@ Synthesizing Unit <conbus_arb>.
 Unit <conbus_arb> synthesized.
 
 Synthesizing Unit <lm32_cpu>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_cpu.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v".
         eba_reset = 32'b00000000000000000000000000000000
         icache_associativity = 1
         icache_sets = 512
@@ -321,8 +324,8 @@ Synthesizing Unit <lm32_cpu>.
         watchpoints = 4'b0000
         breakpoints = 4'b0000
         interrupts = 32
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_cpu.v" line 436: Output port <pc_x> of the instance <instruction_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_cpu.v" line 495: Output port <x_result_sel_logic> of the instance <decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 436: Output port <pc_x> of the instance <instruction_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 495: Output port <x_result_sel_logic> of the instance <decoder> is unconnected or connected to loadless signal.
     Found 32-bit register for signal <operand_0_x>.
     Found 32-bit register for signal <operand_1_x>.
     Found 32-bit register for signal <store_operand_x>.
@@ -400,7 +403,7 @@ INFO:Xst:3210 - "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys
 Unit <lm32_cpu> synthesized.
 
 Synthesizing Unit <lm32_instruction_unit>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_instruction_unit.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v".
         associativity = 1
         sets = 512
         bytes_per_line = 16
@@ -429,13 +432,14 @@ WARNING:Xst:647 - Input <i_rty_i> is never used. This port will be preserved and
 Unit <lm32_instruction_unit> synthesized.
 
 Synthesizing Unit <lm32_decoder>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_decoder.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v".
+WARNING:Xst:647 - Input <instruction<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	inferred  19 Multiplexer(s).
 Unit <lm32_decoder> synthesized.
 
 Synthesizing Unit <lm32_load_store_unit>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_load_store_unit.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_load_store_unit.v".
         associativity = 1
         sets = 512
         bytes_per_line = 16
@@ -469,13 +473,13 @@ WARNING:Xst:647 - Input <d_rty_i> is never used. This port will be preserved and
 Unit <lm32_load_store_unit> synthesized.
 
 Synthesizing Unit <lm32_adder>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_adder.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_adder.v".
     Summary:
 	no macro.
 Unit <lm32_adder> synthesized.
 
 Synthesizing Unit <lm32_addsub>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_addsub.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_addsub.v".
     Found 33-bit subtractor for signal <GND_15_o_GND_15_o_sub_3_OUT> created at line 63.
     Found 33-bit subtractor for signal <tmp_subResult> created at line 63.
     Found 33-bit adder for signal <n0025> created at line 62.
@@ -486,7 +490,7 @@ Synthesizing Unit <lm32_addsub>.
 Unit <lm32_addsub> synthesized.
 
 Synthesizing Unit <lm32_logic_op>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_logic_op.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_logic_op.v".
     Found 1-bit 4-to-1 multiplexer for signal <logic_result_x<0>> created at line 67.
     Found 1-bit 4-to-1 multiplexer for signal <logic_result_x<1>> created at line 67.
     Found 1-bit 4-to-1 multiplexer for signal <logic_result_x<2>> created at line 67.
@@ -524,7 +528,7 @@ Synthesizing Unit <lm32_logic_op>.
 Unit <lm32_logic_op> synthesized.
 
 Synthesizing Unit <lm32_multiplier>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_multiplier.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_multiplier.v".
     Found 32-bit register for signal <multiplier>.
     Found 32-bit register for signal <product>.
     Found 32-bit register for signal <result>.
@@ -536,7 +540,7 @@ Synthesizing Unit <lm32_multiplier>.
 Unit <lm32_multiplier> synthesized.
 
 Synthesizing Unit <lm32_mc_arithmetic>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_mc_arithmetic.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_mc_arithmetic.v".
     Found 32-bit register for signal <p>.
     Found 32-bit register for signal <a>.
     Found 32-bit register for signal <b>.
@@ -567,8 +571,9 @@ Synthesizing Unit <lm32_mc_arithmetic>.
 Unit <lm32_mc_arithmetic> synthesized.
 
 Synthesizing Unit <lm32_interrupt>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lm32/lm32_interrupt.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_interrupt.v".
         interrupts = 32
+WARNING:Xst:647 - Input <csr_write_data<2:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit register for signal <im>.
     Found 32-bit register for signal <ip>.
     Found 1-bit register for signal <eie>.
@@ -580,12 +585,12 @@ Synthesizing Unit <lm32_interrupt>.
 Unit <lm32_interrupt> synthesized.
 
 Synthesizing Unit <wb_bram>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_bram/wb_bram.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v".
         mem_file_name = "../firmware/hw-test/image.ram"
         adr_width = 12
-WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1024x32-bit single-port RAM <Mram_ram> for signal <ram>.
     Found 1-bit register for signal <ack>.
@@ -596,12 +601,12 @@ WARNING:Xst:647 - Input <rst_i> is never used. This port will be preserved and l
 Unit <wb_bram> synthesized.
 
 Synthesizing Unit <wb_uart>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_uart/wb_uart.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v".
         clk_freq = 100000000
-        baud = 31250
-WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+        baud = 1152000
 WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <wb_dat_o<7>>.
     Found 1-bit register for signal <wb_dat_o<6>>.
@@ -614,39 +619,39 @@ WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preser
     Found 1-bit register for signal <tx_wr>.
     Found 1-bit register for signal <rx_ack>.
     Found 1-bit register for signal <ack>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><30:30>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><15:15>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><29:29>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><28:28>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><27:27>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><26:26>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><25:25>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><25:25>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><23:23>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><20:20>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><19:19>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><18:18>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><17:17>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><15:15>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><11:11>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><17:17>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><10:10>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><9:9>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><9:9>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><30:30>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><11:11>> (without init value) have a constant value of 0 in block <wb_uart>.
     Summary:
 	inferred  11 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <wb_uart> synthesized.
 
 Synthesizing Unit <uart>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/lac/uart.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v".
         freq_hz = 100000000
-        baud = 31250
+        baud = 1152000
     Found 1-bit register for signal <uart_rxd1>.
     Found 1-bit register for signal <uart_rxd2>.
     Found 1-bit register for signal <rx_busy>.
@@ -674,9 +679,10 @@ Synthesizing Unit <uart>.
 Unit <uart> synthesized.
 
 Synthesizing Unit <spi_top>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_spi/spi_top.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v".
         Tp = 1
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i<2:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit register for signal <divider>.
     Found 4-bit register for signal <ss>.
     Found 32-bit register for signal <wb_dat_o>.
@@ -703,7 +709,7 @@ WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserv
 Unit <spi_top> synthesized.
 
 Synthesizing Unit <spi_clgen>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_spi/spi_clgen.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_clgen.v".
         Tp = 1
     Found 16-bit register for signal <cnt>.
     Found 1-bit register for signal <clk_out>.
@@ -717,7 +723,7 @@ Synthesizing Unit <spi_clgen>.
 Unit <spi_clgen> synthesized.
 
 Synthesizing Unit <spi_shift>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_spi/spi_shift.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_shift.v".
         Tp = 1
 WARNING:Xst:647 - Input <latch<3:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <byte_sel<3:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -748,10 +754,12 @@ WARNING:Xst:647 - Input <p_in<31:8>> is never used. This port will be preserved 
 Unit <spi_shift> synthesized.
 
 Synthesizing Unit <wb_timer>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_timer/wb_timer.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v".
         clk_freq = 100000000
 WARNING:Xst:647 - Input <wb_adr_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_dat_i<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_dat_i<4:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <en0>.
     Found 1-bit register for signal <en1>.
     Found 1-bit register for signal <ar0>.
@@ -779,14 +787,14 @@ WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved an
 Unit <wb_timer> synthesized.
 
 Synthesizing Unit <wb_gpio>.
-    Related source file is "/home/kveldulv/Documents/Proyecto Digital 2/lm32_soc_hdl (nexys4)/rtl/wb_gpio/wb_gpio.v".
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_gpio/wb_gpio.v".
         gpio_io_width = 8
         gpio_dir_reset_val = 0
         gpio_o_reset_val = 0
         wb_dat_width = 32
         wb_adr_width = 32
-WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <gpio_dir>.
     Found 1-bit register for signal <ack>.
@@ -805,6 +813,73 @@ WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preser
 	inferred   8 Tristate(s).
 Unit <wb_gpio> synthesized.
 
+Synthesizing Unit <wb_trigger>.
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v".
+WARNING:Xst:647 - Input <wb_adr_i<31:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_dat_i<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <wb_dat_o<7:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <ack>.
+    Found 9-bit register for signal <set_trig>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><0:0>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><30:30>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><29:29>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><28:28>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><27:27>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><26:26>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><25:25>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><24:24>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><23:23>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><22:22>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><21:21>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><20:20>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><19:19>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><18:18>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><17:17>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><16:16>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><15:15>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><14:14>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><12:12>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><11:11>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><10:10>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><9:9>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><8:8>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <wb_trigger> synthesized.
+
+Synthesizing Unit <trigger_top>.
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_top.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <trigger_top> synthesized.
+
+Synthesizing Unit <div_frec_adj>.
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v".
+    Found 26-bit register for signal <counter>.
+    Found 1-bit register for signal <clk_out>.
+    Found 26-bit adder for signal <counter[25]_GND_40_o_add_3_OUT> created at line 80.
+WARNING:Xst:737 - Found 1-bit latch for signal <rst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator equal for signal <GND_40_o_p[31]_equal_2_o> created at line 69
+    Found 32-bit comparator greater for signal <p[31]_GND_40_o_LessThan_3_o> created at line 74
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <div_frec_adj> synthesized.
+
+Synthesizing Unit <trigger_pulse>.
+    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_pulse.v".
+    Found 3-bit register for signal <delay>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <trigger_pulse> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
@@ -814,8 +889,9 @@ Macro Statistics
  32x32-bit dual-port RAM                               : 2
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 20
+# Adders/Subtractors                                   : 22
  16-bit subtractor                                     : 2
+ 26-bit adder                                          : 2
  30-bit adder                                          : 2
  32-bit adder                                          : 2
  33-bit adder                                          : 2
@@ -824,29 +900,35 @@ Macro Statistics
  5-bit adder                                           : 1
  5-bit subtractor                                      : 3
  6-bit subtractor                                      : 1
-# Registers                                            : 176
- 1-bit register                                        : 111
+# Registers                                            : 183
+ 1-bit register                                        : 114
  16-bit register                                       : 3
  2-bit register                                        : 3
  24-bit register                                       : 1
- 3-bit register                                        : 2
+ 26-bit register                                       : 2
+ 3-bit register                                        : 3
  30-bit register                                       : 7
  32-bit register                                       : 31
  4-bit register                                        : 8
  5-bit register                                        : 4
  6-bit register                                        : 1
  8-bit register                                        : 5
-# Comparators                                          : 11
+ 9-bit register                                        : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 15
  1-bit comparator equal                                : 1
- 32-bit comparator equal                               : 3
+ 32-bit comparator equal                               : 5
+ 32-bit comparator greater                             : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 6
-# Multiplexers                                         : 180
+# Multiplexers                                         : 184
  1-bit 2-to-1 multiplexer                              : 73
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 3
  16-bit 2-to-1 multiplexer                             : 2
  2-bit 2-to-1 multiplexer                              : 1
+ 26-bit 2-to-1 multiplexer                             : 4
  3-bit 2-to-1 multiplexer                              : 2
  30-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 46
@@ -990,7 +1072,8 @@ Macro Statistics
  32x32-bit dual-port distributed RAM                   : 2
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 11
+# Adders/Subtractors                                   : 13
+ 26-bit adder                                          : 2
  3-bit subtractor                                      : 1
  30-bit adder                                          : 2
  32-bit adder                                          : 2
@@ -1004,18 +1087,20 @@ Macro Statistics
  16-bit down counter                                   : 2
  4-bit up counter                                      : 4
  6-bit down counter                                    : 1
-# Registers                                            : 1385
- Flip-Flops                                            : 1385
-# Comparators                                          : 11
+# Registers                                            : 1452
+ Flip-Flops                                            : 1452
+# Comparators                                          : 15
  1-bit comparator equal                                : 1
- 32-bit comparator equal                               : 3
+ 32-bit comparator equal                               : 5
+ 32-bit comparator greater                             : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 6
-# Multiplexers                                         : 269
+# Multiplexers                                         : 273
  1-bit 2-to-1 multiplexer                              : 168
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 3
  2-bit 2-to-1 multiplexer                              : 1
+ 26-bit 2-to-1 multiplexer                             : 4
  3-bit 2-to-1 multiplexer                              : 2
  30-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 43
@@ -1075,6 +1160,31 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_28> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_29> (without init value) has a constant value of 0 in block <spi_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_30> (without init value) has a constant value of 0 in block <spi_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_31> (without init value) has a constant value of 0 in block <spi_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    rst in unit <div_frec_adj>
+
 
 Optimizing unit <system> ...
 
@@ -1166,6 +1276,10 @@ Optimizing unit <spi_shift> ...
 Optimizing unit <spi_clgen> ...
 
 Optimizing unit <wb_timer> ...
+
+Optimizing unit <wb_trigger> ...
+
+Optimizing unit <div_frec_adj> ...
 WARNING:Xst:1710 - FF/Latch <lm0/bus_error_x> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <lm0/instruction_unit/pc_w_31> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <lm0/instruction_unit/pc_w_30> of sequential type is unconnected in block <system>.
@@ -1243,7 +1357,12 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable1
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_10> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_12> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_8> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_7> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_9> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_6> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_5> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_3> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_4> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_10> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_10> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_11> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_11> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_12> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_12> 
@@ -1315,34 +1434,32 @@ INFO:Xst:2261 - The FF/Latch <lm0/multiplier/multiplier_29> in Unit <system> is 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 3.
+Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 30.
 Forward register balancing over carry chain lm0/Mcompar_cmp_zero_cy<0>
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_0> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_8_BRB1> <lm0/load_store_unit/store_data_m_16_BRB0> <lm0/load_store_unit/store_data_m_24_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_1> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_9_BRB1> <lm0/load_store_unit/store_data_m_17_BRB0> <lm0/load_store_unit/store_data_m_25_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_2> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_10_BRB1> <lm0/load_store_unit/store_data_m_18_BRB0> <lm0/load_store_unit/store_data_m_26_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_3> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_11_BRB1> <lm0/load_store_unit/store_data_m_19_BRB0> <lm0/load_store_unit/store_data_m_27_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_4> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_12_BRB1> <lm0/load_store_unit/store_data_m_20_BRB0> <lm0/load_store_unit/store_data_m_28_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_5> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_13_BRB1> <lm0/load_store_unit/store_data_m_21_BRB0> <lm0/load_store_unit/store_data_m_29_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_6> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_14_BRB1> <lm0/load_store_unit/store_data_m_22_BRB0> <lm0/load_store_unit/store_data_m_30_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_7> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_15_BRB1> <lm0/load_store_unit/store_data_m_23_BRB0> <lm0/load_store_unit/store_data_m_31_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_0> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_8_BRB2> <lm0/load_store_unit/store_data_m_16_BRB0> <lm0/load_store_unit/store_data_m_24_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_1> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_9_BRB2> <lm0/load_store_unit/store_data_m_17_BRB0> <lm0/load_store_unit/store_data_m_25_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_2> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_10_BRB2> <lm0/load_store_unit/store_data_m_18_BRB0> <lm0/load_store_unit/store_data_m_26_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_3> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_11_BRB2> <lm0/load_store_unit/store_data_m_19_BRB0> <lm0/load_store_unit/store_data_m_27_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_4> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_12_BRB2> <lm0/load_store_unit/store_data_m_20_BRB0> <lm0/load_store_unit/store_data_m_28_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_5> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_13_BRB2> <lm0/load_store_unit/store_data_m_21_BRB0> <lm0/load_store_unit/store_data_m_29_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_6> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_14_BRB2> <lm0/load_store_unit/store_data_m_22_BRB0> <lm0/load_store_unit/store_data_m_30_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_7> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_15_BRB2> <lm0/load_store_unit/store_data_m_23_BRB0> <lm0/load_store_unit/store_data_m_31_BRB4> 
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/size_m_1> in Unit <system> is equivalent to the following 16 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_15_BRB0> <lm0/load_store_unit/store_data_m_14_BRB0> <lm0/load_store_unit/store_data_m_13_BRB0> <lm0/load_store_unit/store_data_m_12_BRB0> <lm0/load_store_unit/store_data_m_11_BRB0> <lm0/load_store_unit/store_data_m_10_BRB0> <lm0/load_store_unit/store_data_m_9_BRB0> <lm0/load_store_unit/store_data_m_8_BRB0> <lm0/load_store_unit/store_data_m_31_BRB0> <lm0/load_store_unit/store_data_m_30_BRB0> <lm0/load_store_unit/store_data_m_29_BRB0> <lm0/load_store_unit/store_data_m_28_BRB0> <lm0/load_store_unit/store_data_m_27_BRB0> <lm0/load_store_unit/store_data_m_26_BRB0> <lm0/load_store_unit/store_data_m_25_BRB0> <lm0/load_store_unit/store_data_m_24_BRB0> 
 INFO:Xst:2261 - The FF/Latch <lm0/x_bypass_enable_x> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/m_bypass_enable_x_BRB0> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_m> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/w_result_sel_load_m_BRB0> 
 INFO:Xst:2261 - The FF/Latch <lm0/m_result_sel_compare_x> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/m_bypass_enable_x_BRB1> 
 INFO:Xst:2261 - The FF/Latch <lm0/size_x_1> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/w_result_sel_mul_x_BRB0> 
 
 Pipelining and Register Balancing Report ...
 
 Processing Unit <system> :
-	Register(s) lm0/operand_w_1 lm0/operand_w_0 lm0/load_store_unit/data_w_15 lm0/load_store_unit/data_w_7 lm0/load_store_unit/data_w_23 lm0/load_store_unit/data_w_31 has(ve) been forward balanced into : lm0/load_store_unit/load_data_w<10>41_FRB.
 	Register(s) lm0/branch_x has(ve) been backward balanced into : lm0/branch_x_BRB0 lm0/branch_x_BRB1 lm0/branch_x_BRB2 lm0/branch_x_BRB3 lm0/branch_x_BRB4 lm0/branch_x_BRB5.
 	Register(s) lm0/load_store_unit/byte_enable_m_1 has(ve) been backward balanced into : lm0/load_store_unit/byte_enable_m_1_BRB0 lm0/load_store_unit/byte_enable_m_1_BRB1 lm0/load_store_unit/byte_enable_m_1_BRB2 lm0/load_store_unit/byte_enable_m_1_BRB3.
-	Register(s) lm0/load_store_unit/store_data_m_10 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_10_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_11 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_11_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_12 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_12_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_13 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_13_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_14 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_14_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_15 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_15_BRB2.
+	Register(s) lm0/load_store_unit/store_data_m_10 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_10_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_11 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_11_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_12 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_12_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_13 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_13_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_14 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_14_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_15 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_15_BRB1 .
 	Register(s) lm0/load_store_unit/store_data_m_16 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_16_BRB3.
 	Register(s) lm0/load_store_unit/store_data_m_17 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_17_BRB3.
 	Register(s) lm0/load_store_unit/store_data_m_18 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_18_BRB3.
@@ -1359,10 +1476,10 @@ Processing Unit <system> :
 	Register(s) lm0/load_store_unit/store_data_m_29 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_29_BRB3 .
 	Register(s) lm0/load_store_unit/store_data_m_30 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_30_BRB3 .
 	Register(s) lm0/load_store_unit/store_data_m_31 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_31_BRB1 lm0/load_store_unit/store_data_m_31_BRB3 .
-	Register(s) lm0/load_store_unit/store_data_m_8 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_8_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_9 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_9_BRB2.
-	Register(s) lm0/mc_arithmetic/a_31 has(ve) been backward balanced into : lm0/mc_arithmetic/a_31_BRB0 lm0/mc_arithmetic/a_31_BRB1 lm0/mc_arithmetic/a_31_BRB2.
+	Register(s) lm0/load_store_unit/store_data_m_8 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_8_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_9 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_9_BRB1 .
 	Register(s) lm0/store_x has(ve) been backward balanced into : lm0/store_x_BRB0 lm0/store_x_BRB5.
+	Register(s) lm0/w_result_sel_load_m has(ve) been backward balanced into : lm0/w_result_sel_load_m_BRB1.
 	Register(s) lm0/w_result_sel_mul_m has(ve) been backward balanced into : lm0/w_result_sel_mul_m_BRB0 lm0/w_result_sel_mul_m_BRB1.
 Unit <system> processed.
 FlipFlop gpio0/gpio_o_7 has been replicated 1 time(s) to handle iob=true attribute.
@@ -1383,8 +1500,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1265
- Flip-Flops                                            : 1265
+# Registers                                            : 1325
+ Flip-Flops                                            : 1325
 
 =========================================================================
 
@@ -1407,72 +1524,73 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2123
+# BELS                             : 2466
 #      GND                         : 1
-#      INV                         : 38
-#      LUT1                        : 93
-#      LUT2                        : 183
-#      LUT3                        : 201
-#      LUT4                        : 202
-#      LUT5                        : 295
-#      LUT6                        : 580
-#      MUXCY                       : 271
-#      MUXF7                       : 12
+#      INV                         : 36
+#      LUT1                        : 143
+#      LUT2                        : 181
+#      LUT3                        : 264
+#      LUT4                        : 291
+#      LUT5                        : 275
+#      LUT6                        : 618
+#      MUXCY                       : 358
+#      MUXF7                       : 5
 #      VCC                         : 1
-#      XORCY                       : 246
-# FlipFlops/Latches                : 1265
-#      FD                          : 37
-#      FDC                         : 155
-#      FDCE                        : 755
-#      FDE                         : 61
+#      XORCY                       : 293
+# FlipFlops/Latches                : 1327
+#      FD                          : 35
+#      FDC                         : 211
+#      FDCE                        : 753
+#      FDE                         : 71
 #      FDP                         : 16
-#      FDPE                        : 33
-#      FDR                         : 18
+#      FDPE                        : 34
+#      FDR                         : 17
 #      FDRE                        : 120
-#      FDS                         : 5
+#      FDS                         : 3
 #      FDSE                        : 65
-# RAMS                             : 65
+#      LD                          : 2
+# RAMS                             : 66
 #      RAM32X1D                    : 64
-#      RAMB36E1                    : 1
+#      RAMB16BWER                  : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 19
+# IO Buffers                       : 20
 #      IBUF                        : 3
 #      IOBUF                       : 8
-#      OBUF                        : 8
+#      OBUF                        : 9
 # DSPs                             : 3
-#      DSP48E1                     : 3
+#      DSP48A1                     : 3
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 7a100tcsg324-3 
+Selected Device : 6slx16csg324-3 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1253  out of  126800     0%  
- Number of Slice LUTs:                 1720  out of  63400     2%  
-    Number used as Logic:              1592  out of  63400     2%  
-    Number used as Memory:              128  out of  19000     0%  
+ Number of Slice Registers:            1315  out of  18224     7%  
+ Number of Slice LUTs:                 1936  out of   9112    21%  
+    Number used as Logic:              1808  out of   9112    19%  
+    Number used as Memory:              128  out of   2176     5%  
        Number used as RAM:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1957
-   Number with an unused Flip Flop:     704  out of   1957    35%  
-   Number with an unused LUT:           237  out of   1957    12%  
-   Number of fully used LUT-FF pairs:  1016  out of   1957    51%  
-   Number of unique control sets:        40
+ Number of LUT Flip Flop pairs used:   2171
+   Number with an unused Flip Flop:     856  out of   2171    39%  
+   Number with an unused LUT:           235  out of   2171    10%  
+   Number of fully used LUT-FF pairs:  1080  out of   2171    49%  
+   Number of unique control sets:        46
 
 IO Utilization: 
- Number of IOs:                          20
- Number of bonded IOBs:                  20  out of    210     9%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    232     9%  
     IOB Flip Flops/Latches:              12
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                1  out of    135     0%  
-    Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
- Number of DSP48E1s:                      3  out of    240     1%  
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      3  out of     32     9%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1492,11 +1610,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 1330  |
------------------------------------+------------------------+-------+
+-----------------------------------+---------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                 | Load  |
+-----------------------------------+---------------------------------------+-------+
+clk                                | BUFGP                                 | 1388  |
+trigger_0/trigger0/div2/clk_out    | NONE(trigger_0/trigger0/pulse/delay_0)| 3     |
+trigger_0/trigger0/div1/rst        | NONE(trigger_0/trigger0/div1/rst)     | 1     |
+trigger_0/trigger0/div2/rst        | NONE(trigger_0/trigger0/div2/rst)     | 1     |
+-----------------------------------+---------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -1506,9 +1628,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.292ns (Maximum Frequency: 158.937MHz)
-   Minimum input arrival time before clock: 1.619ns
-   Maximum output required time after clock: 1.253ns
+   Minimum period: 12.519ns (Maximum Frequency: 79.882MHz)
+   Minimum input arrival time before clock: 5.752ns
+   Maximum output required time after clock: 5.267ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1517,33 +1639,98 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.292ns (frequency: 158.937MHz)
-  Total number of paths / destination ports: 1327244 / 3149
+  Clock period: 12.519ns (frequency: 79.882MHz)
+  Total number of paths / destination ports: 1335179 / 3244
 -------------------------------------------------------------------------
-Delay:               6.292ns (Levels of Logic = 3)
-  Source:            lm0/multiplier/multiplier_1 (FF)
+Delay:               12.519ns (Levels of Logic = 3)
+  Source:            lm0/multiplier/muliplicand_7 (FF)
   Destination:       lm0/multiplier/product_31 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: lm0/multiplier/multiplier_1 to lm0/multiplier/product_31
+  Data Path: lm0/multiplier/muliplicand_7 to lm0/multiplier/product_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             8   0.361   0.312  lm0/multiplier/multiplier_1 (lm0/multiplier/multiplier_1)
-     DSP48E1:A1->PCOUT47    1   2.970   0.000  lm0/multiplier/Mmult_n0019 (lm0/multiplier/Mmult_n0019_PCOUT_to_Mmult_n00191_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  lm0/multiplier/Mmult_n00191 (lm0/multiplier/Mmult_n00191_PCOUT_to_Mmult_n00192_PCIN_47)
-     DSP48E1:PCIN47->P14    1   1.107   0.279  lm0/multiplier/Mmult_n00192 (lm0/multiplier/n0019<31>)
-     FDCE:D                    0.008          lm0/multiplier/product_31
+     FDCE:C->Q             9   0.447   0.829  lm0/multiplier/muliplicand_7 (lm0/multiplier/muliplicand_7)
+     DSP48A1:A7->P47      18   4.560   1.049  lm0/multiplier/Mmult_n0019 (lm0/multiplier/Mmult_n0019_P47_to_Mmult_n00191)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  lm0/multiplier/Mmult_n00191 (lm0/multiplier/Mmult_n00191_PCOUT_to_Mmult_n00192_PCIN_47)
+     DSP48A1:PCIN47->P14    1   2.264   0.579  lm0/multiplier/Mmult_n00192 (lm0/multiplier/n0019<31>)
+     FDCE:D                    0.102          lm0/multiplier/product_31
     ----------------------------------------
-    Total                      6.292ns (5.701ns logic, 0.591ns route)
-                                       (90.6% logic, 9.4% route)
+    Total                     12.519ns (10.062ns logic, 2.456ns route)
+                                       (80.4% logic, 19.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div2/clk_out'
+  Clock period: 1.165ns (frequency: 858.185MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.165ns (Levels of Logic = 0)
+  Source:            trigger_0/trigger0/pulse/delay_0 (FF)
+  Destination:       trigger_0/trigger0/pulse/delay_1 (FF)
+  Source Clock:      trigger_0/trigger0/div2/clk_out rising
+  Destination Clock: trigger_0/trigger0/div2/clk_out rising
+
+  Data Path: trigger_0/trigger0/pulse/delay_0 to trigger_0/trigger0/pulse/delay_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  trigger_0/trigger0/pulse/delay_0 (trigger_0/trigger0/pulse/delay_0)
+     FDC:D                     0.102          trigger_0/trigger0/pulse/delay_1
+    ----------------------------------------
+    Total                      1.165ns (0.549ns logic, 0.616ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div1/rst'
+  Clock period: 2.568ns (frequency: 389.348MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.568ns (Levels of Logic = 1)
+  Source:            trigger_0/trigger0/div1/rst (LATCH)
+  Destination:       trigger_0/trigger0/div1/rst (LATCH)
+  Source Clock:      trigger_0/trigger0/div1/rst rising
+  Destination Clock: trigger_0/trigger0/div1/rst rising
+
+  Data Path: trigger_0/trigger0/div1/rst to trigger_0/trigger0/div1/rst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  trigger_0/trigger0/div1/rst (trigger_0/trigger0/div1/rst)
+     INV:I->O             29   0.206   1.249  trigger_0/trigger0/div1/rst_inv1_INV_0 (trigger_0/trigger0/div1/rst_G)
+     LD:D                      0.037          trigger_0/trigger0/div1/rst
+    ----------------------------------------
+    Total                      2.568ns (0.741ns logic, 1.827ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div2/rst'
+  Clock period: 2.568ns (frequency: 389.348MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.568ns (Levels of Logic = 1)
+  Source:            trigger_0/trigger0/div2/rst (LATCH)
+  Destination:       trigger_0/trigger0/div2/rst (LATCH)
+  Source Clock:      trigger_0/trigger0/div2/rst rising
+  Destination Clock: trigger_0/trigger0/div2/rst rising
+
+  Data Path: trigger_0/trigger0/div2/rst to trigger_0/trigger0/div2/rst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.579  trigger_0/trigger0/div2/rst (trigger_0/trigger0/div2/rst)
+     INV:I->O             29   0.206   1.249  trigger_0/trigger0/div2/rst_inv1_INV_0 (trigger_0/trigger0/div2/rst_G)
+     LD:D                      0.037          trigger_0/trigger0/div2/rst
+    ----------------------------------------
+    Total                      2.568ns (0.741ns logic, 1.827ns route)
+                                       (28.9% logic, 71.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1300 / 1284
+  Total number of paths / destination ports: 1305 / 1289
 -------------------------------------------------------------------------
-Offset:              1.619ns (Levels of Logic = 2)
+Offset:              5.752ns (Levels of Logic = 2)
   Source:            rst (PAD)
   Destination:       timer0/wb_dat_o_31 (FF)
   Destination Clock: clk rising
@@ -1552,32 +1739,52 @@ Offset:              1.619ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            24   0.001   0.786  rst_IBUF (rst_IBUF)
-     LUT6:I1->O           32   0.097   0.386  timer0/_n0187<7>3 (timer0/_n0187)
-     FDRE:R                    0.349          timer0/wb_dat_o_0
+     IBUF:I->O          1143   1.222   2.606  rst_IBUF (rst_IBUF)
+     LUT6:I0->O           32   0.203   1.291  timer0/_n0187<7>3 (timer0/_n0187)
+     FDRE:R                    0.430          timer0/wb_dat_o_0
     ----------------------------------------
-    Total                      1.619ns (0.447ns logic, 1.172ns route)
-                                       (27.6% logic, 72.4% route)
+    Total                      5.752ns (1.855ns logic, 3.897ns route)
+                                       (32.2% logic, 67.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 32 / 16
 -------------------------------------------------------------------------
-Offset:              1.253ns (Levels of Logic = 2)
-  Source:            spi0/ss_3 (FF)
+Offset:              5.267ns (Levels of Logic = 2)
+  Source:            spi0/shift/tip (FF)
   Destination:       spi_cs<3> (PAD)
   Source Clock:      clk rising
 
-  Data Path: spi0/ss_3 to spi_cs<3>
+  Data Path: spi0/shift/tip to spi_cs<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             2   0.361   0.515  spi0/ss_3 (spi0/ss_3)
-     LUT3:I0->O            1   0.097   0.279  spi0/ss_pad_o<3>1 (spi_cs_3_OBUF)
-     OBUF:I->O                 0.000          spi_cs_3_OBUF (spi_cs<3>)
+     FDC:C->Q             37   0.447   1.467  spi0/shift/tip (spi0/shift/tip)
+     LUT3:I1->O            1   0.203   0.579  spi0/ss_pad_o<0>1 (spi_cs_0_OBUF)
+     OBUF:I->O                 2.571          spi_cs_0_OBUF (spi_cs<0>)
     ----------------------------------------
-    Total                      1.253ns (0.458ns logic, 0.795ns route)
-                                       (36.6% logic, 63.4% route)
+    Total                      5.267ns (3.221ns logic, 2.046ns route)
+                                       (61.2% logic, 38.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'trigger_0/trigger0/div2/clk_out'
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Offset:              4.610ns (Levels of Logic = 2)
+  Source:            trigger_0/trigger0/pulse/delay_2 (FF)
+  Destination:       trigger_o (PAD)
+  Source Clock:      trigger_0/trigger0/div2/clk_out rising
+
+  Data Path: trigger_0/trigger0/pulse/delay_2 to trigger_o
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.447   0.808  trigger_0/trigger0/pulse/delay_2 (trigger_0/trigger0/pulse/delay_2)
+     LUT3:I0->O            1   0.205   0.579  trigger_0/trigger0/pulse/t_out<0>1 (trigger_o_OBUF)
+     OBUF:I->O                 2.571          trigger_o_OBUF (trigger_o)
+    ----------------------------------------
+    Total                      4.610ns (3.223ns logic, 1.387ns route)
+                                       (69.9% logic, 30.1% route)
 
 =========================================================================
 
@@ -1585,25 +1792,52 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    6.292|         |         |         |
----------------+---------+---------+---------+---------+
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+clk                        |   12.519|         |         |         |
+trigger_0/trigger0/div1/rst|    2.961|         |         |         |
+trigger_0/trigger0/div2/rst|    2.961|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock trigger_0/trigger0/div1/rst
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+trigger_0/trigger0/div1/rst|    2.568|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock trigger_0/trigger0/div2/clk_out
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+clk                            |    1.527|         |         |         |
+trigger_0/trigger0/div2/clk_out|    1.165|         |         |         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock trigger_0/trigger0/div2/rst
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+trigger_0/trigger0/div2/rst|    2.568|         |         |         |
+---------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 21.03 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.71 secs
  
 --> 
 
 
-Total memory usage is 511924 kilobytes
+Total memory usage is 410140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  292 (   0 filtered)
-Number of infos    :  112 (   0 filtered)
+Number of warnings :  326 (   0 filtered)
+Number of infos    :  107 (   0 filtered)
 

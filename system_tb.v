@@ -12,7 +12,7 @@ module system_tb;
 parameter tck              = 20;       // clock period in ns
 parameter uart_baud_rate   = 1152000;  // uart baud rate for simulation 
 
-parameter clk_freq = 1000000000 / tck; // Frequenzy in HZ
+parameter clk_freq = 500000000 / tck; // Frequenzy in HZ
 //----------------------------------------------------------------------------
 //
 //----------------------------------------------------------------------------
@@ -39,6 +39,13 @@ wire [3:0]   spi_cs;
 //------------------------------------------------------------------------------
 wire [7:0]   gpio_io;
 
+//-------------------------------------------------------------------------------
+// TRIGGER
+//-------------------------------------------------------------------------------
+wire trigger_o;
+
+
+
 
 //----------------------------------------------------------------------------
 // Device Under Test 
@@ -46,7 +53,7 @@ wire [7:0]   gpio_io;
 system #(
 	.clk_freq(           clk_freq         ),
 	.uart_baud_rate(     uart_baud_rate   )
-) dut  (
+) dut (
 	.clk(          clk    ),
 	// Debug
 	.rst(          rst    ),
@@ -58,7 +65,9 @@ system #(
 	//.spi_cs(  spi_cs  ),
 	// Uart
 	.uart_rxd(  uart_rxd  ),
-	.uart_txd(  uart_txd  )
+	.uart_txd(  uart_txd  ),
+	.trigger_o( trigger_o )
+	
 );
 
 /* Clocking device */

@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// This file is used by ../rtl/lm32/* to configure CPU parameter
+// This file is used by ../rtl/lm32/* to configure CPU parameter actual
 //
 //---------------------------------------------------------------------------
 `ifndef SYSTEM_CONF

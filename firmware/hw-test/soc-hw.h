@@ -142,6 +142,12 @@ void uart_putstr(char *str);
 char uart_getchar();
 
 /***************************************************************************
+* Trigger
+ */
+typedef struct {
+	volatile uint32_t set_trig;
+		} trigger_t;
+/***************************************************************************
 * SPI0
  */
 //Bits of CTRL register
@@ -179,4 +185,7 @@ extern gpio_t   *gpio0;
 extern spi_t 	*spi0; 
 extern uint32_t *sram0; 
 
+
+
 #endif // SPIKEHW_H
+

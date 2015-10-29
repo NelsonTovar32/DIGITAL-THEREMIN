@@ -29,11 +29,11 @@
 module conbus #(
 	parameter s_addr_w = 3,
 	parameter s0_addr = 3'h0,
-	parameter s1_addr = 3'h1,
-	parameter s2_addr = 3'h2,
-	parameter s3_addr = 3'h3,
-	parameter s4_addr = 3'h4,
-	parameter s5_addr = 3'h5
+	parameter s1_addr = 3'h2,
+	parameter s2_addr = 3'h3,
+	parameter s3_addr = 3'h4,
+	parameter s4_addr = 3'h5,
+	parameter s5_addr = 3'h6
 ) (
 	input sys_clk,
 	input sys_rst,

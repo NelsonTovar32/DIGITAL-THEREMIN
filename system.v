@@ -6,12 +6,9 @@
 
 module system
 #(
-//	parameter   bootram_file     = "../firmware/cain_loader/image.ram",
-//	parameter   bootram_file     = "../firmware/arch_examples/image.ram",
-//	parameter   bootram_file     = "../firmware/boot0-serial/image.ram",
 	parameter   bootram_file     = "../firmware/hw-test/image.ram",
-	parameter   clk_freq         = 50000000
-	parameter   uart_baud_rate   = 31250
+	parameter   clk_freq         = 100000000,
+	parameter   uart_baud_rate   = 1152000
 ) (
 	input             clk,
 	// Debug 
@@ -182,7 +179,7 @@ conbus #(
 	.s2_addr(3'b011),	// timer    0x30000000 
 	.s3_addr(3'b100),   	// gpio     0x40000000 
 	.s4_addr(3'b101),	// spi      0x50000000 
-	.s5_addr(3'b110)	// i2c      0x60000000 
+	.s5_addr(3'b110)	// trigger  0x60000000 
 ) conbus0(
 	.sys_clk( clk ),
 	.sys_rst( rst ),
@@ -421,7 +418,7 @@ wb_gpio gpio0 (
 //---------------------------------------------------------------------------
 wire trig_o;
 
-wb_trigger trigger0 (
+wb_trigger trigger_0 (
 	.clk( clk ),
 	.reset( rst ),
 	//
