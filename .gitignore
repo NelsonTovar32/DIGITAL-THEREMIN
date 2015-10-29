@@ -1,7 +1,7 @@
-firmware/dmx/image*
-firmware/dmx/*~
-firmware/dmx/*.o
-firmware/dmx/*.d
+firmware/hw-test/image*
+firmware/hw-test/*~
+firmware/hw-test/*.o
+firmware/hw-test/*.d
 *~
 simulation/*
 build/*
