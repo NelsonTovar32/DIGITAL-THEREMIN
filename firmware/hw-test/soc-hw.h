@@ -63,6 +63,9 @@
 typedef unsigned int  uint32_t;    // 32 Bit
 typedef signed   int   int32_t;    // 32 Bit
 
+typedef unsigned char  uint16_t;    // 16 Bit
+typedef signed   char   int16_t;    // 16 Bit
+
 typedef unsigned char  uint8_t;    // 8 Bit
 typedef signed   char   int8_t;    // 8 Bit
 
@@ -122,6 +125,7 @@ typedef struct {
 
 void gpio_init();
 uint8_t gpio_read();
+void gpio_write();
 
 
 /***************************************************************************

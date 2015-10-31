@@ -119,15 +119,22 @@ uint32_t spi_readByte(uint8_t cs){
 // Estructura del periferico GPIO
 //*************************************************************************
 
-void gpio_init()
+void gpio_init(uint32_t k)
 {
-	gpio0->dir=0x0ff;
+	gpio0->dir=k; //todo lo que sea 0 es puerto lectura
 }
 
 uint8_t gpio_read()
 {
 	return gpio0->read;
 }
+
+void gpio_write(uint32_t k)
+{
+	gpio0->write=k;
+}
+
+
 
 
 //***************************************************************************

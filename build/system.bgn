@@ -1,12 +1,12 @@
-Release 13.4 - Bitgen O.87xd (lin64)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
-Loading device for application Rf_Device from file '6slx16.nph' in environment
-/opt/Xilinx/13.4/ISE_DS/ISE/.
-   "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
+Release 14.7 - Bitgen P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Loading device for application Rf_Device from file '6slx45.nph' in environment
+/opt/Xilinx/14.7/ISE_DS/ISE/.
+   "system" is an NCD, version 3.2, device xc6slx45, package csg324, speed -3
 
-Tue Oct 27 12:23:49 2015
+Fri Oct 30 15:49:24 2015
 
-/opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w system-routed.ncd system.bit 
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w system-routed.ncd system.bit 
 
 Summary of Bitgen Options:
 +----------------------+----------------------+
@@ -92,7 +92,7 @@ Summary of Bitgen Options:
 +----------------------+----------------------+
 | ExtMasterCclk_divide | 1*                   |
 +----------------------+----------------------+
-| MaskVectorFile       | No*                  |
+| CrcCoverage          | No*                  |
 +----------------------+----------------------+
 | glutmask             | Yes*                 |
 +----------------------+----------------------+
@@ -114,6 +114,8 @@ Summary of Bitgen Options:
 +----------------------+----------------------+
 | spi_buswidth         | 1*                   |
 +----------------------+----------------------+
+| TimeStamp            | Default*             |
++----------------------+----------------------+
 | IEEE1532             | No*                  |
 +----------------------+----------------------+
 | Binary               | No*                  |
@@ -124,7 +126,12 @@ Summary of Bitgen Options:
 No constraints file was processed.
 
 Running DRC.
-DRC detected 0 errors and 0 warnings.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   trigger_0/trigger0/div2/clk_out is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "system.bit".
 Bitstream generation is complete.

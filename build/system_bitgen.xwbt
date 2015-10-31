@@ -1,7 +1,7 @@
-INFILE=/home/manu/LM32/DIGITAL_THEREMIN/build/system-routed.ncd
-OUTFILE=/home/manu/LM32/DIGITAL_THEREMIN/build/system.bit
+INFILE=/home/asus/Documentos/DIGITAL_THEREMIN/build/system-routed.ncd
+OUTFILE=/home/asus/Documentos/DIGITAL_THEREMIN/build/system.bit
 FAMILY=Spartan6
-PART=xc6slx16-3csg324
-WORKINGDIR=/home/manu/LM32/DIGITAL_THEREMIN/build
+PART=xc6slx45-3csg324
+WORKINGDIR=/home/asus/Documentos/DIGITAL_THEREMIN/build
 LICENSE=WebPack
-USER_INFO=210933213_0_0_530
+USER_INFO=211081784_0_0_277

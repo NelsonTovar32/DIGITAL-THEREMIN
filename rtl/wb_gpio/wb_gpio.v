@@ -38,7 +38,7 @@ module wb_gpio(
 	    gpio_io);
 
 
-   parameter gpio_io_width = 8;
+   parameter gpio_io_width = 16;
 
    parameter gpio_dir_reset_val = 0;
    parameter gpio_o_reset_val = 0;
@@ -60,6 +60,8 @@ module wb_gpio(
       
    //I/O PORT
    inout [gpio_io_width-1:0] gpio_io;
+
+
    //Interupt
 
    // Internal registers
@@ -82,7 +84,8 @@ module wb_gpio(
    // Tristate logic for IO
    genvar    i;
    generate 
-      for (i=0;i<gpio_io_width;i=i+1)  begin: gpio_tris
+      for (i=0;i<gpio_io_width;i=i+1)  
+	 begin: gpio_tris
 	 assign gpio_io[i] = (gpio_dir[i]) ? gpio_o[i] : 1'bz;
 	 assign gpio_i[i] = gpio_io[i]; //(gpio_dir[i]) ? gpio_o[i] : ;
 	 end

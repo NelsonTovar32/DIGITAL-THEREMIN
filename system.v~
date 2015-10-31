@@ -8,6 +8,7 @@ module system
 #(
 	parameter   bootram_file     = "../firmware/hw-test/image.ram",
 	parameter   clk_freq         = 100000000,
+        //parameter   clk_freq         = 50000000,
 	parameter   uart_baud_rate   = 1152000
 ) (
 	input             clk,
@@ -15,7 +16,9 @@ module system
 	output            led,
 	input             rst,
 	// GPIO
-	inout [7:0]	 gpio_io,
+	//input [7:0]	 gpio_ik,
+	//output [7:0]	 gpio_ok,
+inout [15:0] gpio_io,
 	// UART
 	input             uart_rxd, 
 	output            uart_txd,
@@ -393,10 +396,10 @@ wb_timer #(
 );
 
 //---------------------------------------------------------------------------
-// General Purpose IO
+// General Purpose IO1
 //---------------------------------------------------------------------------
 
-wire [7:0] gpio0_io;
+wire [15:0] gpio0_io;
 //wire       gpio0_irq;
 
 wb_gpio gpio0 (
@@ -451,7 +454,9 @@ assign spi0_miso = spi_miso;
 assign spi_clk = spi0_clk;
 assign spi_cs = spi0_cs;
 
-assign gpio_io = gpio0_io;
 assign trigger_o = trig_o;
+
+assign gpio_io= gpio0_io;
+//assign gpio0_io[15:8] = gpio_ok;
 
 endmodule 

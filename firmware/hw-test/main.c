@@ -161,8 +161,14 @@ void midi(int cs)
 int main()
 {	
 	uint32_t a1, a2, a3, a4; // Cuatro esclavos (ADC) son seleccionados
-	int j; 
+	int j;
+
+ 	uint16_t b1, b2, b3, b4;
+
+	uint8_t c1, c2, c3, c4;
 	
+	/*
+ 	
 	spi_init(255); // Constante de división para generación de reloj del SPI - Freq(sclk)=192KHz
 	for(;;)
 	{	nsleep(100);
@@ -205,9 +211,18 @@ int main()
                  	
 }
 	 
+*/
+for(;;){
+uart_putstr("192");
+b1=0xff00;
+gpio_init(b1);
 
+c1=gpio_read();
 
+if(c1=0x02){gpio_write(0x02);}
+else gpio_write(0xffff);
 
+}
 
 
 

@@ -50,7 +50,6 @@ gpio_t  *gpio0  = (gpio_t *)   0x40000000;
 spi_t   *spi0   = (spi_t *)    0x50000000;
 trigger_t *trigger0 = (trigger_t *) 0x60000000;
 
-
 isr_ptr_t isr_table[32];
 
 void tic_isr();
@@ -120,15 +119,22 @@ uint32_t spi_readByte(uint8_t cs){
 // Estructura del periferico GPIO
 //*************************************************************************
 
-void gpio_init()
+void gpio_init(uint16_t k)
 {
-	gpio0->dir=0x0ff;
+	gpio0->dir=k; //todo lo que sea 0 es puerto lectura
 }
 
 uint8_t gpio_read()
 {
 	return gpio0->read;
 }
+
+void gpio_write(uint16_t k)
+{
+	gpio0->write=k;
+}
+
+
 
 
 //***************************************************************************

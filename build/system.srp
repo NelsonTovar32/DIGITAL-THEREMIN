@@ -1,5 +1,5 @@
-Release 13.4 - xst O.87xd (lin64)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 
 TABLE OF CONTENTS
@@ -33,7 +33,7 @@ Input Format                       : MIXED
 
 ---- Target Parameters
 Output File Name                   : "system.ngc"
-Target Device                      : xc6slx16-3csg324
+Target Device                      : xc6slx45-3csg324
 
 ---- Source Options
 Top Module Name                    : system
@@ -46,130 +46,129 @@ RTL Output                         : yes
 
 =========================================================================
 
-INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
 
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/system.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" into library work
 Parsing module <system>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" into library work
 Parsing module <lac>.
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 23. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 24. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 25. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 86. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 87. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 88. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 89. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 90. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 91. parameter declaration becomes local in lac with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 92. parameter declaration becomes local in lac with formal parameter declaration list
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" into library work
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 23. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 24. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 25. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 86. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 87. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 88. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 89. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 90. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 91. parameter declaration becomes local in lac with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/lac.v" Line 92. parameter declaration becomes local in lac with formal parameter declaration list
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" into library work
 Parsing module <uart>.
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 24. parameter declaration becomes local in uart with formal parameter declaration list
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/dp_ram.v" into library work
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 24. parameter declaration becomes local in uart with formal parameter declaration list
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/dp_ram.v" into library work
 Parsing module <dp_ram>.
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/dp_ram.v" Line 20. parameter declaration becomes local in dp_ram with formal parameter declaration list
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/system_conf.v" included at line 28.
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/dp_ram.v" Line 20. parameter declaration becomes local in dp_ram with formal parameter declaration list
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/system_conf.v" included at line 28.
 Parsing module <lm32_cpu>.
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 423.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 423.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_instruction_unit>.
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 291.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 291.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_decoder>.
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 298.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_simtrace.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 10.
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 298.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_simtrace.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 10.
 Parsing module <lm32_simtrace>.
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 63.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_load_store_unit.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 63.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_load_store_unit.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_load_store_unit>.
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 208.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_adder.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_functions.v" included at line 208.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_adder.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_adder>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_addsub.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 23.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_addsub.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 23.
 Parsing module <lm32_addsub>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_logic_op.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_logic_op.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_logic_op>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_shifter.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_shifter.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_shifter>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_multiplier.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_multiplier.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_multiplier>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_mc_arithmetic.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_mc_arithmetic.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 24.
 Parsing module <lm32_mc_arithmetic>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_interrupt.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/system_conf.v" included at line 24.
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 25.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_interrupt.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/system_conf.v" included at line 24.
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 25.
 Parsing module <lm32_interrupt>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_ram.v" into library work
-Parsing verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 23.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_ram.v" into library work
+Parsing verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_include.v" included at line 23.
 Parsing module <lm32_ram>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" into library work
 Parsing module <wb_bram>.
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" Line 25. parameter declaration becomes local in wb_bram with formal parameter declaration list
-INFO:HDLCompiler:693 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" Line 26. parameter declaration becomes local in wb_bram with formal parameter declaration list
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v" into library work
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" Line 25. parameter declaration becomes local in wb_bram with formal parameter declaration list
+INFO:HDLCompiler:693 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v" Line 26. parameter declaration becomes local in wb_bram with formal parameter declaration list
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v" into library work
 Parsing module <wb_uart>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v" into library work
 Parsing module <wb_timer>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_gpio/wb_gpio.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_gpio/wb_gpio.v" into library work
 Parsing module <wb_gpio>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v" into library work
 Parsing module <spi_top>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_shift.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_spi/spi_shift.v" into library work
 Parsing module <spi_shift>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_clgen.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_spi/spi_clgen.v" into library work
 Parsing module <spi_clgen>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_conbus/conbus.v" into library work
 Parsing module <conbus>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus_arb.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_conbus/conbus_arb.v" into library work
 Parsing module <conbus_arb>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v" into library work
 Parsing module <wb_trigger>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_top.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_top.v" into library work
 Parsing module <trigger_top>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_pulse.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_pulse.v" into library work
 Parsing module <trigger_pulse>.
-Analyzing Verilog file "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" into library work
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" into library work
 Parsing module <div_frec_adj>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 175: Port m0_cti_i is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 357: Port wb_err_o is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 178: Port m0_cti_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 360: Port wb_err_o is not connected to this instance
 
 Elaborating module <system>.
 
 Elaborating module <conbus(s_addr_w=3,s0_addr=3'b0,s1_addr=3'b010,s2_addr=3'b011,s3_addr=3'b100,s4_addr=3'b101,s5_addr=3'b110)>.
 
 Elaborating module <conbus_arb>.
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 237: Assignment to gpio0_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 240: Assignment to gpio0_sel ignored, since the identifier is never used
 
 Elaborating module <lm32_cpu>.
 
 Elaborating module <lm32_instruction_unit(associativity=1,sets=512,bytes_per_line=16,base_address=0,limit=0)>.
-"/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v" Line 699. $display Instruction bus error. Address: 0
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 461: Assignment to pc_x ignored, since the identifier is never used
+"/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v" Line 699. $display Instruction bus error. Address: 0
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 461: Assignment to pc_x ignored, since the identifier is never used
 
 Elaborating module <lm32_simtrace>.
-WARNING:HDLCompiler:1499 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_simtrace.v" Line 20: Empty module <lm32_simtrace> remains a black box.
+WARNING:HDLCompiler:1499 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_simtrace.v" Line 20: Empty module <lm32_simtrace> remains a black box.
 
 Elaborating module <lm32_decoder>.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v" Line 559: Result of 32-bit expression is truncated to fit in 30-bit target.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v" Line 559: Result of 32-bit expression is truncated to fit in 30-bit target.
 
 Elaborating module <lm32_load_store_unit(associativity=1,sets=512,bytes_per_line=16,base_address=0,limit=0)>.
 
@@ -184,81 +183,82 @@ Elaborating module <lm32_multiplier>.
 Elaborating module <lm32_mc_arithmetic>.
 
 Elaborating module <lm32_interrupt>.
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 280: Assignment to lm32i_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 281: Assignment to lm32i_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 282: Assignment to lm32i_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 294: Assignment to lm32d_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 295: Assignment to lm32d_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 296: Assignment to lm32d_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 283: Assignment to lm32i_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 284: Assignment to lm32i_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 285: Assignment to lm32i_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 297: Assignment to lm32d_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 298: Assignment to lm32d_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 299: Assignment to lm32d_bte ignored, since the identifier is never used
 
 Elaborating module <wb_bram(adr_width=12,mem_file_name="../firmware/hw-test/image.ram")>.
 Reading initialization file \"../firmware/hw-test/image.ram\".
 
-Elaborating module <wb_uart(clk_freq=100000000,baud=1152000)>.
+Elaborating module <wb_uart(clk_freq=50000000,baud=1152000)>.
 
-Elaborating module <uart(freq_hz=100000000,baud=1152000)>.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 39: Result of 32-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 88: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 135: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 138: Result of 5-bit expression is truncated to fit in 4-bit target.
+Elaborating module <uart(freq_hz=50000000,baud=1152000)>.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 39: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 88: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 135: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 138: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <spi_top>.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v" Line 348: Result of 7-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v" Line 348: Result of 7-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <spi_clgen>.
 
 Elaborating module <spi_shift>.
-WARNING:HDLCompiler:189 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 361: Size mismatch in connection of port <wb_adr_i>. Formal port size is 5-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 364: Size mismatch in connection of port <wb_adr_i>. Formal port size is 5-bit while actual signal size is 32-bit.
 
-Elaborating module <wb_timer(clk_freq=100000000)>.
+Elaborating module <wb_timer(clk_freq=50000000)>.
 
 Elaborating module <wb_gpio>.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_gpio/wb_gpio.v" Line 123: Result of 16-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <wb_trigger>.
 
 Elaborating module <trigger_top>.
 
 Elaborating module <div_frec_adj>.
-WARNING:HDLCompiler:91 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 41: Signal <num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 80: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:91 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 41: Signal <num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 80: Result of 27-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <trigger_pulse>.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 147: Net <lm32i_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 148: Net <lm32d_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 150: Net <lm32i_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 151: Net <lm32d_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 168: Net <gpio0_intr> does not have a driver.
-WARNING:HDLCompiler:552 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 183: Input port m0_cti_i[2] is not connected on this instance
-WARNING:Xst:2972 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 483. All outputs of instance <simtrace> of block <lm32_simtrace> are unconnected in block <lm32_cpu>. Underlying logic will be removed.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 150: Net <lm32i_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 151: Net <lm32d_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 153: Net <lm32i_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 154: Net <lm32d_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 171: Net <gpio0_intr> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 186: Input port m0_cti_i[2] is not connected on this instance
+WARNING:Xst:2972 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 483. All outputs of instance <simtrace> of block <lm32_simtrace> are unconnected in block <lm32_cpu>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <system>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/system.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/system.v".
         bootram_file = "../firmware/hw-test/image.ram"
-        clk_freq = 100000000
+        clk_freq = 50000000
         uart_baud_rate = 1152000
 WARNING:Xst:2898 - Port 'm0_cti_i', unconnected in block instance 'conbus0', is tied to GND.
 WARNING:Xst:2898 - Port 'm1_cti_i', unconnected in block instance 'conbus0', is tied to GND.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 183: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 267: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 357: Output port <wb_err_o> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" line 357: Output port <wb_int_o> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 186: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 186: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 186: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 186: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 186: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 186: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 186: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 270: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 270: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 270: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 270: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 270: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 270: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 360: Output port <wb_err_o> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 360: Output port <wb_int_o> of the instance <spi0> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <lm32i_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32d_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32i_err> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -269,7 +269,7 @@ WARNING:Xst:653 - Signal <gpio0_intr> is used but never assigned. This sourceles
 Unit <system> synthesized.
 
 Synthesizing Unit <conbus>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_conbus/conbus.v".
         s_addr_w = 3
         s0_addr = 3'b000
         s1_addr = 3'b010
@@ -282,7 +282,7 @@ Synthesizing Unit <conbus>.
 Unit <conbus> synthesized.
 
 Synthesizing Unit <conbus_arb>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_conbus/conbus_arb.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_conbus/conbus_arb.v".
         grant0 = 7'b0000001
         grant1 = 7'b0000010
         grant2 = 7'b0000100
@@ -309,7 +309,7 @@ Synthesizing Unit <conbus_arb>.
 Unit <conbus_arb> synthesized.
 
 Synthesizing Unit <lm32_cpu>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v".
         eba_reset = 32'b00000000000000000000000000000000
         icache_associativity = 1
         icache_sets = 512
@@ -324,8 +324,8 @@ Synthesizing Unit <lm32_cpu>.
         watchpoints = 4'b0000
         breakpoints = 4'b0000
         interrupts = 32
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 436: Output port <pc_x> of the instance <instruction_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 495: Output port <x_result_sel_logic> of the instance <decoder> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 436: Output port <pc_x> of the instance <instruction_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 495: Output port <x_result_sel_logic> of the instance <decoder> is unconnected or connected to loadless signal.
     Found 32-bit register for signal <operand_0_x>.
     Found 32-bit register for signal <operand_1_x>.
     Found 32-bit register for signal <store_operand_x>.
@@ -403,7 +403,7 @@ INFO:Xst:3210 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 495:
 Unit <lm32_cpu> synthesized.
 
 Synthesizing Unit <lm32_instruction_unit>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_instruction_unit.v".
         associativity = 1
         sets = 512
         bytes_per_line = 16
@@ -432,14 +432,13 @@ WARNING:Xst:647 - Input <i_rty_i> is never used. This port will be preserved and
 Unit <lm32_instruction_unit> synthesized.
 
 Synthesizing Unit <lm32_decoder>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v".
-WARNING:Xst:647 - Input <instruction<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_decoder.v".
     Summary:
 	inferred  19 Multiplexer(s).
 Unit <lm32_decoder> synthesized.
 
 Synthesizing Unit <lm32_load_store_unit>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_load_store_unit.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_load_store_unit.v".
         associativity = 1
         sets = 512
         bytes_per_line = 16
@@ -473,13 +472,13 @@ WARNING:Xst:647 - Input <d_rty_i> is never used. This port will be preserved and
 Unit <lm32_load_store_unit> synthesized.
 
 Synthesizing Unit <lm32_adder>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_adder.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_adder.v".
     Summary:
 	no macro.
 Unit <lm32_adder> synthesized.
 
 Synthesizing Unit <lm32_addsub>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_addsub.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_addsub.v".
     Found 33-bit subtractor for signal <GND_15_o_GND_15_o_sub_3_OUT> created at line 63.
     Found 33-bit subtractor for signal <tmp_subResult> created at line 63.
     Found 33-bit adder for signal <n0025> created at line 62.
@@ -490,7 +489,7 @@ Synthesizing Unit <lm32_addsub>.
 Unit <lm32_addsub> synthesized.
 
 Synthesizing Unit <lm32_logic_op>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_logic_op.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_logic_op.v".
     Found 1-bit 4-to-1 multiplexer for signal <logic_result_x<0>> created at line 67.
     Found 1-bit 4-to-1 multiplexer for signal <logic_result_x<1>> created at line 67.
     Found 1-bit 4-to-1 multiplexer for signal <logic_result_x<2>> created at line 67.
@@ -528,7 +527,7 @@ Synthesizing Unit <lm32_logic_op>.
 Unit <lm32_logic_op> synthesized.
 
 Synthesizing Unit <lm32_multiplier>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_multiplier.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_multiplier.v".
     Found 32-bit register for signal <multiplier>.
     Found 32-bit register for signal <product>.
     Found 32-bit register for signal <result>.
@@ -540,7 +539,7 @@ Synthesizing Unit <lm32_multiplier>.
 Unit <lm32_multiplier> synthesized.
 
 Synthesizing Unit <lm32_mc_arithmetic>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_mc_arithmetic.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_mc_arithmetic.v".
     Found 32-bit register for signal <p>.
     Found 32-bit register for signal <a>.
     Found 32-bit register for signal <b>.
@@ -571,9 +570,8 @@ Synthesizing Unit <lm32_mc_arithmetic>.
 Unit <lm32_mc_arithmetic> synthesized.
 
 Synthesizing Unit <lm32_interrupt>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_interrupt.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_interrupt.v".
         interrupts = 32
-WARNING:Xst:647 - Input <csr_write_data<2:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit register for signal <im>.
     Found 32-bit register for signal <ip>.
     Found 1-bit register for signal <eie>.
@@ -585,12 +583,12 @@ WARNING:Xst:647 - Input <csr_write_data<2:31>> is never used. This port will be 
 Unit <lm32_interrupt> synthesized.
 
 Synthesizing Unit <wb_bram>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v".
         mem_file_name = "../firmware/hw-test/image.ram"
         adr_width = 12
-WARNING:Xst:647 - Input <wb_adr_i<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1024x32-bit single-port RAM <Mram_ram> for signal <ram>.
     Found 1-bit register for signal <ack>.
@@ -601,12 +599,12 @@ WARNING:Xst:647 - Input <rst_i> is never used. This port will be preserved and l
 Unit <wb_bram> synthesized.
 
 Synthesizing Unit <wb_uart>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v".
-        clk_freq = 100000000
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v".
+        clk_freq = 50000000
         baud = 1152000
-WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <wb_dat_o<7>>.
     Found 1-bit register for signal <wb_dat_o<6>>.
@@ -619,38 +617,38 @@ WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preser
     Found 1-bit register for signal <tx_wr>.
     Found 1-bit register for signal <rx_ack>.
     Found 1-bit register for signal <ack>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><15:15>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><20:20>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><30:30>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><29:29>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><28:28>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><27:27>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><26:26>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><25:25>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><23:23>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><20:20>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><19:19>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><18:18>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><17:17>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><15:15>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><11:11>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><10:10>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><9:9>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><30:30>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><11:11>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><9:9>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><8:8>> (without init value) have a constant value of 0 in block <wb_uart>.
     Summary:
 	inferred  11 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <wb_uart> synthesized.
 
 Synthesizing Unit <uart>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lac/uart.v".
-        freq_hz = 100000000
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v".
+        freq_hz = 50000000
         baud = 1152000
     Found 1-bit register for signal <uart_rxd1>.
     Found 1-bit register for signal <uart_rxd2>.
@@ -679,10 +677,9 @@ Synthesizing Unit <uart>.
 Unit <uart> synthesized.
 
 Synthesizing Unit <spi_top>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_spi/spi_top.v".
         Tp = 1
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i<2:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 16-bit register for signal <divider>.
     Found 4-bit register for signal <ss>.
     Found 32-bit register for signal <wb_dat_o>.
@@ -709,7 +706,7 @@ WARNING:Xst:647 - Input <wb_sel_i<2:3>> is never used. This port will be preserv
 Unit <spi_top> synthesized.
 
 Synthesizing Unit <spi_clgen>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_clgen.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_spi/spi_clgen.v".
         Tp = 1
     Found 16-bit register for signal <cnt>.
     Found 1-bit register for signal <clk_out>.
@@ -723,7 +720,7 @@ Synthesizing Unit <spi_clgen>.
 Unit <spi_clgen> synthesized.
 
 Synthesizing Unit <spi_shift>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_spi/spi_shift.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_spi/spi_shift.v".
         Tp = 1
 WARNING:Xst:647 - Input <latch<3:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <byte_sel<3:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -754,12 +751,10 @@ WARNING:Xst:647 - Input <p_in<31:8>> is never used. This port will be preserved 
 Unit <spi_shift> synthesized.
 
 Synthesizing Unit <wb_timer>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v".
-        clk_freq = 100000000
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v".
+        clk_freq = 50000000
 WARNING:Xst:647 - Input <wb_adr_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_dat_i<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_dat_i<4:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <en0>.
     Found 1-bit register for signal <en1>.
     Found 1-bit register for signal <ar0>.
@@ -787,37 +782,45 @@ WARNING:Xst:647 - Input <wb_dat_i<4:31>> is never used. This port will be preser
 Unit <wb_timer> synthesized.
 
 Synthesizing Unit <wb_gpio>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_gpio/wb_gpio.v".
-        gpio_io_width = 8
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_gpio/wb_gpio.v".
+        gpio_io_width = 16
         gpio_dir_reset_val = 0
         gpio_o_reset_val = 0
         wb_dat_width = 32
         wb_adr_width = 32
-WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 8-bit register for signal <gpio_dir>.
+    Found 16-bit register for signal <gpio_dir>.
     Found 1-bit register for signal <ack>.
     Found 32-bit register for signal <wb_dat_o>.
-    Found 8-bit register for signal <gpio_o>.
-    Found 1-bit tristate buffer for signal <gpio_io<0>> created at line 86
-    Found 1-bit tristate buffer for signal <gpio_io<1>> created at line 86
-    Found 1-bit tristate buffer for signal <gpio_io<2>> created at line 86
-    Found 1-bit tristate buffer for signal <gpio_io<3>> created at line 86
-    Found 1-bit tristate buffer for signal <gpio_io<4>> created at line 86
-    Found 1-bit tristate buffer for signal <gpio_io<5>> created at line 86
-    Found 1-bit tristate buffer for signal <gpio_io<6>> created at line 86
-    Found 1-bit tristate buffer for signal <gpio_io<7>> created at line 86
+    Found 16-bit register for signal <gpio_o>.
+    Found 1-bit tristate buffer for signal <gpio_io<0>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<1>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<2>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<3>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<4>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<5>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<6>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<7>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<8>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<9>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<10>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<11>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<12>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<13>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<14>> created at line 89
+    Found 1-bit tristate buffer for signal <gpio_io<15>> created at line 89
     Summary:
-	inferred  49 D-type flip-flop(s).
-	inferred   8 Tristate(s).
+	inferred  65 D-type flip-flop(s).
+	inferred  16 Tristate(s).
 Unit <wb_gpio> synthesized.
 
 Synthesizing Unit <wb_trigger>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v".
-WARNING:Xst:647 - Input <wb_adr_i<31:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v".
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_sel_i<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<31:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_dat_i<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <wb_dat_o<7:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <ack>.
@@ -851,20 +854,20 @@ WARNING:Xst:653 - Signal <wb_dat_o<7:0>> is used but never assigned. This source
 Unit <wb_trigger> synthesized.
 
 Synthesizing Unit <trigger_top>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_top.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_top.v".
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <trigger_top> synthesized.
 
 Synthesizing Unit <div_frec_adj>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v".
     Found 26-bit register for signal <counter>.
     Found 1-bit register for signal <clk_out>.
-    Found 26-bit adder for signal <counter[25]_GND_40_o_add_3_OUT> created at line 80.
+    Found 26-bit adder for signal <counter[25]_GND_48_o_add_3_OUT> created at line 80.
 WARNING:Xst:737 - Found 1-bit latch for signal <rst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit comparator equal for signal <GND_40_o_p[31]_equal_2_o> created at line 69
-    Found 32-bit comparator greater for signal <p[31]_GND_40_o_LessThan_3_o> created at line 74
+    Found 32-bit comparator equal for signal <GND_48_o_p[31]_equal_2_o> created at line 69
+    Found 32-bit comparator greater for signal <p[31]_GND_48_o_LessThan_3_o> created at line 74
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  27 D-type flip-flop(s).
@@ -874,7 +877,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <rst>. Latches may be generated f
 Unit <div_frec_adj> synthesized.
 
 Synthesizing Unit <trigger_pulse>.
-    Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_pulse.v".
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_pulse.v".
     Found 3-bit register for signal <delay>.
     Summary:
 	inferred   3 D-type flip-flop(s).
@@ -902,7 +905,7 @@ Macro Statistics
  6-bit subtractor                                      : 1
 # Registers                                            : 183
  1-bit register                                        : 114
- 16-bit register                                       : 3
+ 16-bit register                                       : 5
  2-bit register                                        : 3
  24-bit register                                       : 1
  26-bit register                                       : 2
@@ -912,7 +915,7 @@ Macro Statistics
  4-bit register                                        : 8
  5-bit register                                        : 4
  6-bit register                                        : 1
- 8-bit register                                        : 5
+ 8-bit register                                        : 3
  9-bit register                                        : 1
 # Latches                                              : 2
  1-bit latch                                           : 2
@@ -938,8 +941,8 @@ Macro Statistics
  5-bit 2-to-1 multiplexer                              : 11
  6-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
-# Tristates                                            : 8
- 1-bit tristate buffer                                 : 8
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
 # FSMs                                                 : 2
 
 =========================================================================
@@ -950,8 +953,12 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 =========================================================================
 
 INFO:Xst:2261 - The FF/Latch <i_cyc_o> in Unit <instruction_unit> is equivalent to the following FF/Latch, which will be removed : <i_stb_o> 
+INFO:Xst:2261 - The FF/Latch <gpio_dir_8> in Unit <gpio0> is equivalent to the following 7 FFs/Latches, which will be removed : <gpio_dir_9> <gpio_dir_10> <gpio_dir_11> <gpio_dir_12> <gpio_dir_13> <gpio_dir_14> <gpio_dir_15> 
 INFO:Xst:2261 - The FF/Latch <wb_dat_o_8> in Unit <gpio0> is equivalent to the following 23 FFs/Latches, which will be removed : <wb_dat_o_9> <wb_dat_o_10> <wb_dat_o_11> <wb_dat_o_12> <wb_dat_o_13> <wb_dat_o_14> <wb_dat_o_15> <wb_dat_o_16> <wb_dat_o_17> <wb_dat_o_18> <wb_dat_o_19> <wb_dat_o_20> <wb_dat_o_21> <wb_dat_o_22> <wb_dat_o_23> <wb_dat_o_24> <wb_dat_o_25> <wb_dat_o_26> <wb_dat_o_27> <wb_dat_o_28> <wb_dat_o_29> <wb_dat_o_30> <wb_dat_o_31> 
+INFO:Xst:2261 - The FF/Latch <gpio_o_8> in Unit <gpio0> is equivalent to the following 7 FFs/Latches, which will be removed : <gpio_o_9> <gpio_o_10> <gpio_o_11> <gpio_o_12> <gpio_o_13> <gpio_o_14> <gpio_o_15> 
 WARNING:Xst:1710 - FF/Latch <bus_error_x> (without init value) has a constant value of 0 in block <lm0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gpio_dir_8> (without init value) has a constant value of 0 in block <gpio0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <gpio_o_8> (without init value) has a constant value of 0 in block <gpio0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <wb_dat_o_8> (without init value) has a constant value of 0 in block <gpio0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <i_adr_o_12> of sequential type is unconnected in block <instruction_unit>.
 WARNING:Xst:2677 - Node <i_adr_o_13> of sequential type is unconnected in block <instruction_unit>.
@@ -992,6 +999,8 @@ WARNING:Xst:2677 - Node <byte_enable_m_3> of sequential type is unconnected in b
 WARNING:Xst:2677 - Node <d_sel_o_2> of sequential type is unconnected in block <load_store_unit>.
 WARNING:Xst:2677 - Node <d_sel_o_3> of sequential type is unconnected in block <load_store_unit>.
 WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31:8>> (without init value) have a constant value of 0 in block <wb_gpio>.
+WARNING:Xst:2404 -  FFs/Latches <gpio_dir<15:8>> (without init value) have a constant value of 0 in block <wb_gpio>.
+WARNING:Xst:2404 -  FFs/Latches <gpio_o<15:8>> (without init value) have a constant value of 0 in block <wb_gpio>.
 
 Synthesizing (advanced) Unit <lm32_cpu>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -1362,7 +1371,9 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable1
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_6> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_5> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_3> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_2> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_4> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_1> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_10> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_10> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_11> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_11> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_12> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_12> 
@@ -1434,7 +1445,7 @@ INFO:Xst:2261 - The FF/Latch <lm0/multiplier/multiplier_29> in Unit <system> is 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 30.
+Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 9.
 Forward register balancing over carry chain lm0/Mcompar_cmp_zero_cy<0>
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_0> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_8_BRB2> <lm0/load_store_unit/store_data_m_16_BRB0> <lm0/load_store_unit/store_data_m_24_BRB4> 
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_1> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_9_BRB2> <lm0/load_store_unit/store_data_m_17_BRB0> <lm0/load_store_unit/store_data_m_25_BRB4> 
@@ -1500,8 +1511,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1325
- Flip-Flops                                            : 1325
+# Registers                                            : 1323
+ Flip-Flops                                            : 1323
 
 =========================================================================
 
@@ -1524,27 +1535,27 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2466
+# BELS                             : 2458
 #      GND                         : 1
-#      INV                         : 36
+#      INV                         : 34
 #      LUT1                        : 143
-#      LUT2                        : 181
+#      LUT2                        : 184
 #      LUT3                        : 264
-#      LUT4                        : 291
-#      LUT5                        : 275
-#      LUT6                        : 618
-#      MUXCY                       : 358
+#      LUT4                        : 289
+#      LUT5                        : 274
+#      LUT6                        : 616
+#      MUXCY                       : 356
 #      MUXF7                       : 5
 #      VCC                         : 1
-#      XORCY                       : 293
-# FlipFlops/Latches                : 1327
+#      XORCY                       : 291
+# FlipFlops/Latches                : 1325
 #      FD                          : 35
 #      FDC                         : 211
 #      FDCE                        : 753
 #      FDE                         : 71
 #      FDP                         : 16
 #      FDPE                        : 34
-#      FDR                         : 17
+#      FDR                         : 15
 #      FDRE                        : 120
 #      FDS                         : 3
 #      FDSE                        : 65
@@ -1554,43 +1565,44 @@ Primitive and Black Box Usage:
 #      RAMB16BWER                  : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 20
+# IO Buffers                       : 28
 #      IBUF                        : 3
 #      IOBUF                       : 8
 #      OBUF                        : 9
+#      OBUFT                       : 8
 # DSPs                             : 3
 #      DSP48A1                     : 3
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6slx16csg324-3 
+Selected Device : 6slx45csg324-3 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1315  out of  18224     7%  
- Number of Slice LUTs:                 1936  out of   9112    21%  
-    Number used as Logic:              1808  out of   9112    19%  
-    Number used as Memory:              128  out of   2176     5%  
+ Number of Slice Registers:            1313  out of  54576     2%  
+ Number of Slice LUTs:                 1932  out of  27288     7%  
+    Number used as Logic:              1804  out of  27288     6%  
+    Number used as Memory:              128  out of   6408     1%  
        Number used as RAM:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2171
-   Number with an unused Flip Flop:     856  out of   2171    39%  
-   Number with an unused LUT:           235  out of   2171    10%  
-   Number of fully used LUT-FF pairs:  1080  out of   2171    49%  
-   Number of unique control sets:        46
+ Number of LUT Flip Flop pairs used:   2167
+   Number with an unused Flip Flop:     854  out of   2167    39%  
+   Number with an unused LUT:           235  out of   2167    10%  
+   Number of fully used LUT-FF pairs:  1078  out of   2167    49%  
+   Number of unique control sets:        45
 
 IO Utilization: 
- Number of IOs:                          21
- Number of bonded IOBs:                  21  out of    232     9%  
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    218    13%  
     IOB Flip Flops/Latches:              12
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                2  out of     32     6%  
+ Number of Block RAM/FIFO:                2  out of    116     1%  
     Number using Block RAM only:          2
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
- Number of DSP48A1s:                      3  out of     32     9%  
+ Number of DSP48A1s:                      3  out of     58     5%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1613,7 +1625,7 @@ Clock Information:
 -----------------------------------+---------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                 | Load  |
 -----------------------------------+---------------------------------------+-------+
-clk                                | BUFGP                                 | 1388  |
+clk                                | BUFGP                                 | 1386  |
 trigger_0/trigger0/div2/clk_out    | NONE(trigger_0/trigger0/pulse/delay_0)| 3     |
 trigger_0/trigger0/div1/rst        | NONE(trigger_0/trigger0/div1/rst)     | 1     |
 trigger_0/trigger0/div2/rst        | NONE(trigger_0/trigger0/div2/rst)     | 1     |
@@ -1640,7 +1652,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 12.519ns (frequency: 79.882MHz)
-  Total number of paths / destination ports: 1335179 / 3244
+  Total number of paths / destination ports: 1335052 / 3240
 -------------------------------------------------------------------------
 Delay:               12.519ns (Levels of Logic = 3)
   Source:            lm0/multiplier/muliplicand_7 (FF)
@@ -1728,7 +1740,7 @@ Delay:               2.568ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1305 / 1289
+  Total number of paths / destination ports: 1303 / 1287
 -------------------------------------------------------------------------
 Offset:              5.752ns (Levels of Logic = 2)
   Source:            rst (PAD)
@@ -1739,7 +1751,7 @@ Offset:              5.752ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1143   1.222   2.606  rst_IBUF (rst_IBUF)
+     IBUF:I->O          1144   1.222   2.606  rst_IBUF (rst_IBUF)
      LUT6:I0->O           32   0.203   1.291  timer0/_n0187<7>3 (timer0/_n0187)
      FDRE:R                    0.430          timer0/wb_dat_o_0
     ----------------------------------------
@@ -1829,15 +1841,15 @@ trigger_0/trigger0/div2/rst|    2.568|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.71 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.23 secs
  
 --> 
 
 
-Total memory usage is 410140 kilobytes
+Total memory usage is 418252 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  326 (   0 filtered)
-Number of infos    :  107 (   0 filtered)
+Number of warnings :  328 (   0 filtered)
+Number of infos    :  108 (   0 filtered)
 

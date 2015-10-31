@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.87xd on Tue Oct 27 12:23:15 2015
+// Written by: Map P.20131013 on Fri Oct 30 15:48:53 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,7 +11,7 @@ COMP "spi_cs<0>" LOCATE = SITE "M10" LEVEL 1;
 COMP "spi_cs<1>" LOCATE = SITE "N9" LEVEL 1;
 COMP "spi_cs<2>" LOCATE = SITE "U11" LEVEL 1;
 COMP "spi_cs<3>" LOCATE = SITE "V11" LEVEL 1;
-COMP "trigger_o" LOCATE = SITE "E12" LEVEL 1;
+COMP "trigger_o" LOCATE = SITE "K6" LEVEL 1;
 COMP "gpio_io<0>" LOCATE = SITE "T10" LEVEL 1;
 COMP "gpio_io<1>" LOCATE = SITE "T9" LEVEL 1;
 COMP "gpio_io<2>" LOCATE = SITE "V9" LEVEL 1;
@@ -518,8 +518,7 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "uart0/uart0/rx_bitcount_0" BEL "uart0/uart0/rx_bitcount_1" BEL
         "uart0/uart0/tx_bitcount_3" BEL "uart0/uart0/tx_bitcount_2" BEL
         "uart0/uart0/tx_bitcount_1" BEL "uart0/uart0/tx_bitcount_0" BEL
-        "uart0/uart0/enable16_counter_2" BEL "uart0/uart0/enable16_counter_1"
-        BEL "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
+        "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
         "uart0/uart0/rx_data_6" BEL "uart0/uart0/rx_data_5" BEL
         "uart0/uart0/rx_data_4" BEL "uart0/uart0/rx_data_3" BEL
         "uart0/uart0/rx_data_2" BEL "uart0/uart0/rx_data_1" BEL
