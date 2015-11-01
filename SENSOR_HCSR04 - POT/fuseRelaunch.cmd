@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/DIGITAL-ISE/SENSOR_HCSR04 - copia/DIGPOT_isim_beh.exe" -prj "D:/DIGITAL-ISE/SENSOR_HCSR04 - copia/DIGPOT_beh.prj" "work.DIGPOT" "work.glbl" 

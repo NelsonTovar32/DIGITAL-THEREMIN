@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.ncd
-OUTFILE=/home/asus/Descargas/SENSOR_HCSR04 - POT/LOGIC.bit
-FAMILY=Spartan6
-PART=xc6slx45-3csg324
-WORKINGDIR=/home/asus/Descargas/SENSOR_HCSR04 - POT
-LICENSE=WebPack
-USER_INFO=211081784_0_0_277
