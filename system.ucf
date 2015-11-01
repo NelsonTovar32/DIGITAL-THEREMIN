@@ -3,12 +3,14 @@
 
 NET "clk"   LOC = "V10"	| IOSTANDARD = "LVCMOS33";
 NET "clk" TNM_NET = sys_clk;
-TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 50 MHz HIGH 50%; 
+TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 50 MHz HIGH 50%;
+
+#TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 100 MHz HIGH 50%;  
 
 NET "rst"	LOC = "C4"	| IOSTANDARD = "LVCMOS33";
 NET "led"	LOC = "U16"	| IOSTANDARD = "LVCMOS33";
 		
-# ==== UART ==== Puerto PMOD JA
+# ==== UART ==== Puerto MicroUSB
 NET "uart_txd"	LOC = "N17"	| IOSTANDARD = "LVCMOS33"; 
 #JA2								
 NET "uart_rxd"	LOC = "N18"	| IOSTANDARD = "LVCMOS33"; 
@@ -34,7 +36,7 @@ NET "gpio_io<6>"	LOC = "V8"	| IOSTANDARD = "LVCMOS33";
 NET "gpio_io<7>"	LOC = "T5"	| IOSTANDARD = "LVCMOS33";
 
 #OUTS LEDS
-NET "gpio_io<8>"	LOC = "T17"	| IOSTANDARD = "LVCMOS33"; 
+NET "gpio_io<8>"	LOC = "T17"	| IOSTANDARD = "LVCMOS33"; #PIN CA 7SEG
 NET "gpio_io<9>"	LOC = "V16"	| IOSTANDARD = "LVCMOS33";		
 NET "gpio_io<10>"	LOC = "U15"	| IOSTANDARD = "LVCMOS33";		  
 NET "gpio_io<11>"	LOC = "V15"	| IOSTANDARD = "LVCMOS33";		
@@ -43,43 +45,39 @@ NET "gpio_io<13>"	LOC = "N11"	| IOSTANDARD = "LVCMOS33";
 NET "gpio_io<14>"	LOC = "R11"	| IOSTANDARD = "LVCMOS33";		
 NET "gpio_io<15>"	LOC = "T11"	| IOSTANDARD = "LVCMOS33";
 		
-
-# ==== SPI ==== Puertos PMOD JB
-
-NET "spi_miso"	   LOC = "K2"	| IOSTANDARD = "LVCMOS33"; 
-NET "spi_clk"	   LOC = "K1"	| IOSTANDARD = "LVCMOS33";
-
-NET "spi_cs<0>"    LOC = "M10"	| IOSTANDARD = "LVCMOS33"; 
-NET "spi_cs<1>"    LOC = "N9"	| IOSTANDARD = "LVCMOS33"; 
-NET "spi_cs<2>"    LOC = "U11"	| IOSTANDARD = "LVCMOS33"; 	
-NET "spi_cs<3>"    LOC = "V11"	| IOSTANDARD = "LVCMOS33"; 
-
-# ==== TRIGGER ==== Puertos PMOD JD
-NET "trigger_o"	   LOC = "K6"  | IOSTANDARD = "LVCMOS33"; 
-
-# No utilizado
-NET "spi_mosi"	   LOC = "L4"	| IOSTANDARD = "LVCMOS33"; 
-
 # === GPIO === puertos PMOD JA
 
-#NET "gpio_ik<0>"          LOC = "T12" | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ik<1>"          LOC = "V12" | IOSTANDARD = "LVCMOS33";     
-#NET "gpio_ik<2>"          LOC = "N10" | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ik<3>"          LOC = "P11" | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ik<4>"          LOC = "M10" | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ik<5>"          LOC = "N9"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ik<6>"          LOC = "U11" | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ik<7>"          LOC = "V11" | IOSTANDARD = "LVCMOS33";   
+#NET "gpio_ik<0>"          LOC = "T12" | IOSTANDARD = "LVCMOS33";   #PIN1
+#NET "gpio_ik<1>"          LOC = "V12" | IOSTANDARD = "LVCMOS33";   #PIN2  
+#NET "gpio_ik<2>"          LOC = "N10" | IOSTANDARD = "LVCMOS33";   #PIN3
+#NET "gpio_ik<3>"          LOC = "P11" | IOSTANDARD = "LVCMOS33";   #PIN4
+#NET "gpio_ik<4>"          LOC = "M10" | IOSTANDARD = "LVCMOS33";   #PIN7
+#NET "gpio_ik<5>"          LOC = "N9"  | IOSTANDARD = "LVCMOS33";   #PIN8
+#NET "gpio_ik<6>"          LOC = "U11" | IOSTANDARD = "LVCMOS33";   #PIN9
+#NET "gpio_ik<7>"          LOC = "V11" | IOSTANDARD = "LVCMOS33";   #PIN10
 
 # === GPIO === puertos PMOD JC
 
-#NET "gpio_ok<0>"          LOC = "H3"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ok<1>"          LOC = "L7"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ok<2>"         LOC = "K6"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ok<3>"         LOC = "G3"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ok<4>"         LOC = "G1"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ok<5>"         LOC = "J7"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ok<6>"         LOC = "J6"  | IOSTANDARD = "LVCMOS33";   
-#NET "gpio_ok<7>"         LOC = "F2"  | IOSTANDARD = "LVCMOS33";   
+#NET "gpio_ok<0>"          LOC = "H3"  | IOSTANDARD = "LVCMOS33";   #PIN1
+#NET "gpio_ok<1>"          LOC = "L7"  | IOSTANDARD = "LVCMOS33";   #PIN2
+#NET "gpio_ok<2>"         LOC = "K6"  | IOSTANDARD = "LVCMOS33";    #PIN3
+#NET "gpio_ok<3>"         LOC = "G3"  | IOSTANDARD = "LVCMOS33";    #PIN4
+#NET "gpio_ok<4>"         LOC = "G1"  | IOSTANDARD = "LVCMOS33";    #PIN7
+#NET "gpio_ok<5>"         LOC = "J7"  | IOSTANDARD = "LVCMOS33";    #PIN8
+#NET "gpio_ok<6>"         LOC = "J6"  | IOSTANDARD = "LVCMOS33";    #PIN9
+#NET "gpio_ok<7>"         LOC = "F2"  | IOSTANDARD = "LVCMOS33";    #PIN10
+#ok
+
+
+# ==== DIGPOT ==== Puertos PMOD JB
+
+NET "digpot_INC"	   LOC = "K2"	| IOSTANDARD = "LVCMOS33"; #PIN1
+NET "digpot_UDn"	   LOC = "L3"	| IOSTANDARD = "LVCMOS33"; #PIN4
+NET "digpot_CSn"    	   LOC = "K3"	| IOSTANDARD = "LVCMOS33"; #PIN9
+
+# ==== TRIGGER ==== Puertos PMOD JB
+
+NET "trigger_o"	   LOC = "J3"  | IOSTANDARD = "LVCMOS33"; #PIN7 
+
 
 

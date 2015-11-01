@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 // LatticeMico32 System On A Chip
 //
-// Top Level Design for the Nexys4 
+// Top Level Design for the Nexys3 
 //---------------------------------------------------------------------------
 
 module system
@@ -18,15 +18,15 @@ module system
 	// GPIO
 	//input [7:0]	 gpio_ik,
 	//output [7:0]	 gpio_ok,
-inout [15:0] gpio_io,
+	inout [15:0] gpio_io,
 	// UART
 	input             uart_rxd, 
 	output            uart_txd,
-	// SPI
-	input             spi_miso, 
-	output            spi_mosi,
-	output            spi_clk,
-	output [3:0]      spi_cs,
+	// DIGPOT
+	output 		  digpot_INC,
+	output		  digpot_UDn,
+	output            digpot_CSn,
+	// TRIGGER
 	output		  trigger_o
 	
 	
@@ -57,7 +57,8 @@ wire [31:0]  lm32i_adr,
              ddr0_adr,
              bram0_adr,
              sram0_adr,
-	     trigger0_adr;
+	     trigger0_adr,
+	     digpot0_adr;
 
 
 wire [31:0]  lm32i_dat_r,
@@ -81,7 +82,9 @@ wire [31:0]  lm32i_dat_r,
              ddr0_dat_w,
              ddr0_dat_r,
 	     trigger0_dat_w,
-	     trigger0_dat_r;
+	     trigger0_dat_r,
+	     digpot0_dat_w,
+ 	     digpot0_dat_r;
 
 wire [3:0]   lm32i_sel,
              lm32d_sel,
@@ -93,7 +96,8 @@ wire [3:0]   lm32i_sel,
              bram0_sel,
              sram0_sel,
              ddr0_sel,
-	     trigger0_sel;
+	     trigger0_sel,
+	     digpot0_sel;
 
 
 wire         lm32i_we,
@@ -106,7 +110,8 @@ wire         lm32i_we,
              bram0_we,
              sram0_we,
              ddr0_we,
-	     trigger0_we;
+	     trigger0_we,
+	     digpot0_we;
 
 
 wire         lm32i_cyc,
@@ -119,7 +124,8 @@ wire         lm32i_cyc,
              bram0_cyc,
              sram0_cyc,
              ddr0_cyc,
-	     trigger0_cyc;
+	     trigger0_cyc,
+	     digpot0_cyc;
 
 
 wire         lm32i_stb,
@@ -132,7 +138,8 @@ wire         lm32i_stb,
              bram0_stb,
              sram0_stb,
              ddr0_stb,
-	     trigger0_stb;
+	     trigger0_stb,
+	     digpot0_stb;
 
 wire         lm32i_ack,
              lm32d_ack,
@@ -144,7 +151,8 @@ wire         lm32i_ack,
              bram0_ack,
              sram0_ack,
              ddr0_ack,
-	     trigger0_ack;
+	     trigger0_ack,
+	     digpot0_ack;
 
 
 wire         lm32i_rty,
@@ -181,7 +189,7 @@ conbus #(
 	.s1_addr(3'b010),	// uart0    0x20000000 
 	.s2_addr(3'b011),	// timer    0x30000000 
 	.s3_addr(3'b100),   	// gpio     0x40000000 
-	.s4_addr(3'b101),	// spi      0x50000000 
+	.s4_addr(3'b101),	// digpot   0x50000000 
 	.s5_addr(3'b110)	// trigger  0x60000000 
 ) conbus0(
 	.sys_clk( clk ),
@@ -215,7 +223,7 @@ conbus #(
 	.s0_cyc_o(  bram0_cyc   ),
 	.s0_stb_o(  bram0_stb   ),
 	.s0_ack_i(  bram0_ack   ),
-	// Slave1
+	// Slave1  uart
 	.s1_dat_i(  uart0_dat_r ),
 	.s1_dat_o(  uart0_dat_w ),
 	.s1_adr_o(  uart0_adr   ),
@@ -224,7 +232,7 @@ conbus #(
 	.s1_cyc_o(  uart0_cyc   ),
 	.s1_stb_o(  uart0_stb   ),
 	.s1_ack_i(  uart0_ack   ),
-	// Slave2
+	// Slave2  timer
 	.s2_dat_i(  timer0_dat_r ),
 	.s2_dat_o(  timer0_dat_w ),
 	.s2_adr_o(  timer0_adr   ),
@@ -233,7 +241,7 @@ conbus #(
 	.s2_cyc_o(  timer0_cyc   ),
 	.s2_stb_o(  timer0_stb   ),
 	.s2_ack_i(  timer0_ack   ),
-	// Slave3
+	// Slave3  gpio
 	.s3_dat_i(  gpio0_dat_r ),
 	.s3_dat_o(  gpio0_dat_w ),
 	.s3_adr_o(  gpio0_adr   ),
@@ -242,16 +250,16 @@ conbus #(
 	.s3_cyc_o(  gpio0_cyc   ),
 	.s3_stb_o(  gpio0_stb   ),
 	.s3_ack_i(  gpio0_ack   ),
-	// Slave4
-	.s4_dat_i(  spi0_dat_r ),
-	.s4_dat_o(  spi0_dat_w ),
-	.s4_adr_o(  spi0_adr   ),
-	.s4_sel_o(  spi0_sel   ),
-	.s4_we_o(   spi0_we    ),
-	.s4_cyc_o(  spi0_cyc   ),
-	.s4_stb_o(  spi0_stb   ),
-	.s4_ack_i(  spi0_ack   ),
-	// Slave5
+	// Slave4  digpot
+	.s4_dat_i(  digpot0_dat_r ),
+	.s4_dat_o(  digpot0_dat_w ),
+	.s4_adr_o(  digpot0_adr   ),
+	.s4_sel_o(  digpot0_sel   ),
+	.s4_we_o(   digpot0_we    ),
+	.s4_cyc_o(  digpot0_cyc   ),
+	.s4_stb_o(  digpot0_stb   ),
+	.s4_ack_i(  digpot0_ack   ),
+	// Slave5   trigger
 	.s5_dat_i(  trigger0_dat_r ),
 	.s5_dat_o(  trigger0_dat_w ),
 	.s5_adr_o(  trigger0_adr   ),
@@ -302,7 +310,7 @@ lm32_cpu lm0 (
 );
 	
 //---------------------------------------------------------------------------
-// Block RAM
+// Block RAM  SLAVE0
 //---------------------------------------------------------------------------
 wb_bram #(
 	.adr_width( 12 ),
@@ -324,7 +332,7 @@ wb_bram #(
 
 
 //---------------------------------------------------------------------------
-// uart0
+// Block UART  SLAVE1
 //---------------------------------------------------------------------------
 wire uart0_rxd;
 wire uart0_txd;
@@ -350,33 +358,32 @@ wb_uart #(
 );
 
 //---------------------------------------------------------------------------
-// spi0
+// Block DIGPOT SLAVE4
 //---------------------------------------------------------------------------
-wire spi0_mosi;
-wire spi0_miso;
-wire spi0_clk;
-wire [3:0] spi0_cs;
+wire digpot0_INC;
+wire digpot0_UDn;
+wire digpot0_CSn;
 
-spi_top  spi0 (
-	.wb_clk_i( clk ),
-	.wb_rst_i( rst ),
+wb_digpot digpot0 (
+	.clk( clk ),
+	.reset( rst ),
 	//
-	.wb_adr_i( spi0_adr ),
-	.wb_dat_i( spi0_dat_w ),
-	.wb_dat_o( spi0_dat_r ),
-	.wb_stb_i( spi0_stb ),
-	.wb_cyc_i( spi0_cyc ),
-	.wb_we_i(  spi0_we ),
-	.wb_sel_i( spi0_sel ),
-	.wb_ack_o( spi0_ack ), 
-	.sclk_pad_o(spi0_clk),
-	.mosi_pad_o( spi0_mosi ),
-	.miso_pad_i( spi0_miso ),
-	.ss_pad_o( spi0_cs )
+	.wb_adr_i( digpot0_adr ),
+	.wb_dat_i( digpot0_dat_w ),
+	.wb_dat_o( digpot0_dat_r ),
+	.wb_stb_i( digpot0_stb ),
+	.wb_cyc_i( digpot0_cyc ),
+	.wb_we_i(  digpot0_we ),
+	.wb_sel_i( digpot0_sel ),
+	.wb_ack_o( digpot0_ack ), 
+
+	.INC_o( digpot0_INC ),
+	.UDn_o( digpot0_UDn ),
+	.CSn_o( digpot0_CSn )
 );
 
 //---------------------------------------------------------------------------
-// timer0
+// Block TIMER0 SLAVE2
 //---------------------------------------------------------------------------
 wb_timer #(
 	.clk_freq(   clk_freq  )
@@ -396,7 +403,7 @@ wb_timer #(
 );
 
 //---------------------------------------------------------------------------
-// General Purpose IO1
+// Block General Purpose IO1 SLAVE3
 //---------------------------------------------------------------------------
 
 wire [15:0] gpio0_io;
@@ -417,7 +424,7 @@ wb_gpio gpio0 (
 	.gpio_io(gpio0_io)
 );
 //---------------------------------------------------------------------------
-// trigger0
+// Block trigger0  SLAVE6
 //---------------------------------------------------------------------------
 wire trig_o;
 
@@ -449,14 +456,13 @@ assign uart_txd  = uart0_txd;
 assign uart0_rxd = uart_rxd;
 assign led       = ~uart_txd;
 
-assign spi_mosi  = spi0_mosi;
-assign spi0_miso = spi_miso;
-assign spi_clk = spi0_clk;
-assign spi_cs = spi0_cs;
+assign digpot_INC = digpot0_INC;
+assign digpot_UDn = digpot0_UDn;
+assign digpot_CSn = digpot0_CSn;
 
 assign trigger_o = trig_o;
 
 assign gpio_io= gpio0_io;
-//assign gpio0_io[15:8] = gpio_ok;
+//assign gpio0_io[15:8] = gpio_ok ;
 
 endmodule 
