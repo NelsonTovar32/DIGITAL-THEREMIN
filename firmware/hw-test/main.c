@@ -190,24 +190,15 @@ int main()
 }
 
 */
-for(;;){
-uart_putstr("192");
-b1=0xff00;
-gpio_init(b1);
 
-c1=gpio_read();
-
-if(c1=0x02){gpio_write(0x02);}
-else gpio_write(0xffff);
+gpio_init(0xf0);
+trigger_set(0x027);
+j=10;
+c2=j<<4;
+uart_putchar(c2);
+for (;;){
+c1=gpio0->read;
+uart_putchar(c1 & 0x0f);
 
 }
-
-
-
-
-
-
-
-
-
 }

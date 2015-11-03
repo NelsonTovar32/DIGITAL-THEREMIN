@@ -104,7 +104,7 @@ typedef struct {
 } gpio_t;
 
 void gpio_init();
-uint8_t gpio_read();
+uint32_t gpio_read();
 void gpio_write();
 
 

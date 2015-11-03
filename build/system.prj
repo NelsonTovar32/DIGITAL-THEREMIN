@@ -19,12 +19,12 @@ verilog work ../rtl/wb_bram/wb_bram.v
 verilog work ../rtl/wb_uart/wb_uart.v
 verilog work ../rtl/wb_timer/wb_timer.v
 verilog work ../rtl/wb_gpio/wb_gpio.v
-verilog work ../rtl/wb_spi/spi_top.v
-verilog work ../rtl/wb_spi/spi_shift.v
-verilog work ../rtl/wb_spi/spi_clgen.v
 verilog work ../rtl/wb_conbus/conbus.v
 verilog work ../rtl/wb_conbus/conbus_arb.v
 verilog work ../rtl/wb_trigger/wb_trigger.v
 verilog work ../rtl/wb_trigger/trigger_top.v
 verilog work ../rtl/wb_trigger/trigger_pulse.v
 verilog work ../rtl/wb_trigger/div_frec_adj.v
+verilog work ../rtl/wb_digpot/wb_digpot.v
+verilog work ../rtl/wb_digpot/inc_pulse.v
+verilog work ../rtl/wb_digpot/div_frec.v

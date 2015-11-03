@@ -1,41 +1,20 @@
 //////////////////////////////////////////////////////////////////////
 ////                                                              ////
-////  soc-hw.c                                                    ////
+////                   DIGITAL - THEREMIN                         ////
+////                        soc-hw.c                              ////
 ////                                                              ////
 ////  Este archivo hace parte del trabajo realizado para el       ////
-////  proyecto de curso de Electronica Digital II		  ////
-////  Universidad Nacional de Colombia - 2015    		  ////
-////  					                          ////
+////  proyecto de curso de Electronica Digital II		          ////
+////  Universidad Nacional de Colombia - 2015 -2        		  ////
 ////                                                              ////
 ////  Autores:                                                    ////
-////      - Andrés Mondragón (afmondragonc@unal.edu.co)		  ////
-////      - Sthefania Moreno (stmorenore@unal.edu.co)             ////
-////      - Luis Antonio Rodriguez (luiarodriguezper@unal.edu.co) ////
+////    *Nelson Leonardo Tovar (nltovar@unal.edu.co)		      ////
+////    *Manuel Alejandro Barreto (mabarretor@unal.edu.co)        ////
+////    *Daniel Camilo Beltrán (dcbeltrans@unal.edu.co)           ////
 ////                                                              ////
-////  Información adicional en: 				  ////
+////  Información adicional en: 				                  ////
 ////  https://sites.google.com/site/edigital2unal/proyectos/      ////
-////  	                                                          ////
-////                                                              ////
-//////////////////////////////////////////////////////////////////////
-////                                                              ////
-//// Copyright (C) 2015 Authors                                   ////
-////                                                              ////
-//// This source file may be used and distributed without         ////
-//// restriction provided that this copyright statement is not    ////
-//// removed from the file and that any derivative work contains  ////
-//// the original copyright notice and the associated disclaimer. ////
-////                                                              ////
-//// This source file is free software; you can redistribute it   ////
-//// and/or modify it under the terms of the GNU Lesser General   ////
-//// Public License as published by the Free Software Foundation; ////
-//// either version 2.1 of the License, or (at your option) any   ////
-//// later version.                                               ////
-////                                                              ////
-//// This source is distributed in the hope that it will be       ////
-//// useful, but WITHOUT ANY WARRANTY; without even the implied   ////
-//// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR      ////
-//// PURPOSE.  See the GNU Lesser General Public License for more ////
-//// details.                                                     ////
+////  	     proyectosii-015/grupo02                              ////
 ////                                                              ////
 //////////////////////////////////////////////////////////////////////
 
@@ -47,7 +26,7 @@
 uart_t  *uart0  = (uart_t *)   0x20000000;
 timer_t *timer0 = (timer_t *)  0x30000000;
 gpio_t  *gpio0  = (gpio_t *)   0x40000000;
-spi_t   *spi0   = (spi_t *)    0x50000000;
+digpot_t   *digpot0   = (digpot_t *)    0x50000000;
 trigger_t *trigger0 = (trigger_t *) 0x60000000;
 
 isr_ptr_t isr_table[32];
@@ -87,49 +66,22 @@ void isr_unregister(int irq)
 	isr_table[irq] = &isr_null;
 }
 
-//**************************************************************************
-// Estructura del periferico SPI
-//**************************************************************************
-
-void spi_init(uint32_t constdiv)
-{
-
-	spi0->DEVIDE = constdiv; // Definición de la frecuencia del reloj sclk
-	
-	// Parametros iniciales del registro de control
-	spi0->CTRL |= 0x0A << CHAR_LEN; 
-	spi0->CTRL |= 0x00 << GO_BSY;
-	spi0->CTRL |= 0x00 << Rx_NEG;
-	spi0->CTRL |= 0x00 << Tx_NEG;
-	spi0->CTRL |= 0x00 << LSB;
-	spi0->CTRL |= 0x00 << IE;
-	spi0->CTRL |= 0x00 << ASS;
-}
-
-uint32_t spi_readByte(uint8_t cs){
-	spi0->SS = cs; // Selección del esclavo al cual se le va a pedir información
-	spi0->CTRL |= EN << GO_BSY; // Señal ENABLE para inicio de lectura
-	while((spi0->CTRL >> GO_BSY) & EN);
-	spi0->SS = 0;
-	return spi0->RxTx0; //Retorno de información por el registro RXTX0
-	
-}
 
 //*************************************************************************
 // Estructura del periferico GPIO
 //*************************************************************************
 
-void gpio_init(uint16_t k)
+void gpio_init(uint32_t k)
 {
 	gpio0->dir=k; //todo lo que sea 0 es puerto lectura
 }
 
-uint8_t gpio_read()
+uint32_t gpio_read()
 {
 	return gpio0->read;
 }
 
-void gpio_write(uint16_t k)
+void gpio_write(uint32_t k)
 {
 	gpio0->write=k;
 }
@@ -138,7 +90,7 @@ void gpio_write(uint16_t k)
 
 
 //***************************************************************************
-// Estructura del periferico TIMER 
+// Estructura del periferico TIMER
 //**************************************************************************
 
 void msleep(uint32_t msec)
@@ -194,12 +146,12 @@ void tic_init()
 
 
 //***************************************************************************
-// Estructura del periferico UART 
+// Estructura del periferico UART
 //***************************************************************************
 void uart_init(){}
 
 char uart_getchar()
-{   
+{
 	while (! (uart0->ucr & UART_DR)) ;
 	return uart0->rxtx;
 }
@@ -217,5 +169,26 @@ void uart_putstr(char *str)
 		uart_putchar(*c);
 		c++;
 	}
+}
+
+
+//***************************************************************************
+// Estructura del periferico TRIGGER
+//***************************************************************************
+void trigger_set(uint32_t st)
+{
+    trigger0->set_trig = st;
+
+}
+
+//***************************************************************************
+// Estructura del periferico DIGPOT
+//***************************************************************************
+void init_digpot(){}
+
+void set_digpot(uint32_t dp)
+{
+    digpot0->set_digpot = dp;
+
 }
 

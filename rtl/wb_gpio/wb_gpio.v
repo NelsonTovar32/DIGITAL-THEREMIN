@@ -38,7 +38,7 @@ module wb_gpio(
 	    gpio_io);
 
 
-   parameter gpio_io_width = 16;
+   parameter gpio_io_width = 8;
 
    parameter gpio_dir_reset_val = 0;
    parameter gpio_o_reset_val = 0;

@@ -7,8 +7,8 @@
 module system
 #(
 	parameter   bootram_file     = "../firmware/hw-test/image.ram",
-	//parameter   clk_freq         = 100000000,
-        parameter   clk_freq         = 50000000,
+	parameter   clk_freq         = 100000000,
+        //parameter   clk_freq         = 50000000,
 	parameter   uart_baud_rate   = 1152000
 ) (
 	input             clk,
@@ -18,7 +18,7 @@ module system
 	// GPIO
 	//input [7:0]	 gpio_ik,
 	//output [7:0]	 gpio_ok,
-	inout [15:0] gpio_io,
+	inout [7:0] gpio_io,
 	// UART
 	input             uart_rxd, 
 	output            uart_txd,
@@ -176,7 +176,7 @@ wire [1:0]   lm32i_bte,
 wire [31:0]  intr_n;
 wire         uart0_intr = 0;
 wire   [1:0] timer0_intr;
-wire         gpio0_intr;
+wire         gpio0_intr=0;
 
 assign intr_n = { 28'hFFFFFFF, ~timer0_intr[1], ~gpio0_intr, ~timer0_intr[0], ~uart0_intr };
 
@@ -406,7 +406,7 @@ wb_timer #(
 // Block General Purpose IO1 SLAVE3
 //---------------------------------------------------------------------------
 
-wire [15:0] gpio0_io;
+wire [7:0] gpio0_io;
 //wire       gpio0_irq;
 
 wb_gpio gpio0 (

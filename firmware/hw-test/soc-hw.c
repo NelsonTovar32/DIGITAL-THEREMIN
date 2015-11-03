@@ -27,7 +27,6 @@ uart_t  *uart0  = (uart_t *)   0x20000000;
 timer_t *timer0 = (timer_t *)  0x30000000;
 gpio_t  *gpio0  = (gpio_t *)   0x40000000;
 digpot_t   *digpot0   = (digpot_t *)    0x50000000;
-//spi_t   *spi0   = (spi_t *)    0x50000000;
 trigger_t *trigger0 = (trigger_t *) 0x60000000;
 
 isr_ptr_t isr_table[32];
@@ -67,33 +66,6 @@ void isr_unregister(int irq)
 	isr_table[irq] = &isr_null;
 }
 
-//**************************************************************************
-// Estructura del periferico SPI
-//**************************************************************************
-
-void spi_init(uint32_t constdiv)
-{
-
-	spi0->DEVIDE = constdiv; // Definición de la frecuencia del reloj sclk
-
-	// Parametros iniciales del registro de control
-	spi0->CTRL |= 0x0A << CHAR_LEN;
-	spi0->CTRL |= 0x00 << GO_BSY;
-	spi0->CTRL |= 0x00 << Rx_NEG;
-	spi0->CTRL |= 0x00 << Tx_NEG;
-	spi0->CTRL |= 0x00 << LSB;
-	spi0->CTRL |= 0x00 << IE;
-	spi0->CTRL |= 0x00 << ASS;
-}
-
-uint32_t spi_readByte(uint8_t cs){
-	spi0->SS = cs; // Selección del esclavo al cual se le va a pedir información
-	spi0->CTRL |= EN << GO_BSY; // Señal ENABLE para inicio de lectura
-	while((spi0->CTRL >> GO_BSY) & EN);
-	spi0->SS = 0;
-	return spi0->RxTx0; //Retorno de información por el registro RXTX0
-
-}
 
 //*************************************************************************
 // Estructura del periferico GPIO
@@ -205,7 +177,7 @@ void uart_putstr(char *str)
 //***************************************************************************
 void trigger_set(uint32_t st)
 {
-    trigger0->set_trigger = st;
+    trigger0->set_trig = st;
 
 }
 
