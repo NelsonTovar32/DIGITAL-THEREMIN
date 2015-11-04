@@ -2,7 +2,7 @@
 
 module inc_pulse(
     input clk_in,
-	 input [7:0] num,
+	 input [6:0] num,
 	 input reset,
     output  clk_out,
 	 output reg dp_busy,
@@ -14,7 +14,7 @@ module inc_pulse(
 	 parameter k_en=7'b1101110;
 	 reg stop =1'b0;
 	 reg ena =1'b0;
-	 reg [7:0] counter=7'b0;
+	 reg [6:0] counter=7'b0;
 	 reg [7:0] counter_en1=7'b0;
 	   
 	 wire clk_a = ena & clk_in & ~stop;

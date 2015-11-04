@@ -4,7 +4,7 @@ Loading device for application Rf_Device from file '6slx16.nph' in environment
 /opt/Xilinx/13.4/ISE_DS/ISE/.
    "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 
-Tue Nov  3 15:43:40 2015
+Wed Nov  4 10:58:32 2015
 
 /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w system-routed.ncd system.bit 
 

@@ -88,6 +88,7 @@ typedef struct {
 
 void msleep(uint32_t msec);
 void nsleep(uint32_t nsec);
+int counter();
 
 void prueba();
 void tic_init();
@@ -97,6 +98,12 @@ void tic_isr();
 /***************************************************************************
  * GPIO0
  */
+
+#define PIN1 0x01
+#define PIN2 0x02
+#define PIN3 0x04
+#define PIN4 0x08
+
 typedef struct {
 	volatile uint32_t read;
 	volatile uint32_t write;
@@ -106,6 +113,9 @@ typedef struct {
 void gpio_init();
 uint32_t gpio_read();
 void gpio_write();
+
+void set_pin(uint8_t value, uint8_t npin);
+void pin_inv(uint8_t npin);
 
 
 /***************************************************************************

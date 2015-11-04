@@ -143,9 +143,86 @@ int main()
 
  	uint16_t b1, b2, b3, b4;
 
-	uint8_t c1, c2, c3, c4;
+	uint8_t c1, c2, c3, c4, valor;
 
-	/*
+
+gpio_init(0x01);
+c2=0x002;
+trigger_set(c2);
+
+msleep(3000);
+set_digpot(0xE4);
+msleep(5000);
+set_digpot(0x32);
+
+c3=counter();
+
+
+
+
+for(;;)
+{
+	valor=gpio0->read;
+	valor=valor>>1;
+	if(valor==1)
+	{
+		pin_inv(1);
+		msleep(2000);
+	}
+	else if(valor==2)
+	{
+		pin_inv(1);
+		msleep(200);
+	}
+	else if(valor==4)
+	{
+		pin_inv(1);
+		msleep(5000);
+	}
+	else
+	{
+		pin_inv(1);
+		msleep(500);
+	}
+
+}
+
+
+/*for (;;)
+{
+	c1=gpio0->read;
+	c1=c1>4;
+	if(c1==0x10 && !c2==0x00F)	
+	{
+		c2=c2+1;
+		trigger_set(c2);
+	}
+	else if(c1=0x20 && !c2==0x002)
+	{
+		c2=c2-1;
+		trigger_set(c2);
+	}
+	
+	if(c1==0x40)
+	{
+		set_pin(1,5);		
+		msleep(2000);		
+		pin_inv(5);		
+	}
+	else if (c1=0x80)
+	{
+		set_pin(1,5);		
+		msleep(500);
+		pin_inv(5);
+	}	
+}
+
+*/
+
+
+
+
+/*
 
 	spi_init(255); // Constante de división para generación de reloj del SPI - Freq(sclk)=192KHz
 	for(;;)
@@ -191,14 +268,8 @@ int main()
 
 */
 
-gpio_init(0xf0);
-trigger_set(0x027);
-j=10;
-c2=j<<4;
-uart_putchar(c2);
-for (;;){
-c1=gpio0->read;
-uart_putchar(c1 & 0x0f);
 
-}
+
+
+
 }

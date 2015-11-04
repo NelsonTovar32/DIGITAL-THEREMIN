@@ -87,11 +87,44 @@ void gpio_write(uint32_t k)
 }
 
 
+void set_pin(uint8_t value, uint8_t npin)
+{
+     if (value)
+		gpio0->write = gpio0->read | npin;
+	else
+		gpio0->write = gpio0->read & (~npin);
+
+}
+
+void pin_inv(uint8_t npin)
+{
+	uint32_t val;
+	val = (~gpio0->read) & npin;
+    set_pin(val,npin);
+}
+
+
 
 
 //***************************************************************************
 // Estructura del periferico TIMER
 //**************************************************************************
+int counter()
+{
+	uint32_t tcr;
+	int msec=0xFFFFFFFF;
+	//Use timer0.1
+	timer0->compare1 = (FCPU/1000)*msec;
+	timer0->counter1 = 0;
+	timer0->tcr1 = TIMER_EN;
+
+	do {
+ 		tcr = timer0->tcr1;
+ 	} while ( ! (tcr & TIMER_TRIG) );
+	
+	return timer0->counter1;
+}
+
 
 void msleep(uint32_t msec)
 {
@@ -184,7 +217,6 @@ void trigger_set(uint32_t st)
 //***************************************************************************
 // Estructura del periferico DIGPOT
 //***************************************************************************
-void init_digpot(){}
 
 void set_digpot(uint32_t dp)
 {
