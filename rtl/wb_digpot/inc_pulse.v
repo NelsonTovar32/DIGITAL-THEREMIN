@@ -11,11 +11,11 @@ module inc_pulse(
 	 );
 	 
 	 //Internal Registers & Wires
-	 parameter k_en=7'b1101110;
+	 parameter k_en=8'b01101110;
 	 reg stop =1'b0;
 	 reg ena =1'b0;
 	 reg [6:0] counter=7'b0;
-	 reg [7:0] counter_en1=7'b0;
+	 reg [7:0] counter_en1=8'b0;
 	   
 	 wire clk_a = ena & clk_in & ~stop;
 
@@ -38,7 +38,7 @@ always @(negedge clk_in or negedge ena)
 				else
 					 begin
 						 if(num[6:0]==7'b0) begin
-						 counter<=counter+1;
+						 counter<=7'b0;
 						 end
 						 else begin
 						 counter<=counter+1;
