@@ -1,23 +1,23 @@
 //! **************************************************************************
-// Written by: Map O.87xd on Tue Nov 03 15:43:07 2015
+// Written by: Map O.87xd on Wed Nov 04 10:57:57 2015
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "led" LOCATE = SITE "U16" LEVEL 1;
 COMP "rst" LOCATE = SITE "C4" LEVEL 1;
-COMP "digpot_INC" LOCATE = SITE "K2" LEVEL 1;
-COMP "digpot_CSn" LOCATE = SITE "K3" LEVEL 1;
-COMP "digpot_UDn" LOCATE = SITE "L3" LEVEL 1;
+COMP "digpot_INC" LOCATE = SITE "F11" LEVEL 1;
+COMP "digpot_CSn" LOCATE = SITE "F10" LEVEL 1;
+COMP "digpot_UDn" LOCATE = SITE "G11" LEVEL 1;
 COMP "trigger_o" LOCATE = SITE "J3" LEVEL 1;
 COMP "gpio_io<0>" LOCATE = SITE "T12" LEVEL 1;
 COMP "gpio_io<1>" LOCATE = SITE "V12" LEVEL 1;
 COMP "gpio_io<2>" LOCATE = SITE "N10" LEVEL 1;
 COMP "gpio_io<3>" LOCATE = SITE "P11" LEVEL 1;
-COMP "gpio_io<4>" LOCATE = SITE "V16" LEVEL 1;
-COMP "gpio_io<5>" LOCATE = SITE "U15" LEVEL 1;
-COMP "gpio_io<6>" LOCATE = SITE "V15" LEVEL 1;
-COMP "gpio_io<7>" LOCATE = SITE "M11" LEVEL 1;
+COMP "gpio_io<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "gpio_io<5>" LOCATE = SITE "N9" LEVEL 1;
+COMP "gpio_io<6>" LOCATE = SITE "U11" LEVEL 1;
+COMP "gpio_io<7>" LOCATE = SITE "V11" LEVEL 1;
 COMP "uart_rxd" LOCATE = SITE "N18" LEVEL 1;
 COMP "uart_txd" LOCATE = SITE "N17" LEVEL 1;
 PIN bram0/Mram_ram1_pins<10> = BEL "bram0/Mram_ram1" PINNAME CLKA;
@@ -680,14 +680,14 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "timer0/trig0" BEL "lm0/Mcompar_cmp_zero_cy<10>_FRB" BEL
         "lm0/w_result_sel_mul_m_BRB0" BEL "lm0/w_result_sel_mul_m_BRB1" BEL
         "lm0/w_result_sel_load_m_BRB1" BEL
-        "lm0/load_store_unit/store_data_m_15_BRB2" BEL
-        "lm0/load_store_unit/store_data_m_14_BRB2" BEL
-        "lm0/load_store_unit/store_data_m_13_BRB2" BEL
-        "lm0/load_store_unit/store_data_m_12_BRB2" BEL
-        "lm0/load_store_unit/store_data_m_11_BRB2" BEL
-        "lm0/load_store_unit/store_data_m_10_BRB2" BEL
-        "lm0/load_store_unit/store_data_m_9_BRB2" BEL
-        "lm0/load_store_unit/store_data_m_8_BRB2" BEL
+        "lm0/load_store_unit/store_data_m_15_BRB1" BEL
+        "lm0/load_store_unit/store_data_m_14_BRB1" BEL
+        "lm0/load_store_unit/store_data_m_13_BRB1" BEL
+        "lm0/load_store_unit/store_data_m_12_BRB1" BEL
+        "lm0/load_store_unit/store_data_m_11_BRB1" BEL
+        "lm0/load_store_unit/store_data_m_10_BRB1" BEL
+        "lm0/load_store_unit/store_data_m_9_BRB1" BEL
+        "lm0/load_store_unit/store_data_m_8_BRB1" BEL
         "lm0/load_store_unit/store_data_m_23_BRB1" BEL
         "lm0/load_store_unit/store_data_m_23_BRB2" BEL
         "lm0/load_store_unit/store_data_m_23_BRB3" BEL

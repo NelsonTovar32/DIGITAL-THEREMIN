@@ -6,7 +6,7 @@ module div_frec_adj(clk,num,clk_out);
     output reg clk_out;
     reg rst;
     reg [25:0] counter;
-	 //F_out= (F_in / 2p)
+	 //F_out= (F_in / 2p).
 
 integer p=26'd10000000;
 
@@ -82,3 +82,4 @@ rst=0;
 			end
 
 endmodule
+

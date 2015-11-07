@@ -210,10 +210,9 @@ Elaborating module <div_frec>.
 WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/div_frec.v" Line 34: Result of 27-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <inc_pulse>.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 41: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 44: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 41: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 44: Result of 8-bit expression is truncated to fit in 7-bit target.
 WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 61: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:189 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/wb_digpot.v" Line 42: Size mismatch in connection of port <num>. Formal port size is 8-bit while actual signal size is 7-bit.
 
 Elaborating module <wb_timer(clk_freq=100000000)>.
 
@@ -618,30 +617,30 @@ WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preser
     Found 1-bit register for signal <tx_wr>.
     Found 1-bit register for signal <rx_ack>.
     Found 1-bit register for signal <ack>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><27:27>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><11:11>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><10:10>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><19:19>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><26:26>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><25:25>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><23:23>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><18:18>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><17:17>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><15:15>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><28:28>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><30:30>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><29:29>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><20:20>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><29:29>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><27:27>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><26:26>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><25:25>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><23:23>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><20:20>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><19:19>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><18:18>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><11:11>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><10:10>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><9:9>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><8:8>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><28:28>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><17:17>> (without init value) have a constant value of 0 in block <wb_uart>.
     Summary:
 	inferred  11 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
@@ -731,14 +730,13 @@ Unit <div_frec> synthesized.
 Synthesizing Unit <inc_pulse>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v".
         k_en = 7'b1101110
-WARNING:Xst:647 - Input <num<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Register <dp_cyc1> equivalent to <dp_cyc0> has been removed
     Found 1-bit register for signal <dp_busy>.
     Found 1-bit register for signal <dp_cyc0>.
     Found 1-bit register for signal <stop>.
-    Found 8-bit register for signal <counter>.
-    Found 8-bit adder for signal <counter[7]_GND_28_o_add_3_OUT> created at line 44.
+    Found 7-bit register for signal <counter>.
+    Found 7-bit adder for signal <counter[6]_GND_28_o_add_3_OUT> created at line 44.
     Found 8-bit adder for signal <counter_en1[7]_GND_28_o_add_8_OUT> created at line 61.
 WARNING:Xst:737 - Found 1-bit latch for signal <ena>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -749,11 +747,11 @@ WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<3>>. Latches may be 
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 8-bit comparator greater for signal <n0008> created at line 32
+    Found 7-bit comparator greater for signal <n0008> created at line 32
     Found 8-bit comparator greater for signal <GND_28_o_INV_153_o> created at line 55
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  11 D-type flip-flop(s).
+	inferred  10 D-type flip-flop(s).
 	inferred   9 Latch(s).
 	inferred   2 Comparator(s).
 	inferred   2 Multiplexer(s).
@@ -904,7 +902,8 @@ Macro Statistics
  33-bit subtractor                                     : 3
  4-bit adder                                           : 4
  6-bit subtractor                                      : 1
- 8-bit adder                                           : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 1
 # Registers                                            : 157
  1-bit register                                        : 90
  16-bit register                                       : 1
@@ -917,7 +916,8 @@ Macro Statistics
  4-bit register                                        : 7
  5-bit register                                        : 3
  6-bit register                                        : 1
- 8-bit register                                        : 7
+ 7-bit register                                        : 1
+ 8-bit register                                        : 6
  9-bit register                                        : 1
 # Latches                                              : 12
  1-bit latch                                           : 12
@@ -926,7 +926,8 @@ Macro Statistics
  32-bit comparator equal                               : 5
  32-bit comparator greater                             : 2
  5-bit comparator equal                                : 6
- 8-bit comparator greater                              : 2
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
 # Multiplexers                                         : 147
  1-bit 2-to-1 multiplexer                              : 45
  1-bit 4-to-1 multiplexer                              : 32
@@ -941,7 +942,8 @@ Macro Statistics
  32-bit 7-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 3
  6-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
 # Tristates                                            : 8
  1-bit tristate buffer                                 : 8
 # FSMs                                                 : 2
@@ -1088,7 +1090,7 @@ Macro Statistics
  26-bit up counter                                     : 1
  4-bit up counter                                      : 4
  6-bit down counter                                    : 1
- 8-bit up counter                                      : 1
+ 7-bit up counter                                      : 1
 # Registers                                            : 1379
  Flip-Flops                                            : 1379
 # Comparators                                          : 16
@@ -1096,7 +1098,8 @@ Macro Statistics
  32-bit comparator equal                               : 5
  32-bit comparator greater                             : 2
  5-bit comparator equal                                : 6
- 8-bit comparator greater                              : 2
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
 # Multiplexers                                         : 235
  1-bit 2-to-1 multiplexer                              : 140
  1-bit 4-to-1 multiplexer                              : 32
@@ -1425,14 +1428,14 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 29.
 Forward register balancing over carry chain lm0/Mcompar_cmp_zero_cy<0>
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_0> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_8_BRB1> <lm0/load_store_unit/store_data_m_16_BRB0> <lm0/load_store_unit/store_data_m_24_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_1> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_9_BRB1> <lm0/load_store_unit/store_data_m_17_BRB0> <lm0/load_store_unit/store_data_m_25_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_2> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_10_BRB1> <lm0/load_store_unit/store_data_m_18_BRB0> <lm0/load_store_unit/store_data_m_26_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_3> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_11_BRB1> <lm0/load_store_unit/store_data_m_19_BRB0> <lm0/load_store_unit/store_data_m_27_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_4> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_12_BRB1> <lm0/load_store_unit/store_data_m_20_BRB0> <lm0/load_store_unit/store_data_m_28_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_5> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_13_BRB1> <lm0/load_store_unit/store_data_m_21_BRB0> <lm0/load_store_unit/store_data_m_29_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_6> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_14_BRB1> <lm0/load_store_unit/store_data_m_22_BRB0> <lm0/load_store_unit/store_data_m_30_BRB4> 
-INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_7> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_15_BRB1> <lm0/load_store_unit/store_data_m_23_BRB0> <lm0/load_store_unit/store_data_m_31_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_0> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_8_BRB2> <lm0/load_store_unit/store_data_m_16_BRB0> <lm0/load_store_unit/store_data_m_24_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_1> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_9_BRB2> <lm0/load_store_unit/store_data_m_17_BRB0> <lm0/load_store_unit/store_data_m_25_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_2> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_10_BRB2> <lm0/load_store_unit/store_data_m_18_BRB0> <lm0/load_store_unit/store_data_m_26_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_3> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_11_BRB2> <lm0/load_store_unit/store_data_m_19_BRB0> <lm0/load_store_unit/store_data_m_27_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_4> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_12_BRB2> <lm0/load_store_unit/store_data_m_20_BRB0> <lm0/load_store_unit/store_data_m_28_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_5> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_13_BRB2> <lm0/load_store_unit/store_data_m_21_BRB0> <lm0/load_store_unit/store_data_m_29_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_6> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_14_BRB2> <lm0/load_store_unit/store_data_m_22_BRB0> <lm0/load_store_unit/store_data_m_30_BRB4> 
+INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_7> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_15_BRB2> <lm0/load_store_unit/store_data_m_23_BRB0> <lm0/load_store_unit/store_data_m_31_BRB4> 
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/size_m_1> in Unit <system> is equivalent to the following 16 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_15_BRB0> <lm0/load_store_unit/store_data_m_14_BRB0> <lm0/load_store_unit/store_data_m_13_BRB0> <lm0/load_store_unit/store_data_m_12_BRB0> <lm0/load_store_unit/store_data_m_11_BRB0> <lm0/load_store_unit/store_data_m_10_BRB0> <lm0/load_store_unit/store_data_m_9_BRB0> <lm0/load_store_unit/store_data_m_8_BRB0> <lm0/load_store_unit/store_data_m_31_BRB0> <lm0/load_store_unit/store_data_m_30_BRB0> <lm0/load_store_unit/store_data_m_29_BRB0> <lm0/load_store_unit/store_data_m_28_BRB0> <lm0/load_store_unit/store_data_m_27_BRB0> <lm0/load_store_unit/store_data_m_26_BRB0> <lm0/load_store_unit/store_data_m_25_BRB0> <lm0/load_store_unit/store_data_m_24_BRB0> 
 INFO:Xst:2261 - The FF/Latch <lm0/x_bypass_enable_x> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/m_bypass_enable_x_BRB0> 
 INFO:Xst:2261 - The FF/Latch <lm0/m_result_sel_compare_x> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/m_bypass_enable_x_BRB1> 
@@ -1442,12 +1445,12 @@ Pipelining and Register Balancing Report ...
 
 Processing Unit <system> :
 	Register(s) lm0/branch_x has(ve) been backward balanced into : lm0/branch_x_BRB0 lm0/branch_x_BRB1 lm0/branch_x_BRB2 lm0/branch_x_BRB3 lm0/branch_x_BRB4 lm0/branch_x_BRB5.
-	Register(s) lm0/load_store_unit/store_data_m_10 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_10_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_11 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_11_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_12 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_12_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_13 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_13_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_14 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_14_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_15 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_15_BRB2.
+	Register(s) lm0/load_store_unit/store_data_m_10 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_10_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_11 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_11_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_12 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_12_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_13 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_13_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_14 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_14_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_15 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_15_BRB1 .
 	Register(s) lm0/load_store_unit/store_data_m_16 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_16_BRB3.
 	Register(s) lm0/load_store_unit/store_data_m_17 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_17_BRB3.
 	Register(s) lm0/load_store_unit/store_data_m_18 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_18_BRB3.
@@ -1464,8 +1467,8 @@ Processing Unit <system> :
 	Register(s) lm0/load_store_unit/store_data_m_29 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_29_BRB3 .
 	Register(s) lm0/load_store_unit/store_data_m_30 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_30_BRB3 .
 	Register(s) lm0/load_store_unit/store_data_m_31 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_31_BRB1 lm0/load_store_unit/store_data_m_31_BRB3 .
-	Register(s) lm0/load_store_unit/store_data_m_8 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_8_BRB2.
-	Register(s) lm0/load_store_unit/store_data_m_9 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_9_BRB2.
+	Register(s) lm0/load_store_unit/store_data_m_8 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_8_BRB1 .
+	Register(s) lm0/load_store_unit/store_data_m_9 has(ve) been backward balanced into : lm0/load_store_unit/store_data_m_9_BRB1 .
 	Register(s) lm0/store_x has(ve) been backward balanced into : lm0/store_x_BRB0 lm0/store_x_BRB5.
 	Register(s) lm0/w_result_sel_load_m has(ve) been backward balanced into : lm0/w_result_sel_load_m_BRB1.
 	Register(s) lm0/w_result_sel_mul_m has(ve) been backward balanced into : lm0/w_result_sel_mul_m_BRB0 lm0/w_result_sel_mul_m_BRB1.
@@ -1486,8 +1489,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1281
- Flip-Flops                                            : 1281
+# Registers                                            : 1280
+ Flip-Flops                                            : 1280
 
 =========================================================================
 
@@ -1510,22 +1513,22 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2443
+# BELS                             : 2427
 #      GND                         : 1
-#      INV                         : 26
+#      INV                         : 28
 #      LUT1                        : 167
 #      LUT2                        : 212
-#      LUT3                        : 253
-#      LUT4                        : 271
-#      LUT5                        : 256
-#      LUT6                        : 568
-#      MUXCY                       : 375
+#      LUT3                        : 251
+#      LUT4                        : 269
+#      LUT5                        : 254
+#      LUT6                        : 571
+#      MUXCY                       : 368
 #      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 311
-# FlipFlops/Latches                : 1293
+#      XORCY                       : 303
+# FlipFlops/Latches                : 1292
 #      FD                          : 34
-#      FDC                         : 213
+#      FDC                         : 212
 #      FDC_1                       : 1
 #      FDCE                        : 712
 #      FDCE_1                      : 1
@@ -1556,17 +1559,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1282  out of  18224     7%  
- Number of Slice LUTs:                 1881  out of   9112    20%  
-    Number used as Logic:              1753  out of   9112    19%  
+ Number of Slice Registers:            1281  out of  18224     7%  
+ Number of Slice LUTs:                 1880  out of   9112    20%  
+    Number used as Logic:              1752  out of   9112    19%  
     Number used as Memory:              128  out of   2176     5%  
        Number used as RAM:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2114
-   Number with an unused Flip Flop:     832  out of   2114    39%  
-   Number with an unused LUT:           233  out of   2114    11%  
-   Number of fully used LUT-FF pairs:  1049  out of   2114    49%  
+ Number of LUT Flip Flop pairs used:   2112
+   Number with an unused Flip Flop:     831  out of   2112    39%  
+   Number with an unused LUT:           232  out of   2112    10%  
+   Number of fully used LUT-FF pairs:  1049  out of   2112    49%  
    Number of unique control sets:        49
 
 IO Utilization: 
@@ -1602,7 +1605,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                 | Load  |
 -----------------------------------+---------------------------------------+-------+
 clk                                | BUFGP                                 | 1333  |
-digpot0/divider0/clk_out           | NONE(digpot0/inc_pulse0/counter_7)    | 19    |
+digpot0/divider0/clk_out           | NONE(digpot0/inc_pulse0/counter_6)    | 18    |
 digpot0/inc_pulse0/dp_busy         | NONE(digpot0/inc_pulse0/dp_cyc0)      | 1     |
 trigger_0/trigger0/div2/clk_out    | NONE(trigger_0/trigger0/pulse/delay_0)| 3     |
 digpot0/divider0/rst               | NONE(digpot0/divider0/rst)            | 1     |
@@ -1631,7 +1634,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 12.519ns (frequency: 79.882MHz)
-  Total number of paths / destination ports: 1333519 / 3155
+  Total number of paths / destination ports: 1332887 / 3155
 -------------------------------------------------------------------------
 Delay:               12.519ns (Levels of Logic = 3)
   Source:            lm0/multiplier/muliplicand_7 (FF)
@@ -1654,28 +1657,30 @@ Delay:               12.519ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'digpot0/divider0/clk_out'
-  Clock period: 5.504ns (frequency: 181.688MHz)
-  Total number of paths / destination ports: 502 / 29
+  Clock period: 7.218ns (frequency: 138.545MHz)
+  Total number of paths / destination ports: 212 / 27
 -------------------------------------------------------------------------
-Delay:               5.504ns (Levels of Logic = 4)
+Delay:               7.218ns (Levels of Logic = 6)
   Source:            digpot0/inc_pulse0/counter_2 (FF)
-  Destination:       digpot0/inc_pulse0/dp_busy (FF)
+  Destination:       digpot0/inc_pulse0/counter_5 (FF)
   Source Clock:      digpot0/divider0/clk_out falling
   Destination Clock: digpot0/divider0/clk_out falling
 
-  Data Path: digpot0/inc_pulse0/counter_2 to digpot0/inc_pulse0/dp_busy
+  Data Path: digpot0/inc_pulse0/counter_2 to digpot0/inc_pulse0/counter_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.447   0.981  digpot0/inc_pulse0/counter_2 (digpot0/inc_pulse0/counter_2)
+     FDC:C->Q              5   0.447   1.079  digpot0/inc_pulse0/counter_2 (digpot0/inc_pulse0/counter_2)
      LUT6:I0->O            1   0.203   0.808  digpot0/inc_pulse0/n0008_inv_inv3 (digpot0/inc_pulse0/n0008_inv_inv1)
      LUT3:I0->O            1   0.205   0.580  digpot0/inc_pulse0/n0008_inv_inv11 (digpot0/inc_pulse0/n0008_inv_inv11)
-     LUT5:I4->O            9   0.205   0.934  digpot0/inc_pulse0/n0008_inv_inv12 (digpot0/inc_pulse0/n0008_inv_inv2)
-     LUT4:I2->O            2   0.203   0.616  digpot0/inc_pulse0/n0008_inv1 (digpot0/inc_pulse0/n0008_inv)
-     FDCE_1:CE                 0.322          digpot0/inc_pulse0/stop
+     LUT5:I4->O            7   0.205   1.002  digpot0/inc_pulse0/n0008_inv_inv12 (digpot0/inc_pulse0/n0008_inv_inv2)
+     LUT3:I0->O            3   0.205   1.015  digpot0/inc_pulse0/n0008_inv_inv21 (digpot0/inc_pulse0/n0008_inv_inv)
+     LUT6:I0->O            2   0.203   0.961  digpot0/inc_pulse0/Mcount_counter_cy<4>11 (digpot0/inc_pulse0/Mcount_counter_cy<4>)
+     LUT5:I0->O            1   0.203   0.000  digpot0/inc_pulse0/Mcount_counter_xor<5>11 (digpot0/inc_pulse0/Mcount_counter5)
+     FDC:D                     0.102          digpot0/inc_pulse0/counter_5
     ----------------------------------------
-    Total                      5.504ns (1.585ns logic, 3.919ns route)
-                                       (28.8% logic, 71.2% route)
+    Total                      7.218ns (1.773ns logic, 5.445ns route)
+                                       (24.6% logic, 75.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div2/clk_out'
@@ -1867,8 +1872,8 @@ Clock to Setup on destination clock digpot0/divider0/clk_out
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-clk                     |         |         |    5.447|         |
-digpot0/divider0/clk_out|         |         |    5.504|         |
+clk                     |         |         |    7.063|         |
+digpot0/divider0/clk_out|         |         |    7.218|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock digpot0/divider0/rst
@@ -1916,14 +1921,14 @@ trigger_0/trigger0/div2/rst|    2.568|         |         |         |
 
 
 Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.69 secs
+Total CPU time to Xst completion: 19.53 secs
  
 --> 
 
 
-Total memory usage is 408504 kilobytes
+Total memory usage is 408104 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  348 (   0 filtered)
+Number of warnings :  346 (   0 filtered)
 Number of infos    :  104 (   0 filtered)
 
