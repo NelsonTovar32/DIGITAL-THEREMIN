@@ -211,8 +211,8 @@ WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/div_fr
 
 Elaborating module <inc_pulse>.
 WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 41: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 44: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 61: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 45: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 62: Result of 9-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <wb_timer(clk_freq=100000000)>.
 
@@ -729,15 +729,15 @@ Unit <div_frec> synthesized.
 
 Synthesizing Unit <inc_pulse>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v".
-        k_en = 7'b1101110
+        k_en = 8'b01101110
 WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Register <dp_cyc1> equivalent to <dp_cyc0> has been removed
     Found 1-bit register for signal <dp_busy>.
     Found 1-bit register for signal <dp_cyc0>.
     Found 1-bit register for signal <stop>.
     Found 7-bit register for signal <counter>.
-    Found 7-bit adder for signal <counter[6]_GND_28_o_add_3_OUT> created at line 44.
-    Found 8-bit adder for signal <counter_en1[7]_GND_28_o_add_8_OUT> created at line 61.
+    Found 7-bit adder for signal <counter[6]_GND_28_o_add_3_OUT> created at line 45.
+    Found 8-bit adder for signal <counter_en1[7]_GND_28_o_add_8_OUT> created at line 62.
 WARNING:Xst:737 - Found 1-bit latch for signal <ena>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -748,13 +748,13 @@ WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<2>>. Latches may be 
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <counter_en1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 7-bit comparator greater for signal <n0008> created at line 32
-    Found 8-bit comparator greater for signal <GND_28_o_INV_153_o> created at line 55
+    Found 8-bit comparator greater for signal <GND_28_o_INV_153_o> created at line 56
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  10 D-type flip-flop(s).
 	inferred   9 Latch(s).
 	inferred   2 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   3 Multiplexer(s).
 Unit <inc_pulse> synthesized.
 
 Synthesizing Unit <wb_timer>.
@@ -928,7 +928,7 @@ Macro Statistics
  5-bit comparator equal                                : 6
  7-bit comparator greater                              : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 147
+# Multiplexers                                         : 148
  1-bit 2-to-1 multiplexer                              : 45
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 1
@@ -942,7 +942,7 @@ Macro Statistics
  32-bit 7-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 3
  6-bit 2-to-1 multiplexer                              : 1
- 7-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 2
 # Tristates                                            : 8
  1-bit tristate buffer                                 : 8
@@ -997,10 +997,6 @@ WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31:8>> (without init value) have a con
 Synthesizing (advanced) Unit <div_frec>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
 Unit <div_frec> synthesized (advanced).
-
-Synthesizing (advanced) Unit <inc_pulse>.
-The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-Unit <inc_pulse> synthesized (advanced).
 
 Synthesizing (advanced) Unit <lm32_cpu>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -1077,22 +1073,22 @@ Macro Statistics
  32x32-bit dual-port distributed RAM                   : 2
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 11
  26-bit adder                                          : 2
  30-bit adder                                          : 2
  32-bit adder                                          : 2
  33-bit adder carry in                                 : 1
  33-bit subtractor                                     : 1
  33-bit subtractor borrow in                           : 1
+ 7-bit adder                                           : 1
  8-bit adder                                           : 1
-# Counters                                             : 8
+# Counters                                             : 7
  16-bit down counter                                   : 1
  26-bit up counter                                     : 1
  4-bit up counter                                      : 4
  6-bit down counter                                    : 1
- 7-bit up counter                                      : 1
-# Registers                                            : 1379
- Flip-Flops                                            : 1379
+# Registers                                            : 1386
+ Flip-Flops                                            : 1386
 # Comparators                                          : 16
  1-bit comparator equal                                : 1
  32-bit comparator equal                               : 5
@@ -1100,7 +1096,7 @@ Macro Statistics
  5-bit comparator equal                                : 6
  7-bit comparator greater                              : 1
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 235
+# Multiplexers                                         : 237
  1-bit 2-to-1 multiplexer                              : 140
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 1
@@ -1112,6 +1108,7 @@ Macro Statistics
  32-bit 3-to-1 multiplexer                             : 3
  32-bit 7-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 2
 
@@ -1513,23 +1510,23 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2427
+# BELS                             : 2429
 #      GND                         : 1
-#      INV                         : 28
+#      INV                         : 27
 #      LUT1                        : 167
-#      LUT2                        : 212
+#      LUT2                        : 214
 #      LUT3                        : 251
-#      LUT4                        : 269
+#      LUT4                        : 268
 #      LUT5                        : 254
-#      LUT6                        : 571
+#      LUT6                        : 573
 #      MUXCY                       : 368
 #      MUXF7                       : 2
 #      VCC                         : 1
 #      XORCY                       : 303
 # FlipFlops/Latches                : 1292
 #      FD                          : 34
-#      FDC                         : 212
-#      FDC_1                       : 1
+#      FDC                         : 205
+#      FDC_1                       : 8
 #      FDCE                        : 712
 #      FDCE_1                      : 1
 #      FDE                         : 72
@@ -1560,16 +1557,16 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1281  out of  18224     7%  
- Number of Slice LUTs:                 1880  out of   9112    20%  
-    Number used as Logic:              1752  out of   9112    19%  
+ Number of Slice LUTs:                 1882  out of   9112    20%  
+    Number used as Logic:              1754  out of   9112    19%  
     Number used as Memory:              128  out of   2176     5%  
        Number used as RAM:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2112
-   Number with an unused Flip Flop:     831  out of   2112    39%  
-   Number with an unused LUT:           232  out of   2112    10%  
-   Number of fully used LUT-FF pairs:  1049  out of   2112    49%  
+ Number of LUT Flip Flop pairs used:   2113
+   Number with an unused Flip Flop:     832  out of   2113    39%  
+   Number with an unused LUT:           231  out of   2113    10%  
+   Number of fully used LUT-FF pairs:  1050  out of   2113    49%  
    Number of unique control sets:        49
 
 IO Utilization: 
@@ -1605,8 +1602,8 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                 | Load  |
 -----------------------------------+---------------------------------------+-------+
 clk                                | BUFGP                                 | 1333  |
-digpot0/divider0/clk_out           | NONE(digpot0/inc_pulse0/counter_6)    | 18    |
 digpot0/inc_pulse0/dp_busy         | NONE(digpot0/inc_pulse0/dp_cyc0)      | 1     |
+digpot0/divider0/clk_out           | NONE(digpot0/inc_pulse0/stop)         | 18    |
 trigger_0/trigger0/div2/clk_out    | NONE(trigger_0/trigger0/pulse/delay_0)| 3     |
 digpot0/divider0/rst               | NONE(digpot0/divider0/rst)            | 1     |
 trigger_0/trigger0/div1/rst        | NONE(trigger_0/trigger0/div1/rst)     | 1     |
@@ -1624,7 +1621,7 @@ Speed Grade: -3
 
    Minimum period: 12.519ns (Maximum Frequency: 79.882MHz)
    Minimum input arrival time before clock: 5.731ns
-   Maximum output required time after clock: 4.886ns
+   Maximum output required time after clock: 5.017ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1657,30 +1654,29 @@ Delay:               12.519ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'digpot0/divider0/clk_out'
-  Clock period: 7.218ns (frequency: 138.545MHz)
-  Total number of paths / destination ports: 212 / 27
+  Clock period: 6.027ns (frequency: 165.913MHz)
+  Total number of paths / destination ports: 199 / 27
 -------------------------------------------------------------------------
-Delay:               7.218ns (Levels of Logic = 6)
+Delay:               6.027ns (Levels of Logic = 5)
   Source:            digpot0/inc_pulse0/counter_2 (FF)
-  Destination:       digpot0/inc_pulse0/counter_5 (FF)
+  Destination:       digpot0/inc_pulse0/counter_4 (FF)
   Source Clock:      digpot0/divider0/clk_out falling
   Destination Clock: digpot0/divider0/clk_out falling
 
-  Data Path: digpot0/inc_pulse0/counter_2 to digpot0/inc_pulse0/counter_5
+  Data Path: digpot0/inc_pulse0/counter_2 to digpot0/inc_pulse0/counter_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.447   1.079  digpot0/inc_pulse0/counter_2 (digpot0/inc_pulse0/counter_2)
-     LUT6:I0->O            1   0.203   0.808  digpot0/inc_pulse0/n0008_inv_inv3 (digpot0/inc_pulse0/n0008_inv_inv1)
-     LUT3:I0->O            1   0.205   0.580  digpot0/inc_pulse0/n0008_inv_inv11 (digpot0/inc_pulse0/n0008_inv_inv11)
-     LUT5:I4->O            7   0.205   1.002  digpot0/inc_pulse0/n0008_inv_inv12 (digpot0/inc_pulse0/n0008_inv_inv2)
-     LUT3:I0->O            3   0.205   1.015  digpot0/inc_pulse0/n0008_inv_inv21 (digpot0/inc_pulse0/n0008_inv_inv)
-     LUT6:I0->O            2   0.203   0.961  digpot0/inc_pulse0/Mcount_counter_cy<4>11 (digpot0/inc_pulse0/Mcount_counter_cy<4>)
-     LUT5:I0->O            1   0.203   0.000  digpot0/inc_pulse0/Mcount_counter_xor<5>11 (digpot0/inc_pulse0/Mcount_counter5)
-     FDC:D                     0.102          digpot0/inc_pulse0/counter_5
+     FDC_1:C->Q            5   0.447   1.079  digpot0/inc_pulse0/counter_2 (digpot0/inc_pulse0/counter_2)
+     LUT6:I0->O            1   0.203   0.808  digpot0/inc_pulse0/n00083 (digpot0/inc_pulse0/n00081)
+     LUT3:I0->O            1   0.205   0.580  digpot0/inc_pulse0/n000811 (digpot0/inc_pulse0/n000811)
+     LUT5:I4->O            5   0.205   0.943  digpot0/inc_pulse0/n000812 (digpot0/inc_pulse0/n00082)
+     LUT3:I0->O            4   0.205   1.048  digpot0/inc_pulse0/n000821 (digpot0/inc_pulse0/n0008)
+     LUT6:I0->O            1   0.203   0.000  digpot0/inc_pulse0/Mmux_counter[6]_GND_28_o_mux_5_OUT41 (digpot0/inc_pulse0/counter[6]_GND_28_o_mux_5_OUT<3>)
+     FDC_1:D                   0.102          digpot0/inc_pulse0/counter_3
     ----------------------------------------
-    Total                      7.218ns (1.773ns logic, 5.445ns route)
-                                       (24.6% logic, 75.4% route)
+    Total                      6.027ns (1.570ns logic, 4.457ns route)
+                                       (26.0% logic, 74.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div2/clk_out'
@@ -1793,7 +1789,7 @@ Offset:              5.731ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 20 / 12
 -------------------------------------------------------------------------
-Offset:              4.886ns (Levels of Logic = 2)
+Offset:              5.017ns (Levels of Logic = 2)
   Source:            digpot0/divider0/clk_out (FF)
   Destination:       digpot_INC (PAD)
   Source Clock:      clk rising
@@ -1802,12 +1798,12 @@ Offset:              4.886ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             15   0.447   1.086  digpot0/divider0/clk_out (digpot0/divider0/clk_out)
+     FDC:C->Q             21   0.447   1.218  digpot0/divider0/clk_out (digpot0/divider0/clk_out)
      LUT4:I2->O            1   0.203   0.579  digpot0/inc_pulse0/clk_out1 (digpot_INC_OBUF)
      OBUF:I->O                 2.571          digpot_INC_OBUF (digpot_INC)
     ----------------------------------------
-    Total                      4.886ns (3.221ns logic, 1.665ns route)
-                                       (65.9% logic, 34.1% route)
+    Total                      5.017ns (3.221ns logic, 1.797ns route)
+                                       (64.2% logic, 35.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'digpot0/divider0/clk_out'
@@ -1872,8 +1868,8 @@ Clock to Setup on destination clock digpot0/divider0/clk_out
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-clk                     |         |         |    7.063|         |
-digpot0/divider0/clk_out|         |         |    7.218|         |
+clk                     |         |         |    5.910|         |
+digpot0/divider0/clk_out|         |         |    6.027|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock digpot0/divider0/rst
@@ -1889,7 +1885,7 @@ Clock to Setup on destination clock digpot0/inc_pulse0/dp_busy
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.858|         |
+clk            |         |         |    1.990|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock trigger_0/trigger0/div1/rst
@@ -1921,12 +1917,12 @@ trigger_0/trigger0/div2/rst|    2.568|         |         |         |
 
 
 Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.53 secs
+Total CPU time to Xst completion: 19.22 secs
  
 --> 
 
 
-Total memory usage is 408104 kilobytes
+Total memory usage is 408860 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  346 (   0 filtered)

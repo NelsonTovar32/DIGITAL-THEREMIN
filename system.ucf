@@ -36,10 +36,10 @@ NET "uart_rxd"	LOC = "N18"	| IOSTANDARD = "LVCMOS33";
 #NET "gpio_io<7>"	LOC = "T5"	| IOSTANDARD = "LVCMOS33";
 
 #OUTS LEDS
-NET "gpio_io<4>"	LOC = "V16"	| IOSTANDARD = "LVCMOS33"; #PIN CA 7SEG
-NET "gpio_io<5>"	LOC = "U15"	| IOSTANDARD = "LVCMOS33";		
-NET "gpio_io<6>"	LOC = "V15"	| IOSTANDARD = "LVCMOS33";		  
-NET "gpio_io<7>"	LOC = "M11"	| IOSTANDARD = "LVCMOS33";		
+#NET "gpio_io<4>"	LOC = "V16"	| IOSTANDARD = "LVCMOS33"; #PIN CA 7SEG
+#NET "gpio_io<5>"	LOC = "U15"	| IOSTANDARD = "LVCMOS33";		
+#NET "gpio_io<6>"	LOC = "V15"	| IOSTANDARD = "LVCMOS33";		  
+#NET "gpio_io<7>"	LOC = "M11"	| IOSTANDARD = "LVCMOS33";		
 #NET "gpio_io<12>"	LOC = "M11"	| IOSTANDARD = "LVCMOS33";		
 #NET "gpio_io<13>"	LOC = "N11"	| IOSTANDARD = "LVCMOS33";		
 #NET "gpio_io<14>"	LOC = "R11"	| IOSTANDARD = "LVCMOS33";		

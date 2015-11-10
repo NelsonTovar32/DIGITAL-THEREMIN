@@ -113,15 +113,10 @@ int counter()
 {
 	uint32_t tcr;
 	int msec=0xFFFFFFFF;
-	//Use timer0.1
 	timer0->compare1 = (FCPU/1000)*msec;
 	timer0->counter1 = 0;
 	timer0->tcr1 = TIMER_EN;
 
-	do {
- 		tcr = timer0->tcr1;
- 	} while ( ! (tcr & TIMER_TRIG) );
-	
 	return timer0->counter1;
 }
 

@@ -29,7 +29,7 @@ void midi(int cs)
 {
 	uint32_t b[80], max=0;
 	int i, sel_p, nota;
-	uint8_t instr;
+	uint8_t c3;
 
 	for (i=0;i<=79;i++) // Captura de información proveniente de ADC en vector de 80 posiciones
 	{
@@ -43,7 +43,7 @@ void midi(int cs)
 		max=b[i];
 
 	}
-	instr = gpio_read(); // Lectura de GPIO para determinación de instrumento musical
+	c3 = gpio_read(); // Lectura de GPIO para determinación de c3umento musical
 
 // El controlador cuenta con dos modos: 1) Modo Bateria, 2) Modo General MIDI
 
@@ -51,7 +51,10 @@ void midi(int cs)
 // El modo General MIDI asigna el canal 1 para el envío de información y notas musicales de la octava 3
 // Para ambos modos se utiliza una funciónde corrección que permite ajustar la sensibilidad de los piezoelectricos (i.e. max=max*k)
 
-	if (instr > 127)
+} */
+
+/*
+	if c3 > 127)
 	{
 		if (cs==1)
 		{
@@ -60,7 +63,7 @@ void midi(int cs)
 		}
 		if (cs==2)
 		{
-		 sel_p = 38; // Redoblante
+	 sel_p = 38; // Redoblante
 		max=max*4;
 		}
 		if (cs==4)
@@ -90,7 +93,7 @@ void midi(int cs)
 		uart_putchar(sel_p); // Selección de sección de bateria
 		uart_putchar(0); //Velocity del golpe
 	}
-	if (instr <= 127) // Indica que es un instrumento General MIDI (Envio por el canal 1) - Notas de la octava 3
+	if (c3 <= 127) // Indica que es un c3umento General MIDI (Envio por el canal 1) - Notas de la octava 3
 	{
 		if (cs==1)
 		{
@@ -116,22 +119,8 @@ void midi(int cs)
 		{
 		max=127;
 		}
-		// Mensaje cambio de intrumento
-		uart_putchar(192);
-		uart_putchar(instr);
-		// Mensaje Activación de Nota Musical
-		uart_putchar(144);
-		uart_putchar(nota);
-		uart_putchar(max);
-		msleep(250);
-		// Mensaje de desactivacion de nota
-		uart_putchar(128);
-		uart_putchar(nota);
-		uart_putchar(0);
-
-	}
-
-} */
+	
+*/
 
 //**************************************************************************************************
 // Función principal del codigo - Inicialización de SPI y lectura //
@@ -150,14 +139,10 @@ gpio_init(0x01);
 c2=0x002;
 trigger_set(c2);
 
-msleep(3000);
-set_digpot(0xE4);
-msleep(5000);
-set_digpot(0x32);
+msleep(1000);
+set_digpot(0x64);
 
 c3=counter();
-
-
 
 
 for(;;)
@@ -166,16 +151,19 @@ for(;;)
 	valor=valor>>1;
 	if(valor==1)
 	{
+		trigger_set(0x13);
 		pin_inv(1);
 		msleep(2000);
 	}
 	else if(valor==2)
 	{
+		trigger_set(0x001);		
 		pin_inv(1);
 		msleep(200);
 	}
 	else if(valor==4)
 	{
+		trigger_set(0x28);
 		pin_inv(1);
 		msleep(5000);
 	}

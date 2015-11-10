@@ -31,21 +31,21 @@ Linker script and memory map
                 0x000000000000016c                halt
                 0x00000000000001f8                get_sp
                 0x0000000000000200                get_gp
- .text          0x0000000000000208       0xdc main.o
+ .text          0x0000000000000208       0xe8 main.o
                 0x0000000000000208                main
- .text          0x00000000000002e4      0x34c soc-hw.o
-                0x00000000000002e4                isr_null
-                0x00000000000002e8                tic_isr
-                0x0000000000000314                irq_handler
-                0x0000000000000378                isr_init
-                0x000000000000039c                isr_register
-                0x00000000000003b4                isr_unregister
-                0x00000000000003d4                gpio_init
-                0x00000000000003e8                gpio_read
-                0x00000000000003fc                gpio_write
-                0x0000000000000410                set_pin
-                0x0000000000000458                pin_inv
-                0x000000000000049c                counter
+ .text          0x00000000000002f0      0x340 soc-hw.o
+                0x00000000000002f0                isr_null
+                0x00000000000002f4                tic_isr
+                0x0000000000000320                irq_handler
+                0x0000000000000384                isr_init
+                0x00000000000003a8                isr_register
+                0x00000000000003c0                isr_unregister
+                0x00000000000003e0                gpio_init
+                0x00000000000003f4                gpio_read
+                0x0000000000000408                gpio_write
+                0x000000000000041c                set_pin
+                0x0000000000000464                pin_inv
+                0x00000000000004a8                counter
                 0x00000000000004d8                msleep
                 0x0000000000000514                nsleep
                 0x0000000000000544                tic_init
@@ -105,25 +105,25 @@ LOAD main.o
 LOAD soc-hw.o
 OUTPUT(image elf32-lm32)
 
-.debug_abbrev   0x0000000000000000      0x2a4
+.debug_abbrev   0x0000000000000000      0x2b1
  .debug_abbrev  0x0000000000000000       0xc5 main.o
- .debug_abbrev  0x00000000000000c5      0x1df soc-hw.o
+ .debug_abbrev  0x00000000000000c5      0x1ec soc-hw.o
 
-.debug_info     0x0000000000000000      0x7e2
+.debug_info     0x0000000000000000      0x7de
  .debug_info    0x0000000000000000      0x173 main.o
- .debug_info    0x0000000000000173      0x66f soc-hw.o
+ .debug_info    0x0000000000000173      0x66b soc-hw.o
 
-.debug_line     0x0000000000000000      0x4df
- .debug_line    0x0000000000000000      0x13a main.o
- .debug_line    0x000000000000013a      0x3a5 soc-hw.o
+.debug_line     0x0000000000000000      0x4d7
+ .debug_line    0x0000000000000000      0x142 main.o
+ .debug_line    0x0000000000000142      0x395 soc-hw.o
 
 .debug_frame    0x0000000000000000      0x180
  .debug_frame   0x0000000000000000       0x20 main.o
  .debug_frame   0x0000000000000020      0x160 soc-hw.o
 
-.debug_loc      0x0000000000000000      0x1fa
+.debug_loc      0x0000000000000000      0x1e7
  .debug_loc     0x0000000000000000       0x34 main.o
- .debug_loc     0x0000000000000034      0x1c6 soc-hw.o
+ .debug_loc     0x0000000000000034      0x1b3 soc-hw.o
 
 .debug_pubnames
                 0x0000000000000000      0x1ab

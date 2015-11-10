@@ -152,7 +152,6 @@ typedef struct {
 	volatile uint32_t default0;
 		} digpot_t;
 
-void init_digpot();
 void set_digpot();
 
 /***************************************************************************

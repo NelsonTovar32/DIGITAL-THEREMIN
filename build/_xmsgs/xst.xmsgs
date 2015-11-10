@@ -68,10 +68,10 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 41: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 44: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 45: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 61: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" Line 62: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 41: Signal &lt;<arg fmt="%s" index="1">num</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.

@@ -88,7 +88,7 @@ typedef struct {
 
 void msleep(uint32_t msec);
 void nsleep(uint32_t nsec);
-void counter();
+int counter();
 
 void prueba();
 void tic_init();
