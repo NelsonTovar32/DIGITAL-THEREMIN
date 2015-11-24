@@ -1,13 +1,13 @@
-Release 13.4 par O.87xd (lin64)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-manu-desk::  Tue Nov 10 12:51:46 2015
+asus-X555LN::  Tue Nov 24 15:30:01 2015
 
 par -ol high -w system.ncd system-routed.ncd 
 
 
 Constraints file: system.pcf.
-Loading device for application Rf_Device from file '6slx16.nph' in environment /opt/Xilinx/13.4/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '6slx16.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
    "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -19,23 +19,23 @@ INFO:Par:282 - No user timing constraints were detected or you have set the opti
    reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
    Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
-Device speed data version:  "PRODUCTION 1.21 2012-01-07".
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 
 
 
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,279 out of  18,224    7%
+  Number of Slice Registers:                 1,270 out of  18,224    6%
     Number used as Flip Flops:               1,269
-    Number used as Latches:                      9
+    Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      1,579 out of   9,112   17%
-    Number used as logic:                    1,492 out of   9,112   16%
-      Number using O6 output only:           1,063
-      Number using O5 output only:             162
-      Number using O5 and O6:                  267
+  Number of Slice LUTs:                      1,567 out of   9,112   17%
+    Number used as logic:                    1,483 out of   9,112   16%
+      Number using O6 output only:           1,058
+      Number using O5 output only:             161
+      Number using O5 and O6:                  264
       Number used as ROM:                        0
     Number used as Memory:                      68 out of   2,176    3%
       Number used as Dual Port RAM:             68
@@ -44,18 +44,18 @@ Slice Logic Utilization:
         Number using O5 and O6:                 60
       Number used as Single Port RAM:            0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:     19
-      Number with same-slice register load:     13
+    Number used exclusively as route-thrus:     16
+      Number with same-slice register load:     10
       Number with same-slice carry load:         6
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   643 out of   2,278   28%
-  Nummber of MUXCYs used:                      404 out of   4,556    8%
-  Number of LUT Flip Flop pairs used:        2,037
-    Number with an unused Flip Flop:           863 out of   2,037   42%
-    Number with an unused LUT:                 458 out of   2,037   22%
-    Number of fully used LUT-FF pairs:         716 out of   2,037   35%
+  Number of occupied Slices:                   613 out of   2,278   26%
+  Number of MUXCYs used:                       404 out of   4,556    8%
+  Number of LUT Flip Flop pairs used:        1,999
+    Number with an unused Flip Flop:           833 out of   1,999   41%
+    Number with an unused LUT:                 432 out of   1,999   21%
+    Number of fully used LUT-FF pairs:         734 out of   1,999   36%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -103,35 +103,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 10 secs 
-Finished initial Timing Analysis.  REAL time: 10 secs 
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
 
 Starting Router
 
 
-Phase  1  : 10115 unrouted;      REAL time: 10 secs 
+Phase  1  : 10012 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 8846 unrouted;      REAL time: 11 secs 
+Phase  2  : 8752 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 3719 unrouted;      REAL time: 25 secs 
+Phase  3  : 3830 unrouted;      REAL time: 11 secs 
 
-Phase  4  : 3719 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
+Phase  4  : 3830 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Updating file: system-routed.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 37 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 38 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 40 secs 
-Total REAL time to Router completion: 40 secs 
-Total CPU time to Router completion: 41 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Total REAL time to Router completion: 21 secs 
+Total CPU time to Router completion: 21 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -142,7 +142,7 @@ Partition Implementation Status
 
 Generating "PAR" statistics.
 INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
-Timing Score: 0 (Setup: 0, Hold: 0)
+Timing Score: 128 (Setup: 128, Hold: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -151,18 +151,21 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|    13.413ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.404ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    13.452ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.365ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net dig | SETUP       |         N/A|     4.286ns|     N/A|           0
-  pot0/divider0/clk_out                     | HOLD        |     0.224ns|            |       0|           0
+  Autotimespec constraint for clock net dig | SETUP       |         N/A|     2.282ns|     N/A|           0
+  pot_INC_OBUF                              | HOLD        |     0.439ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net tri | SETUP       |         N/A|     1.242ns|     N/A|           0
-  gger_0/trigger0/div2/clk_out              | HOLD        |     0.562ns|            |       0|           0
+  Autotimespec constraint for clock net dig | SETUP       |         N/A|     2.506ns|     N/A|         128
+  pot0/divider0/clk_out                     | HOLD        |     1.778ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net tri | SETUP       |         N/A|     1.249ns|     N/A|           0
+  gger_0/trigger0/div2/clk_out              | HOLD        |     0.568ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraint not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -174,10 +177,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 41 secs 
-Total CPU time to PAR completion: 42 secs 
+Total REAL time to PAR completion: 22 secs 
+Total CPU time to PAR completion: 22 secs 
 
-Peak Memory Usage:  641 MB
+Peak Memory Usage:  661 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

@@ -4,15 +4,15 @@
 ////                         main.c                               ////
 ////                                                              ////
 ////  Este archivo hace parte del trabajo realizado para el       ////
-////  proyecto de curso de Electronica Digital II		          ////
-////  Universidad Nacional de Colombia - 2015 -2        		  ////
+////  proyecto de curso de Electronica Digital II		  ////
+////  Universidad Nacional de Colombia - 2015 -2        	  ////
 ////                                                              ////
 ////  Autores:                                                    ////
-////    *Nelson Leonardo Tovar (nltovar@unal.edu.co)		      ////
+////    *Nelson Leonardo Tovar (nltovar@unal.edu.co)		  ////
 ////    *Manuel Alejandro Barreto (mabarretor@unal.edu.co)        ////
 ////    *Daniel Camilo Beltrán (dcbeltrans@unal.edu.co)           ////
 ////                                                              ////
-////  Información adicional en: 				                  ////
+////  Información adicional en: 				  ////
 ////  https://sites.google.com/site/edigital2unal/proyectos/      ////
 ////  	     proyectosii-015/grupo02                              ////
 ////                                                              ////
@@ -127,14 +127,52 @@ void midi(int cs)
 //**************************************************************************************************
 int main()
 {
-	uint32_t a1, a2, a3, a4; // Cuatro esclavos (ADC) son seleccionados
-	int j;
+	//uint32_t a1, a2, a3, a4; // Cuatro esclavos (ADC) son seleccionados
+
+	int j, i;
 
  	uint16_t b1, b2, b3, b4;
 
-	uint8_t c1, c2, c3, c4, valor;
+	//uint8_t c1, c2, c3, c4, valor;
+
+	uint8_t c1, c2, c3, c4, c5, p;
 
 
+p = 1;
+c1 = 6;
+
+if ( p == 1)				//selección tercera octava 
+    {	
+        
+        if ( c1 > 2 && c1 < 10){ b1 = 262;}	//selección de la nota dependiendo la distancia
+        else if ( c1 > 10 && c1 < 20){ b1 = 294;}
+	else if ( c1 > 20 && c1 < 30){ b1 = 330;}
+	else if ( c1 > 30 && c1 < 40){ b1 = 349;}
+	else if ( c1 > 40 && c1 < 50){ b1 = 392;}
+	else if ( c1 > 50 && c1 < 60){ b1 = 440;}
+        else if ( c1 > 60 && c1 < 70){ b1 = 494;}
+	
+	for ( i = 0; i < 251; i++)
+	{
+	    for ( j = 0; j < 86; j++)		//recorre cada una de las muestras (85 tercera octava)
+            {
+                c2 = ((1/b1)/85)*1e9;
+                c3 = c2/85;
+                c4 = j*c3;
+                c5 = c2-c4;
+
+    	        set_pin(1,8);			//se asigna el ciclo util por tiempo
+   	        nsleep(c4);
+	        set_pin(0,8);
+	        nsleep(c5);
+
+            }
+        }
+    }
+
+
+
+/*
 gpio_init(0x01);
 c2=0x002;
 trigger_set(c2);
@@ -174,6 +212,8 @@ for(;;)
 	}
 
 }
+
+*/
 
 
 /*for (;;)

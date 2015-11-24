@@ -219,3 +219,70 @@ void set_digpot(uint32_t dp)
 
 }
 
+//***************************************************************************
+// Estructura del periferico PWM
+//***************************************************************************
+/*
+void asig_pwm ()
+
+{
+
+    //double x, y, t, d, f, r, p;
+
+    if ( p == 1)				//selección tercera octava 
+    {	
+        cin >> d;
+        if ( d > 2 && d < 10){ f = 262;}	//selección de la nota dependiendo la distancia
+        else if ( d > 10 && d < 20){ f = 294;}
+	else if ( d > 20 && d < 30){ f = 330;}
+	else if ( d > 30 && d < 40){ f = 349;}
+	else if ( d > 40 && d < 50){ f = 392;}
+	else if ( d > 50 && d < 60){ f = 440;}
+        else if ( d > 60 && d < 70){ f = 494;}
+	
+	for (int i = 0; i < 251; i++)
+	{
+	    for (int i = 0; i < 86; i++)		//recorre cada una de las muestras (85 tercera octava)
+            {
+                t = ((1/f)/85)*1e9;
+                r = t/85;
+                x = i*r;
+                y = t-x;
+
+    	        set_pin(1,8);			//se asigna el ciclo util por tiempo
+   	        nsleep(x);
+	        set_pin(0,8);
+	        nsleep(y);
+
+            }
+        }
+    }
+    else if ( p == 2)				//selección cuarta octava
+    {
+        if ( d > 2 && d < 10){ f = 262;}	//selección de la nota dependiendo la distancia
+        else if ( d > 10 && d < 20){ f = 294;}
+	else if ( d > 20 && d < 30){ f = 330;}
+	else if ( d > 30 && d < 40){ f = 349;}
+	else if ( d > 40 && d < 50){ f = 392;}
+	else if ( d > 50 && d < 60){ f = 440;}
+        else if ( d > 60 && d < 70){ f = 494;}
+
+	for (int i = 0; i < 251; i++)
+	{        
+	    for (int i = 0; i < 171; i++)		//recorre cada una de las muestras (170 cuarta octava)
+            {
+                t = ((1/f)/170)*1e9;
+                r = t/170;
+                x = i*r;
+                y = t-x;
+
+	        set_pin(1,8);			//se asigna el ciclo util por tiempo
+	        nsleep(x);
+	        set_pin(0,8);
+	        nsleep(y);
+
+            }
+        }
+    }
+}
+*/
