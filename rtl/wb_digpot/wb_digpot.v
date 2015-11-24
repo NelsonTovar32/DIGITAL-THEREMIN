@@ -17,18 +17,19 @@ module wb_digpot(
 	// DigPot Wires
 	output    	   INC_o, //Salida de Incremento	
 	output		   UDn_o, //Salida de direccion de incremento
-	output		   CSn_o //Activación del dispositivo
+	output		   CSn_o //Activacin del dispositivo
 );
 
 //---------------------------------------------------------------------------
 // Actual DigPot engine
 //---------------------------------------------------------------------------
 
-wire dp_cyc0, dp_cyc1, dp_busy, clk_out0;
+wire dp_busy, clk_out0;
 
 reg [7:0] set_digpot= 8'b00000000; //Primer bit indica el sentido de movimiento Wiper: 0-Abajo, 1-Arriba
 											  //Ultimos 7 bits indican el numero de pasos del wiper
-reg [7:0] default0 = 8'b00000000;
+
+reg [7:0] set2= 8'b00000000;
 
 div_frec divider0(
 	.clk( clk ),
@@ -40,8 +41,6 @@ inc_pulse inc_pulse0(
 	.clk_in( clk_out0 ),
 	.reset( reset ),
 	.num( set_digpot[6:0] ),
-	.dp_cyc0( dp_cyc0 ),
-	.dp_cyc1( dp_cyc1 ),
 	.dp_busy( dp_busy ),
 	.clk_out( INC_o )
 );
@@ -52,7 +51,6 @@ inc_pulse inc_pulse0(
 
 
 wire wb_wr = wb_stb_i & wb_cyc_i &  wb_we_i;
-wire cycle = ~(dp_cyc0 | dp_busy);
 
 reg  ack;
 
@@ -67,26 +65,40 @@ begin
 	if (reset) 
 		begin
 		wb_dat_o[31:8] <= 24'b0;
-		end 
+		end	
+	if (dp_busy)
+		begin
+		set_digpot[6:0]<=set2[6:0];
+		end
 	else 
 		begin
 		wb_dat_o[31:8] <= 24'b0;
 		ack    <= 0;
+		
 		if (wb_wr & ~ack ) 
 			begin
 			ack <= 1;
-			if (wb_adr_i[2] == 1'b0 & cycle) 
+			if (wb_adr_i[2] == 1'b0 & ~dp_busy) 
 				begin
 				set_digpot <= wb_dat_i[7:0];
 				end
 			end
 		end
-		
-		if (dp_cyc1) 
-			begin
-				set_digpot <= default0;
-			end
+
 end
 
-endmodule
+always @(posedge INC_o)
+   begin
+	
+	if (~dp_busy)
+		begin
+		set2[6:0]<=set_digpot[6:0];
+		end
+		else
+		begin
+		set2[6:0] <= set2[6:0]-1;
+		end
+	end
 
+
+endmodule
