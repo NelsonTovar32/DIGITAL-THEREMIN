@@ -1963,13 +1963,13 @@ trigger_0/trigger0/div2/rst|    2.568|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 14.60 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.02 secs
  
 --> 
 
 
-Total memory usage is 415416 kilobytes
+Total memory usage is 415000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  352 (   0 filtered)
