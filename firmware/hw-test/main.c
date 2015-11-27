@@ -137,10 +137,9 @@ int main()
 
 	uint8_t c1, c2, c3, c4, c5, p;
 
-gpio_init(0x01);
 
 p = 1;
-c1 = 35;
+c1 = 6;
 
 if ( p == 1)				//selección tercera octava 
     {	
@@ -153,9 +152,7 @@ if ( p == 1)				//selección tercera octava
 	else if ( c1 > 50 && c1 < 60){ b1 = 440;}
         else if ( c1 > 60 && c1 < 70){ b1 = 494;}
 	
-for(;;){	
-
-for ( i = 0; i < 251; i++)
+	for ( i = 0; i < 251; i++)
 	{
 	    for ( j = 0; j < 86; j++)		//recorre cada una de las muestras (85 tercera octava)
             {
@@ -164,16 +161,16 @@ for ( i = 0; i < 251; i++)
                 c4 = j*c3;
                 c5 = c2-c4;
 
-    	        set_pin(1,1);			//se asigna el ciclo util por tiempo
+    	        set_pin(1,8);			//se asigna el ciclo util por tiempo
    	        nsleep(c4);
-	        set_pin(0,1);
+	        set_pin(0,8);
 	        nsleep(c5);
 
             }
         }
     }
 
-}
+
 
 /*
 gpio_init(0x01);
