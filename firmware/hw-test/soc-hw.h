@@ -4,15 +4,15 @@
 ////                        soc-hw.h                              ////
 ////                                                              ////
 ////  Este archivo hace parte del trabajo realizado para el       ////
-////  proyecto de curso de Electronica Digital II		          ////
-////  Universidad Nacional de Colombia - 2015 -2        		  ////
+////  proyecto de curso de Electronica Digital II		  ////
+////  Universidad Nacional de Colombia - 2015 -2        	  ////
 ////                                                              ////
 ////  Autores:                                                    ////
-////    *Nelson Leonardo Tovar (nltovar@unal.edu.co)		      ////
+////    *Nelson Leonardo Tovar (nltovar@unal.edu.co)		  ////
 ////    *Manuel Alejandro Barreto (mabarretor@unal.edu.co)        ////
 ////    *Daniel Camilo Beltrán (dcbeltrans@unal.edu.co)           ////
 ////                                                              ////
-////  Información adicional en: 				                  ////
+////  Información adicional en: 				  ////
 ////  https://sites.google.com/site/edigital2unal/proyectos/      ////
 ////  	     proyectosii-015/grupo02                              ////
 ////                                                              ////
@@ -149,7 +149,7 @@ void trigger_set();
  */
 typedef struct {
 	volatile uint32_t set_digpot;
-	volatile uint32_t default0;
+	volatile uint32_t set2;
 		} digpot_t;
 
 void set_digpot();

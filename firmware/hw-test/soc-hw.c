@@ -4,15 +4,15 @@
 ////                        soc-hw.c                              ////
 ////                                                              ////
 ////  Este archivo hace parte del trabajo realizado para el       ////
-////  proyecto de curso de Electronica Digital II		          ////
-////  Universidad Nacional de Colombia - 2015 -2        		  ////
+////  proyecto de curso de Electronica Digital II		  ////
+////  Universidad Nacional de Colombia - 2015 -2                  ////
 ////                                                              ////
 ////  Autores:                                                    ////
-////    *Nelson Leonardo Tovar (nltovar@unal.edu.co)		      ////
+////    *Nelson Leonardo Tovar (nltovar@unal.edu.co)		  ////
 ////    *Manuel Alejandro Barreto (mabarretor@unal.edu.co)        ////
 ////    *Daniel Camilo Beltrán (dcbeltrans@unal.edu.co)           ////
 ////                                                              ////
-////  Información adicional en: 				                  ////
+////  Información adicional en: 				  ////
 ////  https://sites.google.com/site/edigital2unal/proyectos/      ////
 ////  	     proyectosii-015/grupo02                              ////
 ////                                                              ////
@@ -73,7 +73,7 @@ void isr_unregister(int irq)
 
 void gpio_init(uint32_t k)
 {
-	gpio0->dir=k; //todo lo que sea 0 es puerto lectura
+	gpio0->dir=k; //todo lo que sea 0 es puerto lectura, 1 es puerto escritura o salida
 }
 
 uint32_t gpio_read()
