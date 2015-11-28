@@ -1,5 +1,8 @@
-`timescale 1ns / 1ps
-
+//-----------------------------------------------------
+// Design Name : trigger_pulse
+// Description: Generador de estimulo para sensores
+// File Name   : trigger_pulse.v
+//-----------------------------------------------------
 module trigger_pulse(
    input t_long,        //Entrada del pulso de periodo mas largo
    input t_short,       //Entrada del pulso de periodo mas corto

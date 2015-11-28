@@ -33,7 +33,7 @@ Input Format                       : MIXED
 
 ---- Target Parameters
 Output File Name                   : "system.ngc"
-Target Device                      : XC6SLX16-3CSG324
+Target Device                      : XC6SLX45-3CSG324
 
 ---- Source Options
 Top Module Name                    : system
@@ -136,26 +136,32 @@ Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/tr
 Parsing module <trigger_top>.
 Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/trigger_pulse.v" into library work
 Parsing module <trigger_pulse>.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/echo_counter.v" into library work
+Parsing module <echo_counter>.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/echo_top.v" into library work
+Parsing module <echo_top>.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec.v" into library work
+Parsing module <div_frec>.
 Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" into library work
 Parsing module <div_frec_adj>.
 Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/wb_digpot.v" into library work
 Parsing module <wb_digpot>.
 Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v" into library work
 Parsing module <inc_pulse>.
-Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/div_frec.v" into library work
-Parsing module <div_frec>.
+Analyzing Verilog file "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/div_frecp.v" into library work
+Parsing module <div_frecp>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 186: Port m0_cti_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 187: Port m0_cti_i is not connected to this instance
 
 Elaborating module <system>.
 
 Elaborating module <conbus(s_addr_w=3,s0_addr=3'b0,s1_addr=3'b010,s2_addr=3'b011,s3_addr=3'b100,s4_addr=3'b101,s5_addr=3'b110)>.
 
 Elaborating module <conbus_arb>.
-WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 248: Assignment to gpio0_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 249: Assignment to gpio0_sel ignored, since the identifier is never used
 
 Elaborating module <lm32_cpu>.
 
@@ -183,19 +189,19 @@ Elaborating module <lm32_mc_arithmetic>.
 
 Elaborating module <lm32_interrupt>.
 WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 291: Assignment to lm32i_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 292: Assignment to lm32i_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 293: Assignment to lm32i_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 305: Assignment to lm32d_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 306: Assignment to lm32d_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 307: Assignment to lm32d_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 292: Assignment to lm32i_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 293: Assignment to lm32i_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 294: Assignment to lm32i_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 306: Assignment to lm32d_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 307: Assignment to lm32d_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 308: Assignment to lm32d_bte ignored, since the identifier is never used
 
 Elaborating module <wb_bram(adr_width=12,mem_file_name="../firmware/hw-test/image.ram")>.
 Reading initialization file \"../firmware/hw-test/image.ram\".
 
-Elaborating module <wb_uart(clk_freq=100000000,baud=1152000)>.
+Elaborating module <wb_uart(clk_freq=50000000,baud=1152000)>.
 
-Elaborating module <uart(freq_hz=100000000,baud=1152000)>.
+Elaborating module <uart(freq_hz=50000000,baud=1152000)>.
 WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 39: Result of 32-bit expression is truncated to fit in 16-bit target.
 WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 88: Result of 5-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
@@ -204,13 +210,13 @@ WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v
 
 Elaborating module <wb_digpot>.
 
-Elaborating module <div_frec>.
-WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/div_frec.v" Line 34: Result of 27-bit expression is truncated to fit in 26-bit target.
+Elaborating module <div_frecp>.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/div_frecp.v" Line 34: Result of 27-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <inc_pulse>.
 WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/wb_digpot.v" Line 99: Result of 32-bit expression is truncated to fit in 7-bit target.
 
-Elaborating module <wb_timer(clk_freq=100000000)>.
+Elaborating module <wb_timer(clk_freq=50000000)>.
 
 Elaborating module <wb_gpio>.
 
@@ -219,15 +225,24 @@ Elaborating module <wb_trigger>.
 Elaborating module <trigger_top>.
 
 Elaborating module <div_frec_adj>.
-WARNING:HDLCompiler:91 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 41: Signal <num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 80: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:91 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 23: Signal <num> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v" Line 85: Result of 27-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <trigger_pulse>.
-WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 158: Net <lm32i_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 159: Net <lm32d_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 161: Net <lm32i_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 162: Net <lm32d_err> does not have a driver.
-WARNING:HDLCompiler:552 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 194: Input port m0_cti_i[2] is not connected on this instance
+
+Elaborating module <echo_top>.
+
+Elaborating module <div_frec>.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec.v" Line 38: Result of 27-bit expression is truncated to fit in 26-bit target.
+
+Elaborating module <echo_counter>.
+WARNING:HDLCompiler:413 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/echo_counter.v" Line 23: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v" Line 53: Net <echo_in> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 159: Net <lm32i_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 160: Net <lm32d_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 162: Net <lm32i_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 163: Net <lm32d_err> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" Line 195: Input port m0_cti_i[2] is not connected on this instance
 WARNING:Xst:2972 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 483. All outputs of instance <simtrace> of block <lm32_simtrace> are unconnected in block <lm32_cpu>. Underlying logic will be removed.
 
 =========================================================================
@@ -237,23 +252,23 @@ WARNING:Xst:2972 - "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" 
 Synthesizing Unit <system>.
     Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/system.v".
         bootram_file = "../firmware/hw-test/image.ram"
-        clk_freq = 100000000
+        clk_freq = 50000000
         uart_baud_rate = 1152000
 WARNING:Xst:2898 - Port 'm0_cti_i', unconnected in block instance 'conbus0', is tied to GND.
 WARNING:Xst:2898 - Port 'm1_cti_i', unconnected in block instance 'conbus0', is tied to GND.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 194: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 194: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 194: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 194: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 194: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 194: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 194: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 278: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 278: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 278: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 278: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 278: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 278: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 195: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 195: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 195: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 195: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 195: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 195: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 195: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 279: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 279: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 279: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 279: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 279: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/asus/Documentos/DIGITAL_THEREMIN/system.v" line 279: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <lm32i_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32d_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32i_err> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -594,7 +609,7 @@ Unit <wb_bram> synthesized.
 
 Synthesizing Unit <wb_uart>.
     Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_uart/wb_uart.v".
-        clk_freq = 100000000
+        clk_freq = 50000000
         baud = 1152000
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -611,30 +626,30 @@ WARNING:Xst:647 - Input <wb_dat_i<31:8>> is never used. This port will be preser
     Found 1-bit register for signal <tx_wr>.
     Found 1-bit register for signal <rx_ack>.
     Found 1-bit register for signal <ack>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><27:27>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><2:2>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><27:27>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><23:23>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><29:29>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><26:26>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><30:30>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><8:8>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><28:28>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><25:25>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><11:11>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><10:10>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><19:19>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><31:31>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><26:26>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><25:25>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><24:24>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><23:23>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><10:10>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><21:21>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><20:20>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><19:19>> (without init value) have a constant value of 0 in block <wb_uart>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><18:18>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><17:17>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><16:16>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><15:15>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><12:12>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><28:28>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><30:30>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><29:29>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><22:22>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><20:20>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><14:14>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><13:13>> (without init value) have a constant value of 0 in block <wb_uart>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><9:9>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><17:17>> (without init value) have a constant value of 0 in block <wb_uart>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><15:15>> (without init value) have a constant value of 0 in block <wb_uart>.
     Summary:
 	inferred  11 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
@@ -642,7 +657,7 @@ Unit <wb_uart> synthesized.
 
 Synthesizing Unit <uart>.
     Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/lac/uart.v".
-        freq_hz = 100000000
+        freq_hz = 50000000
         baud = 1152000
     Found 1-bit register for signal <uart_rxd1>.
     Found 1-bit register for signal <uart_rxd2>.
@@ -717,8 +732,8 @@ WARNING:Xst:653 - Signal <wb_dat_o<7:0>> is used but never assigned. This source
 	inferred   8 Multiplexer(s).
 Unit <wb_digpot> synthesized.
 
-Synthesizing Unit <div_frec>.
-    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/div_frec.v".
+Synthesizing Unit <div_frecp>.
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/div_frecp.v".
         k = 26'b00000000000000000111110011
     Found 26-bit register for signal <counter>.
     Found 1-bit register for signal <clk_out>.
@@ -729,7 +744,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <rst>. Latches may be generated f
 	inferred  27 D-type flip-flop(s).
 	inferred   1 Latch(s).
 	inferred   1 Multiplexer(s).
-Unit <div_frec> synthesized.
+Unit <div_frecp> synthesized.
 
 Synthesizing Unit <inc_pulse>.
     Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_digpot/inc_pulse.v".
@@ -746,7 +761,7 @@ Unit <inc_pulse> synthesized.
 
 Synthesizing Unit <wb_timer>.
     Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_timer/wb_timer.v".
-        clk_freq = 100000000
+        clk_freq = 50000000
 WARNING:Xst:647 - Input <wb_adr_i<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <en0>.
@@ -805,38 +820,47 @@ Unit <wb_gpio> synthesized.
 Synthesizing Unit <wb_trigger>.
     Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/wb_trigger.v".
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <wb_adr_i<31:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wb_adr_i<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_sel_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_dat_i<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:653 - Signal <wb_dat_o<7:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:647 - Input <echo_i> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <echo_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <wb_dat_o<15>>.
+    Found 1-bit register for signal <wb_dat_o<14>>.
+    Found 1-bit register for signal <wb_dat_o<13>>.
+    Found 1-bit register for signal <wb_dat_o<12>>.
+    Found 1-bit register for signal <wb_dat_o<11>>.
+    Found 1-bit register for signal <wb_dat_o<10>>.
+    Found 1-bit register for signal <wb_dat_o<9>>.
+    Found 1-bit register for signal <wb_dat_o<8>>.
+    Found 1-bit register for signal <wb_dat_o<7>>.
+    Found 1-bit register for signal <wb_dat_o<6>>.
+    Found 1-bit register for signal <wb_dat_o<5>>.
+    Found 1-bit register for signal <wb_dat_o<4>>.
+    Found 1-bit register for signal <wb_dat_o<3>>.
+    Found 1-bit register for signal <wb_dat_o<2>>.
+    Found 1-bit register for signal <wb_dat_o<1>>.
+    Found 1-bit register for signal <wb_dat_o<0>>.
     Found 1-bit register for signal <ack>.
     Found 9-bit register for signal <set_trig>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><0:0>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><30:30>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><0:0>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<29><31:31>> (without init value) have a constant value of 0 in block <wb_trigger>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<28><29:29>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><28:28>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><27:27>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<26><28:28>> (without init value) have a constant value of 0 in block <wb_trigger>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<25><26:26>> (without init value) have a constant value of 0 in block <wb_trigger>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<24><25:25>> (without init value) have a constant value of 0 in block <wb_trigger>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<23><24:24>> (without init value) have a constant value of 0 in block <wb_trigger>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<22><23:23>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><22:22>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><21:21>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<20><22:22>> (without init value) have a constant value of 0 in block <wb_trigger>.
     WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<19><20:20>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><19:19>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><18:18>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><17:17>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<15><16:16>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<14><15:15>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<13><14:14>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<12><13:13>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<11><12:12>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<10><11:11>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<9><10:10>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<8><9:9>> (without init value) have a constant value of 0 in block <wb_trigger>.
-    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31><8:8>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<17><19:19>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<27><17:17>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<18><27:27>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<16><18:18>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<21><16:16>> (without init value) have a constant value of 0 in block <wb_trigger>.
+    WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<30><21:21>> (without init value) have a constant value of 0 in block <wb_trigger>.
     Summary:
-	inferred  10 D-type flip-flop(s).
+	inferred  26 D-type flip-flop(s).
 Unit <wb_trigger> synthesized.
 
 Synthesizing Unit <trigger_top>.
@@ -850,10 +874,10 @@ Synthesizing Unit <div_frec_adj>.
     Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec_adj.v".
     Found 26-bit register for signal <counter>.
     Found 1-bit register for signal <clk_out>.
-    Found 26-bit adder for signal <counter[25]_GND_41_o_add_3_OUT> created at line 80.
+    Found 26-bit adder for signal <counter[25]_GND_41_o_add_3_OUT> created at line 85.
 WARNING:Xst:737 - Found 1-bit latch for signal <rst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 32-bit comparator equal for signal <GND_41_o_p[31]_equal_2_o> created at line 69
-    Found 32-bit comparator greater for signal <p[31]_GND_41_o_LessThan_3_o> created at line 74
+    Found 32-bit comparator equal for signal <GND_41_o_p[31]_equal_2_o> created at line 74
+    Found 32-bit comparator greater for signal <p[31]_GND_41_o_LessThan_3_o> created at line 79
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  27 D-type flip-flop(s).
@@ -869,6 +893,34 @@ Synthesizing Unit <trigger_pulse>.
 	inferred   3 D-type flip-flop(s).
 Unit <trigger_pulse> synthesized.
 
+Synthesizing Unit <echo_top>.
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/echo_top.v".
+    Summary:
+	no macro.
+Unit <echo_top> synthesized.
+
+Synthesizing Unit <div_frec>.
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/div_frec.v".
+        k = 26'b00000000000000000000011000
+    Found 26-bit register for signal <counter>.
+    Found 1-bit register for signal <clk_out>.
+    Found 26-bit adder for signal <counter[25]_GND_46_o_add_1_OUT> created at line 38.
+WARNING:Xst:737 - Found 1-bit latch for signal <rst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   1 Multiplexer(s).
+Unit <div_frec> synthesized.
+
+Synthesizing Unit <echo_counter>.
+    Related source file is "/home/asus/Documentos/DIGITAL_THEREMIN/rtl/wb_trigger/echo_counter.v".
+    WARNING:Xst:2404 -  FFs/Latches <counter<15:0>> (without init value) have a constant value of 0 in block <echo_counter>.
+    WARNING:Xst:2404 -  FFs/Latches <c_out<15:0>> (without init value) have a constant value of 0 in block <echo_counter>.
+    Summary:
+	no macro.
+Unit <echo_counter> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
@@ -878,9 +930,9 @@ Macro Statistics
  32x32-bit dual-port RAM                               : 2
 # Multipliers                                          : 1
  32x32-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 19
+# Adders/Subtractors                                   : 20
  16-bit subtractor                                     : 1
- 26-bit adder                                          : 3
+ 26-bit adder                                          : 4
  30-bit adder                                          : 2
  32-bit adder                                          : 2
  33-bit adder                                          : 2
@@ -888,12 +940,12 @@ Macro Statistics
  4-bit adder                                           : 4
  6-bit subtractor                                      : 1
  7-bit subtractor                                      : 1
-# Registers                                            : 180
- 1-bit register                                        : 113
+# Registers                                            : 198
+ 1-bit register                                        : 130
  16-bit register                                       : 1
  2-bit register                                        : 3
  24-bit register                                       : 1
- 26-bit register                                       : 3
+ 26-bit register                                       : 4
  3-bit register                                        : 3
  30-bit register                                       : 7
  32-bit register                                       : 30
@@ -903,8 +955,8 @@ Macro Statistics
  7-bit register                                        : 1
  8-bit register                                        : 6
  9-bit register                                        : 1
-# Latches                                              : 3
- 1-bit latch                                           : 3
+# Latches                                              : 4
+ 1-bit latch                                           : 4
 # Comparators                                          : 16
  1-bit comparator equal                                : 1
  32-bit comparator equal                               : 5
@@ -912,13 +964,13 @@ Macro Statistics
  5-bit comparator equal                                : 6
  7-bit comparator greater                              : 1
  7-bit comparator lessequal                            : 1
-# Multiplexers                                         : 153
+# Multiplexers                                         : 154
  1-bit 2-to-1 multiplexer                              : 52
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 1
  2-bit 2-to-1 multiplexer                              : 1
- 26-bit 2-to-1 multiplexer                             : 5
+ 26-bit 2-to-1 multiplexer                             : 6
  3-bit 2-to-1 multiplexer                              : 2
  30-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 46
@@ -937,34 +989,52 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <div1> is unconnected in block <echo0>.
+   It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <i_cyc_o> in Unit <instruction_unit> is equivalent to the following FF/Latch, which will be removed : <i_stb_o> 
 INFO:Xst:2261 - The FF/Latch <wb_dat_o_8> in Unit <gpio0> is equivalent to the following 23 FFs/Latches, which will be removed : <wb_dat_o_9> <wb_dat_o_10> <wb_dat_o_11> <wb_dat_o_12> <wb_dat_o_13> <wb_dat_o_14> <wb_dat_o_15> <wb_dat_o_16> <wb_dat_o_17> <wb_dat_o_18> <wb_dat_o_19> <wb_dat_o_20> <wb_dat_o_21> <wb_dat_o_22> <wb_dat_o_23> <wb_dat_o_24> <wb_dat_o_25> <wb_dat_o_26> <wb_dat_o_27> <wb_dat_o_28> <wb_dat_o_29> <wb_dat_o_30> <wb_dat_o_31> 
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_8> (without init value) has a constant value of 0 in block <gpio0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_31> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_8> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_9> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <wb_dat_o_11> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_12> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_10> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_13> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_14> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_15> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_16> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_17> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_18> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_20> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_21> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_19> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_22> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_23> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_24> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_25> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_26> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_27> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_29> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_30> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wb_dat_o_28> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_9> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_8> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_31> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_8> (without init value) has a constant value of 0 in block <gpio0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_14> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_15> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_13> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_12> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_11> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_10> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_9> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_8> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_5> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_7> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_6> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_4> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_3> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_2> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_1> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_0> (without init value) has a constant value of 0 in block <trigger_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <bus_error_x> (without init value) has a constant value of 0 in block <lm0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_28> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_30> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_29> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_27> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_26> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_25> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_24> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_23> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_22> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_19> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_21> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_20> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_18> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_17> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_16> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_15> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_14> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_13> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_10> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_12> (without init value) has a constant value of 0 in block <digpot0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <i_adr_o_12> of sequential type is unconnected in block <instruction_unit>.
 WARNING:Xst:2677 - Node <i_adr_o_13> of sequential type is unconnected in block <instruction_unit>.
 WARNING:Xst:2677 - Node <i_adr_o_14> of sequential type is unconnected in block <instruction_unit>.
@@ -999,11 +1069,17 @@ WARNING:Xst:2677 - Node <d_adr_o_25> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <d_adr_o_26> of sequential type is unconnected in block <load_store_unit>.
 WARNING:Xst:2677 - Node <d_adr_o_27> of sequential type is unconnected in block <load_store_unit>.
 WARNING:Xst:2677 - Node <d_adr_o_31> of sequential type is unconnected in block <load_store_unit>.
+WARNING:Xst:1290 - Hierarchical block <echo0> is unconnected in block <trigger_0>.
+   It will be removed from the design.
 WARNING:Xst:2404 -  FFs/Latches <wb_dat_o<31:8>> (without init value) have a constant value of 0 in block <wb_gpio>.
 
 Synthesizing (advanced) Unit <div_frec>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
 Unit <div_frec> synthesized (advanced).
+
+Synthesizing (advanced) Unit <div_frecp>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <div_frecp> synthesized (advanced).
 
 Synthesizing (advanced) Unit <lm32_cpu>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -1088,13 +1164,13 @@ Macro Statistics
  33-bit subtractor                                     : 1
  33-bit subtractor borrow in                           : 1
  7-bit subtractor                                      : 1
-# Counters                                             : 7
+# Counters                                             : 8
  16-bit down counter                                   : 1
- 26-bit up counter                                     : 1
+ 26-bit up counter                                     : 2
  4-bit up counter                                      : 4
  6-bit down counter                                    : 1
-# Registers                                            : 1409
- Flip-Flops                                            : 1409
+# Registers                                            : 1426
+ Flip-Flops                                            : 1426
 # Comparators                                          : 16
  1-bit comparator equal                                : 1
  32-bit comparator equal                               : 5
@@ -1147,6 +1223,10 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_28> (witho
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_30> (without init value) has a constant value of 0 in block <wb_digpot>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_29> (without init value) has a constant value of 0 in block <wb_digpot>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <i_cyc_o> in Unit <lm32_instruction_unit> is equivalent to the following FF/Latch, which will be removed : <i_stb_o> 
+INFO:Xst:2261 - The FF/Latch <wb_dat_o_15> in Unit <wb_trigger> is equivalent to the following 15 FFs/Latches, which will be removed : <wb_dat_o_14> <wb_dat_o_11> <wb_dat_o_13> <wb_dat_o_12> <wb_dat_o_10> <wb_dat_o_9> <wb_dat_o_6> <wb_dat_o_8> <wb_dat_o_7> <wb_dat_o_5> <wb_dat_o_4> <wb_dat_o_1> <wb_dat_o_3> <wb_dat_o_2> <wb_dat_o_0> 
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_15> (without init value) has a constant value of 0 in block <wb_trigger>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <echo0/div1/clk_out> of sequential type is unconnected in block <wb_trigger>.
+WARNING:Xst:2677 - Node <echo0/div1/rst> of sequential type is unconnected in block <wb_trigger>.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <conbus0/FSM_0> on signal <state[1:3]> with gray encoding.
 ---------------------
@@ -1364,19 +1444,23 @@ WARNING:Xst:2677 - Node <lm0/load_store_unit/d_adr_o_15> of sequential type is u
 WARNING:Xst:2677 - Node <lm0/load_store_unit/d_adr_o_14> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <lm0/load_store_unit/d_adr_o_13> of sequential type is unconnected in block <system>.
 WARNING:Xst:2677 - Node <lm0/load_store_unit/d_adr_o_12> of sequential type is unconnected in block <system>.
-WARNING:Xst:1710 - FF/Latch <uart0/uart0/enable16_counter_14> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_13> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_15> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_11> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_10> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_12> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_8> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_7> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_9> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_6> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_5> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_3> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trigger_0/trigger0/div2/counter_25> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <trigger_0/trigger0/div1/counter_25> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_1> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_4> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_2> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_3> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_5> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_6> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_9> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_7> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_8> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_12> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_10> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_11> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_15> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_13> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart0/uart0/enable16_counter_14> (without init value) has a constant value of 0 in block <system>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_10> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_10> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_11> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_11> 
 INFO:Xst:2261 - The FF/Latch <lm0/multiplier/muliplicand_12> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <lm0/operand_0_x_12> 
@@ -1448,7 +1532,7 @@ INFO:Xst:2261 - The FF/Latch <lm0/multiplier/multiplier_29> in Unit <system> is 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 28.
+Found area constraint ratio of 100 (+ 0) on block system, actual ratio is 9.
 Forward register balancing over carry chain lm0/Mcompar_cmp_zero_cy<0>
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_0> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_8_BRB2> <lm0/load_store_unit/store_data_m_16_BRB0> <lm0/load_store_unit/store_data_m_24_BRB4> 
 INFO:Xst:2261 - The FF/Latch <lm0/load_store_unit/store_data_m_1> in Unit <system> is equivalent to the following 3 FFs/Latches, which will be removed : <lm0/load_store_unit/store_data_m_9_BRB2> <lm0/load_store_unit/store_data_m_17_BRB0> <lm0/load_store_unit/store_data_m_25_BRB4> 
@@ -1512,8 +1596,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1280
- Flip-Flops                                            : 1280
+# Registers                                            : 1276
+ Flip-Flops                                            : 1276
 
 =========================================================================
 
@@ -1536,27 +1620,27 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2418
+# BELS                             : 2401
 #      GND                         : 1
-#      INV                         : 25
-#      LUT1                        : 167
-#      LUT2                        : 212
-#      LUT3                        : 247
-#      LUT4                        : 275
-#      LUT5                        : 248
+#      INV                         : 23
+#      LUT1                        : 165
+#      LUT2                        : 211
+#      LUT3                        : 221
+#      LUT4                        : 272
+#      LUT5                        : 273
 #      LUT6                        : 569
-#      MUXCY                       : 368
+#      MUXCY                       : 364
 #      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 303
-# FlipFlops/Latches                : 1283
+#      XORCY                       : 299
+# FlipFlops/Latches                : 1279
 #      FD                          : 44
 #      FD_1                        : 1
-#      FDC                         : 205
+#      FDC                         : 203
 #      FDCE                        : 712
 #      FDE                         : 79
 #      FDPE                        : 34
-#      FDR                         : 17
+#      FDR                         : 15
 #      FDRE                        : 120
 #      FDS                         : 3
 #      FDSE                        : 65
@@ -1576,33 +1660,33 @@ Primitive and Black Box Usage:
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6slx16csg324-3 
+Selected Device : 6slx45csg324-3 
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1272  out of  18224     6%  
- Number of Slice LUTs:                 1871  out of   9112    20%  
-    Number used as Logic:              1743  out of   9112    19%  
-    Number used as Memory:              128  out of   2176     5%  
+ Number of Slice Registers:            1268  out of  54576     2%  
+ Number of Slice LUTs:                 1862  out of  27288     6%  
+    Number used as Logic:              1734  out of  27288     6%  
+    Number used as Memory:              128  out of   6408     1%  
        Number used as RAM:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2099
-   Number with an unused Flip Flop:     827  out of   2099    39%  
-   Number with an unused LUT:           228  out of   2099    10%  
-   Number of fully used LUT-FF pairs:  1044  out of   2099    49%  
-   Number of unique control sets:        46
+ Number of LUT Flip Flop pairs used:   2089
+   Number with an unused Flip Flop:     821  out of   2089    39%  
+   Number with an unused LUT:           227  out of   2089    10%  
+   Number of fully used LUT-FF pairs:  1041  out of   2089    49%  
+   Number of unique control sets:        45
 
 IO Utilization: 
- Number of IOs:                          17
- Number of bonded IOBs:                  17  out of    232     7%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  17  out of    218     7%  
     IOB Flip Flops/Latches:              11
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                2  out of     32     6%  
+ Number of Block RAM/FIFO:                2  out of    116     1%  
     Number using Block RAM only:          2
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
- Number of DSP48A1s:                      3  out of     32     9%  
+ Number of DSP48A1s:                      3  out of     58     5%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1625,7 +1709,7 @@ Clock Information:
 ----------------------------------------------+---------------------------------------+-------+
 Clock Signal                                  | Clock buffer(FF name)                 | Load  |
 ----------------------------------------------+---------------------------------------+-------+
-clk                                           | BUFGP                                 | 1334  |
+clk                                           | BUFGP                                 | 1330  |
 digpot0/divider0/clk_out                      | NONE(digpot0/inc_pulse0/ena)          | 2     |
 digpot_INC_OBUF(digpot0/inc_pulse0/clk_out1:O)| NONE(*)(digpot0/set2_6)               | 7     |
 trigger_0/trigger0/div2/clk_out               | NONE(trigger_0/trigger0/pulse/delay_0)| 3     |
@@ -1647,7 +1731,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 12.519ns (Maximum Frequency: 79.882MHz)
-   Minimum input arrival time before clock: 5.731ns
+   Minimum input arrival time before clock: 6.345ns
    Maximum output required time after clock: 4.810ns
    Maximum combinational path delay: No path found
 
@@ -1658,7 +1742,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 12.519ns (frequency: 79.882MHz)
-  Total number of paths / destination ports: 1332928 / 3157
+  Total number of paths / destination ports: 1332059 / 3151
 -------------------------------------------------------------------------
 Delay:               12.519ns (Levels of Logic = 3)
   Source:            lm0/multiplier/muliplicand_7 (FF)
@@ -1768,10 +1852,10 @@ Delay:               2.568ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div1/rst'
-  Clock period: 2.568ns (frequency: 389.348MHz)
+  Clock period: 2.554ns (frequency: 391.514MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.568ns (Levels of Logic = 1)
+Delay:               2.554ns (Levels of Logic = 1)
   Source:            trigger_0/trigger0/div1/rst (LATCH)
   Destination:       trigger_0/trigger0/div1/rst (LATCH)
   Source Clock:      trigger_0/trigger0/div1/rst rising
@@ -1782,18 +1866,18 @@ Delay:               2.568ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               1   0.498   0.579  trigger_0/trigger0/div1/rst (trigger_0/trigger0/div1/rst)
-     INV:I->O             29   0.206   1.249  trigger_0/trigger0/div1/rst_inv1_INV_0 (trigger_0/trigger0/div1/rst_G)
+     INV:I->O             28   0.206   1.234  trigger_0/trigger0/div1/rst_inv1_INV_0 (trigger_0/trigger0/div1/rst_G)
      LD:D                      0.037          trigger_0/trigger0/div1/rst
     ----------------------------------------
-    Total                      2.568ns (0.741ns logic, 1.827ns route)
-                                       (28.9% logic, 71.1% route)
+    Total                      2.554ns (0.741ns logic, 1.813ns route)
+                                       (29.0% logic, 71.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'trigger_0/trigger0/div2/rst'
-  Clock period: 2.568ns (frequency: 389.348MHz)
+  Clock period: 2.554ns (frequency: 391.514MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.568ns (Levels of Logic = 1)
+Delay:               2.554ns (Levels of Logic = 1)
   Source:            trigger_0/trigger0/div2/rst (LATCH)
   Destination:       trigger_0/trigger0/div2/rst (LATCH)
   Source Clock:      trigger_0/trigger0/div2/rst rising
@@ -1804,31 +1888,32 @@ Delay:               2.568ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               1   0.498   0.579  trigger_0/trigger0/div2/rst (trigger_0/trigger0/div2/rst)
-     INV:I->O             29   0.206   1.249  trigger_0/trigger0/div2/rst_inv1_INV_0 (trigger_0/trigger0/div2/rst_G)
+     INV:I->O             28   0.206   1.234  trigger_0/trigger0/div2/rst_inv1_INV_0 (trigger_0/trigger0/div2/rst_G)
      LD:D                      0.037          trigger_0/trigger0/div2/rst
     ----------------------------------------
-    Total                      2.568ns (0.741ns logic, 1.827ns route)
-                                       (28.9% logic, 71.1% route)
+    Total                      2.554ns (0.741ns logic, 1.813ns route)
+                                       (29.0% logic, 71.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1207 / 1191
+  Total number of paths / destination ports: 1206 / 1189
 -------------------------------------------------------------------------
-Offset:              5.731ns (Levels of Logic = 2)
+Offset:              6.345ns (Levels of Logic = 3)
   Source:            rst (PAD)
-  Destination:       timer0/wb_dat_o_31 (FF)
+  Destination:       trigger_0/set_trig_8 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst to timer0/wb_dat_o_31
+  Data Path: rst to trigger_0/set_trig_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1053   1.222   2.584  rst_IBUF (rst_IBUF)
-     LUT6:I0->O           32   0.203   1.291  timer0/_n0187<7>3 (timer0/_n0187)
-     FDRE:R                    0.430          timer0/wb_dat_o_0
+     IBUF:I->O          1054   1.222   2.585  rst_IBUF (rst_IBUF)
+     LUT6:I0->O            2   0.203   0.981  trigger_0/_n0305_inv11 (trigger_0/_n0305_inv1)
+     LUT6:I0->O            9   0.203   0.829  trigger_0/_n0305_inv1 (trigger_0/_n0305_inv)
+     FDE:CE                    0.322          trigger_0/set_trig_0
     ----------------------------------------
-    Total                      5.731ns (1.855ns logic, 3.876ns route)
-                                       (32.4% logic, 67.6% route)
+    Total                      6.345ns (1.950ns logic, 4.395ns route)
+                                       (30.7% logic, 69.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1904,8 +1989,8 @@ clk                        |   12.519|         |         |         |
 digpot0/divider0/clk_out   |    2.831|         |         |         |
 digpot0/divider0/rst       |    2.961|         |         |         |
 digpot_INC_OBUF            |    1.528|         |         |         |
-trigger_0/trigger0/div1/rst|    2.961|         |         |         |
-trigger_0/trigger0/div2/rst|    2.961|         |         |         |
+trigger_0/trigger0/div1/rst|    2.947|         |         |         |
+trigger_0/trigger0/div2/rst|    2.947|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock digpot0/divider0/clk_out
@@ -1940,7 +2025,7 @@ Clock to Setup on destination clock trigger_0/trigger0/div1/rst
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-trigger_0/trigger0/div1/rst|    2.568|         |         |         |
+trigger_0/trigger0/div1/rst|    2.554|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock trigger_0/trigger0/div2/clk_out
@@ -1957,21 +2042,21 @@ Clock to Setup on destination clock trigger_0/trigger0/div2/rst
                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------+---------+---------+---------+---------+
-trigger_0/trigger0/div2/rst|    2.568|         |         |         |
+trigger_0/trigger0/div2/rst|    2.554|         |         |         |
 ---------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 14.60 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.82 secs
  
 --> 
 
 
-Total memory usage is 415416 kilobytes
+Total memory usage is 415964 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  352 (   0 filtered)
-Number of infos    :  103 (   0 filtered)
+Number of warnings :  376 (   0 filtered)
+Number of infos    :  104 (   0 filtered)
 

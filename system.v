@@ -7,8 +7,8 @@
 module system
 #(
 	parameter   bootram_file     = "../firmware/hw-test/image.ram",
-	parameter   clk_freq         = 100000000,
-        //parameter   clk_freq         = 50000000,
+	//parameter   clk_freq         = 100000000,
+        parameter   clk_freq         = 50000000,
 	parameter   uart_baud_rate   = 1152000
 ) (
 	input             clk,
@@ -26,8 +26,9 @@ module system
 	output 		  digpot_INC,
 	output		  digpot_UDn,
 	output            digpot_CSn,
-	// TRIGGER
-	output		  trigger_o
+	// TRIGGER-ECHO
+	output		  trigger_o,
+	input		  echo_in
 	
 	
 
@@ -426,7 +427,8 @@ wb_gpio gpio0 (
 //---------------------------------------------------------------------------
 // Block trigger0  SLAVE6
 //---------------------------------------------------------------------------
-wire trig_o;
+wire trig0_o;
+wire echo0_i;
 
 wb_trigger trigger_0 (
 	.clk( clk ),
@@ -441,7 +443,8 @@ wb_trigger trigger_0 (
 	.wb_sel_i( trigger0_sel ),
 	.wb_ack_o( trigger0_ack ), 
 
-	.trig_o( trig_o )
+	.trig_o( trig0_o ),
+	.echo_i( echo0_i )
 
 );
 
@@ -460,9 +463,9 @@ assign digpot_INC = digpot0_INC;
 assign digpot_UDn = digpot0_UDn;
 assign digpot_CSn = digpot0_CSn;
 
-assign trigger_o = trig_o;
+assign trigger_o = trig0_o;
+assign echo0_i = echo_in;
 
 assign gpio_io= gpio0_io;
-//assign gpio0_io[15:8] = gpio_ok ;
 
 endmodule 

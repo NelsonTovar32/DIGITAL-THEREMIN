@@ -24,7 +24,10 @@ verilog work ../rtl/wb_conbus/conbus_arb.v
 verilog work ../rtl/wb_trigger/wb_trigger.v
 verilog work ../rtl/wb_trigger/trigger_top.v
 verilog work ../rtl/wb_trigger/trigger_pulse.v
+verilog work ../rtl/wb_trigger/echo_counter.v
+verilog work ../rtl/wb_trigger/echo_top.v
+verilog work ../rtl/wb_trigger/div_frec.v
 verilog work ../rtl/wb_trigger/div_frec_adj.v
 verilog work ../rtl/wb_digpot/wb_digpot.v
 verilog work ../rtl/wb_digpot/inc_pulse.v
-verilog work ../rtl/wb_digpot/div_frec.v
+verilog work ../rtl/wb_digpot/div_frecp.v

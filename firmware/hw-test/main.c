@@ -131,7 +131,9 @@ int main()
 
 	int j, i;
 
- 	uint16_t b1, b2, b3, b4;
+	uint32_t rc;
+
+ 	uint16_t b1, b2, b3, b4, t2;
 
 	//uint8_t c1, c2, c3, c4, valor;
 
@@ -139,6 +141,10 @@ int main()
 
 gpio_init(0x01);
 
+t2=0x002;
+trigger_set(t2);
+set_digpot(0x64);
+msleep(5000);
 p = 1;
 c1 = 35;
 
@@ -152,9 +158,20 @@ if ( p == 1)				//selección tercera octava
 	else if ( c1 > 40 && c1 < 50){ b1 = 392;}
 	else if ( c1 > 50 && c1 < 60){ b1 = 440;}
         else if ( c1 > 60 && c1 < 70){ b1 = 494;}
-	
-for(;;){	
+}	
+//for(;;){
 
+set_digpot(0xB2);
+
+msleep(5000);
+
+set_digpot(0x14);
+
+
+
+
+
+/*
 for ( i = 0; i < 251; i++)
 	{
 	    for ( j = 0; j < 86; j++)		//recorre cada una de las muestras (85 tercera octava)
@@ -170,8 +187,8 @@ for ( i = 0; i < 251; i++)
 	        nsleep(c5);
 
             }
-        }
-    }
+        } */
+//    }
 
 }
 
@@ -300,7 +317,3 @@ for(;;)
 */
 
 
-
-
-
-}

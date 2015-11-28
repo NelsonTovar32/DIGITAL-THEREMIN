@@ -136,13 +136,15 @@ void uart_putstr(char *str);
 char uart_getchar();
 
 /***************************************************************************
-* Trigger
+* Trigger-Echo
  */
 typedef struct {
 	volatile uint32_t set_trig;
+	volatile uint32_t c_out;
 		} trigger_t;
 
 void trigger_set();
+uint32_t read_count();
 
 /***************************************************************************
 * DigitalPot

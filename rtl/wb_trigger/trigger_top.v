@@ -1,6 +1,6 @@
 //-----------------------------------------------------
-// Design Name : trigger
-// File Name   : trigger.v
+// Design Name : trigger_top
+// File Name   : trigger_top.v
 //-----------------------------------------------------
 module trigger_top
 	(

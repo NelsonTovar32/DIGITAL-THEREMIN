@@ -1,5 +1,8 @@
-`timescale 1ms / 100us
-
+//-----------------------------------------------------
+// Design Name : div_frec_adj
+// Description: Divisor de frecuencia ajustable a 16 posibilidades
+// File Name   : div_frec_adj.v
+//-----------------------------------------------------
 module div_frec_adj(clk,num,clk_out);
     input clk;
 	 input [3:0] num;
@@ -15,7 +18,8 @@ rst=0;
 	 always @(posedge clk or negedge rst)
 			begin
 			
-			/* //clk 50Mhz
+			
+			 //clk 50Mhz
 			case (num)
 			4'b0000: begin p <= 26'd249; end // 10us
 			4'b0001: begin p <= 26'd499; end // 20us
@@ -35,8 +39,9 @@ rst=0;
 			4'b1111: begin	p <= 26'd17499999; end // 700ms
 			default: begin	p <= 26'd1249999;end // 50ms
 			endcase
-			*/
+			
 
+			/*
 			//clk 100MHz
 			case (num)
 			4'b0000: begin p <= 26'd499; end // 10us
@@ -57,7 +62,7 @@ rst=0;
 			4'b1111: begin p <= 26'd34999999; end // 700ms
 			default: begin p <= 26'd2499999;end // 50ms
 			endcase
-			
+			*/
 
 		
 				if(!rst)

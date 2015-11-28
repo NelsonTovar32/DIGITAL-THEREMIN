@@ -206,7 +206,11 @@ void uart_putstr(char *str)
 void trigger_set(uint32_t st)
 {
     trigger0->set_trig = st;
+}
 
+uint32_t read_count()
+{
+    return trigger0->c_out;
 }
 
 //***************************************************************************

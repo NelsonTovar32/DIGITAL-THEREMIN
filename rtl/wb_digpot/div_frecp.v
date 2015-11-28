@@ -1,6 +1,6 @@
 `timescale 1ms / 100us
 
-module div_frec(clk,clk_out);
+module div_frecp(clk,clk_out);
     
 	 input clk;
     output reg clk_out;

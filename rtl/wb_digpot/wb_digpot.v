@@ -31,7 +31,7 @@ reg [7:0] set_digpot= 8'b00000000; //Primer bit indica el sentido de movimiento 
 
 reg [7:0] set2= 8'b00000000;
 
-div_frec divider0(
+div_frecp divider0(
 	.clk( clk ),
 	.clk_out( clk_out0 )
 );

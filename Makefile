@@ -40,10 +40,13 @@ SRC=                                      \
 	../rtl/wb_trigger/wb_trigger.v	  \
 	../rtl/wb_trigger/trigger_top.v \
 	../rtl/wb_trigger/trigger_pulse.v \
+	../rtl/wb_trigger/echo_counter.v \
+	../rtl/wb_trigger/echo_top.v \
+	../rtl/wb_trigger/div_frec.v  \
 	../rtl/wb_trigger/div_frec_adj.v  \
 	../rtl/wb_digpot/wb_digpot.v \
 	../rtl/wb_digpot/inc_pulse.v \
-	../rtl/wb_digpot/div_frec.v  	
+	../rtl/wb_digpot/div_frecp.v  	
         #../rtl/wb_spi/spi_top.v          \
 	#../rtl/wb_spi/spi_shift.v	\
 	#../rtl/wb_spi/spi_clgen.v	\    	

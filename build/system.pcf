@@ -1,14 +1,15 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 24 15:29:58 2015
+// Written by: Map P.20131013 on Sat Nov 28 13:08:46 2015
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "led" LOCATE = SITE "U16" LEVEL 1;
 COMP "rst" LOCATE = SITE "C4" LEVEL 1;
-COMP "digpot_INC" LOCATE = SITE "F11" LEVEL 1;
-COMP "digpot_CSn" LOCATE = SITE "F10" LEVEL 1;
-COMP "digpot_UDn" LOCATE = SITE "G11" LEVEL 1;
+COMP "echo_in" LOCATE = SITE "K5" LEVEL 1;
+COMP "digpot_INC" LOCATE = SITE "H3" LEVEL 1;
+COMP "digpot_CSn" LOCATE = SITE "K6" LEVEL 1;
+COMP "digpot_UDn" LOCATE = SITE "L7" LEVEL 1;
 COMP "trigger_o" LOCATE = SITE "J3" LEVEL 1;
 COMP "gpio_io<0>" LOCATE = SITE "T12" LEVEL 1;
 COMP "gpio_io<1>" LOCATE = SITE "V12" LEVEL 1;
@@ -512,8 +513,7 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "uart0/uart0/rx_bitcount_0" BEL "uart0/uart0/rx_bitcount_1" BEL
         "uart0/uart0/tx_bitcount_3" BEL "uart0/uart0/tx_bitcount_2" BEL
         "uart0/uart0/tx_bitcount_1" BEL "uart0/uart0/tx_bitcount_0" BEL
-        "uart0/uart0/enable16_counter_2" BEL "uart0/uart0/enable16_counter_1"
-        BEL "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
+        "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
         "uart0/uart0/rx_data_6" BEL "uart0/uart0/rx_data_5" BEL
         "uart0/uart0/rx_data_4" BEL "uart0/uart0/rx_data_3" BEL
         "uart0/uart0/rx_data_2" BEL "uart0/uart0/rx_data_1" BEL
@@ -612,7 +612,6 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "trigger_0/set_trig_5" BEL "trigger_0/set_trig_4" BEL
         "trigger_0/set_trig_3" BEL "trigger_0/set_trig_2" BEL
         "trigger_0/set_trig_1" BEL "trigger_0/set_trig_0" BEL
-        "trigger_0/trigger0/div1/counter_25" BEL
         "trigger_0/trigger0/div1/counter_24" BEL
         "trigger_0/trigger0/div1/counter_23" BEL
         "trigger_0/trigger0/div1/counter_22" BEL
@@ -638,7 +637,6 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "trigger_0/trigger0/div1/counter_2" BEL
         "trigger_0/trigger0/div1/counter_1" BEL
         "trigger_0/trigger0/div1/counter_0" BEL
-        "trigger_0/trigger0/div2/counter_25" BEL
         "trigger_0/trigger0/div2/counter_24" BEL
         "trigger_0/trigger0/div2/counter_23" BEL
         "trigger_0/trigger0/div2/counter_22" BEL
@@ -676,8 +674,8 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "timer0/ar1" BEL "timer0/ar0" BEL "trigger_0/trigger0/div1/clk_out"
         BEL "trigger_0/trigger0/div2/clk_out" BEL "bram0/ack" BEL
         "uart0/rx_ack" BEL "uart0/tx_wr" BEL "digpot0/ack" BEL "timer0/irqen1"
-        BEL "timer0/irqen0" BEL "trigger_0/ack" BEL "uart0/uart0/rx_count16_3"
-        BEL "timer0/trig1" BEL "timer0/trig0" BEL
+        BEL "timer0/irqen0" BEL "uart0/uart0/rx_count16_3" BEL "timer0/trig1"
+        BEL "timer0/trig0" BEL "trigger_0/ack" BEL
         "lm0/Mcompar_cmp_zero_cy<10>_FRB" BEL "lm0/w_result_sel_mul_m_BRB0"
         BEL "lm0/w_result_sel_mul_m_BRB1" BEL "lm0/w_result_sel_load_m_BRB1"
         BEL "lm0/load_store_unit/store_data_m_15_BRB1" BEL

@@ -69,15 +69,16 @@ NET "gpio_io<7>"          LOC = "V11" | IOSTANDARD = "LVCMOS33";   #PIN10
 #ok
 
 
-# ==== DIGPOT ==== Puertos PMOD JB
+# ==== DIGPOT ==== Puertos PMOD JC
 
-NET "digpot_INC"	   LOC = "F11"	| IOSTANDARD = "LVCMOS33"; #PIN3
-NET "digpot_UDn"	   LOC = "G11"	| IOSTANDARD = "LVCMOS33"; #PIN1
-NET "digpot_CSn"    	   LOC = "F10"	| IOSTANDARD = "LVCMOS33"; #PIN2
+NET "digpot_INC"	   LOC = "H3"	| IOSTANDARD = "LVCMOS33"; #PIN1
+NET "digpot_UDn"	   LOC = "L7"	| IOSTANDARD = "LVCMOS33"; #PIN2
+NET "digpot_CSn"    	   LOC = "K6"	| IOSTANDARD = "LVCMOS33"; #PIN3
 
 # ==== TRIGGER ==== Puertos PMOD JB
 
 NET "trigger_o"	   LOC = "J3"  | IOSTANDARD = "LVCMOS33"; #PIN7 
+NET "echo_in"	   LOC = "K5"   | IOSTANDARD = "LVCMOS33"; #PIN10 
 
 
 
