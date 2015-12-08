@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Nov 28 13:08:46 2015
+// Written by: Map P.20131013 on Mon Dec 07 16:53:30 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -513,7 +513,8 @@ TIMEGRP sys_clk = BEL "gpio0/gpio_dir_7" BEL "gpio0/gpio_dir_6" BEL
         "uart0/uart0/rx_bitcount_0" BEL "uart0/uart0/rx_bitcount_1" BEL
         "uart0/uart0/tx_bitcount_3" BEL "uart0/uart0/tx_bitcount_2" BEL
         "uart0/uart0/tx_bitcount_1" BEL "uart0/uart0/tx_bitcount_0" BEL
-        "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
+        "uart0/uart0/enable16_counter_2" BEL "uart0/uart0/enable16_counter_1"
+        BEL "uart0/uart0/enable16_counter_0" BEL "uart0/uart0/rx_data_7" BEL
         "uart0/uart0/rx_data_6" BEL "uart0/uart0/rx_data_5" BEL
         "uart0/uart0/rx_data_4" BEL "uart0/uart0/rx_data_3" BEL
         "uart0/uart0/rx_data_2" BEL "uart0/uart0/rx_data_1" BEL

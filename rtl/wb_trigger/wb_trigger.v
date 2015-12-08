@@ -80,7 +80,7 @@ begin
 		if (wb_wr & ~ack )  //Write cycle: Ajuste de trigger
 			begin
 			ack <= 1;
-			if (wb_adr_i[3:2] == 2'b00) 
+			if (wb_adr_i[2] == 1'b0) 
 				begin
 				set_trig <= wb_dat_i[8:0];
 				end

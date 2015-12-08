@@ -27,7 +27,7 @@ module wb_trigger
 	output reg  [31:0] wb_dat_o,
 	// Trigger-Echo Wires
 	output		   trig_o,
-	input		   echo_in
+	input		   echo_i
 );
 
 //---------------------------------------------------------------------------

@@ -1,10 +1,10 @@
 Release 14.7 - Bitgen P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
-Loading device for application Rf_Device from file '6slx45.nph' in environment
+Loading device for application Rf_Device from file '6slx16.nph' in environment
 /opt/Xilinx/14.7/ISE_DS/ISE/.
-   "system" is an NCD, version 3.2, device xc6slx45, package csg324, speed -3
+   "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 
-Sat Nov 28 13:09:17 2015
+Mon Dec  7 16:53:58 2015
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w system-routed.ncd system.bit 
 
@@ -129,14 +129,11 @@ Running DRC.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net digpot_INC_OBUF is sourced
    by a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net digpot0/divider0/clk_out is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    trigger_0/trigger0/div2/clk_out is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
-DRC detected 0 errors and 3 warnings.  Please see the previously displayed
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "system.bit".

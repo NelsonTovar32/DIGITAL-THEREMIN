@@ -24,7 +24,7 @@ rst=0;
 					 counter<=26'd0;
 					 clk_out <= 1'b0;
 					 end
-					else if(counter==k)
+					 else if(counter==k)
 						begin
 						counter<=26'd0;
 						clk_out <= ~clk_out;

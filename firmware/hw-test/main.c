@@ -125,71 +125,97 @@ void midi(int cs)
 //**************************************************************************************************
 // Función principal del codigo - Inicialización de SPI y lectura //
 //**************************************************************************************************
+
 int main()
 {
 	//uint32_t a1, a2, a3, a4; // Cuatro esclavos (ADC) son seleccionados
 
-	int j, i;
+	uint8_t j, i, l, k;
 
-	uint32_t rc;
+	uint32_t rc, t2;
 
- 	uint16_t b1, b2, b3, b4, t2;
+ 	uint16_t b1, b2, b3, b4;
 
-	//uint8_t c1, c2, c3, c4, valor;
+	uint8_t c1, c2, c3, c4, c5, p, valor;
+	
 
-	uint8_t c1, c2, c3, c4, c5, p;
-
+	
 gpio_init(0x01);
 
-t2=0x002;
-trigger_set(t2);
-set_digpot(0x64);
-msleep(5000);
-p = 1;
-c1 = 35;
+//rc=0;
+//t2=0x024;
+//trigger_set(t2);
+//set_digpot(0x64);
+//msleep(5000);
 
-if ( p == 1)				//selección tercera octava 
-    {	
-        
-        if ( c1 > 2 && c1 < 10){ b1 = 262;}	//selección de la nota dependiendo la distancia
-        else if ( c1 > 10 && c1 < 20){ b1 = 294;}
-	else if ( c1 > 20 && c1 < 30){ b1 = 330;}
-	else if ( c1 > 30 && c1 < 40){ b1 = 349;}
-	else if ( c1 > 40 && c1 < 50){ b1 = 392;}
-	else if ( c1 > 50 && c1 < 60){ b1 = 440;}
-        else if ( c1 > 60 && c1 < 70){ b1 = 494;}
-}	
+p = 1;
+
+
 //for(;;){
 
-set_digpot(0xB2);
+    valor=gpio0->read;
+    valor=valor>>1;    
 
-msleep(5000);
+    //rc = read_count();
+    
+    /*
+    set_digpot(0xB2);
+    
+    msleep(5000);
 
-set_digpot(0x14);
+    set_digpot(0x14);
+    */
+
+    //if(valor==1){set_pin(1,1);}
+    //else {set_pin(0,1);}
+    //msleep(10);
+    
+//}
 
 
 
-
-
-/*
-for ( i = 0; i < 251; i++)
+    if (p == 1)				//selección tercera octava 
+    {	
+        
+	for (l = 0; l < 14; l++)
 	{
-	    for ( j = 0; j < 86; j++)		//recorre cada una de las muestras (85 tercera octava)
-            {
-                c2 = ((1/b1)/85)*1e9;
-                c3 = c2/85;
-                c4 = j*c3;
-                c5 = c2-c4;
+	    //c1 = 6+(l*10);		//Escala a una octava (7)	     
+	    c1 = 3+(l*6);		//Escala a dos octavas (14)
+	    msleep(1000);	
+	
+	if (c1 > 2 && c1 < 8){b1 = 170; c3 = 132; c2 = 22452;}		//selección de la nota dependiendo la distancia
+        else if (c1 > 8 && c1 < 14){b1 = 152; c3 = 147; c2 = 22452;}
+	else if (c1 > 14 && c1 < 20){b1 = 134; c3 = 169; c2 = 22452;}
+	else if (c1 > 20 && c1 < 26){b1 = 128; c3 = 175; c2 = 22452;}
+	else if (c1 > 26 && c1 < 32){b1 = 114; c3 = 196; c2 = 22452;}
+	else if (c1 > 32 && c1 < 38){b1 = 102; c3 = 218; c2 = 22452;}
+        else if (c1 > 38 && c1 < 44){b1 = 90; c3 = 250; c2 = 22452;}
+	else if (c1 > 44 && c1 < 50){b1 = 85; c3 = 264; c2 = 22452;}
+        else if (c1 > 50 && c1 < 56){b1 = 76; c3 = 294; c2 = 22452;}
+	else if (c1 > 56 && c1 < 62){b1 = 67; c3 = 338; c2 = 22452;}
+	else if (c1 > 62 && c1 < 68){b1 = 64; c3 = 350; c2 = 22452;}
+	else if (c1 > 68 && c1 < 74){b1 = 57; c3 = 393; c2 = 22452;}
+	else if (c1 > 74 && c1 < 80){b1 = 51; c3 = 437; c2 = 22452;}
+        else if (c1 > 80 && c1 < 86){b1 = 45; c3 = 500; c2 = 22452;}
+    
+    	for (i=0; i<63;i++)
+	    {
+	        b2 = b1+1;
 
-    	        set_pin(1,1);			//se asigna el ciclo util por tiempo
-   	        nsleep(c4);
-	        set_pin(0,1);
-	        nsleep(c5);
+	        for (j=0; j<b2; j++)			//recorre cada una de las muestras (b1 tercera octava)
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
+	 
+                    set_pin(1,1);			//se asigna el ciclo util por tiempo
+   	            nsleep(c4);
+	            set_pin(0,1);
+	            nsleep(c5);
 
+                }
             }
-        } */
-//    }
-
+	}
+    }
 }
 
 /*

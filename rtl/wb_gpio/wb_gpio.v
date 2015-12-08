@@ -71,7 +71,7 @@ module wb_gpio(
 
    wire [gpio_io_width-1:0]  gpio_i; 
    
-//Wisbone logical Interface
+   //Wisbone logical Interface
 
    
    wire wb_rd = wb_stb_i & wb_cyc_i & ~wb_we_i;

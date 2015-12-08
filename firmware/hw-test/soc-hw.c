@@ -26,7 +26,7 @@
 uart_t  *uart0  = (uart_t *)   0x20000000;
 timer_t *timer0 = (timer_t *)  0x30000000;
 gpio_t  *gpio0  = (gpio_t *)   0x40000000;
-digpot_t   *digpot0   = (digpot_t *)    0x50000000;
+digpot_t *digpot0 = (digpot_t *)    0x50000000;
 trigger_t *trigger0 = (trigger_t *) 0x60000000;
 
 isr_ptr_t isr_table[32];
@@ -231,62 +231,67 @@ void asig_pwm ()
 
 {
 
-    //double x, y, t, d, f, r, p;
-
-    if ( p == 1)				//selección tercera octava 
+    if (p == 1)								//selección tercera octava 
     {	
-        cin >> d;
-        if ( d > 2 && d < 10){ f = 262;}	//selección de la nota dependiendo la distancia
-        else if ( d > 10 && d < 20){ f = 294;}
-	else if ( d > 20 && d < 30){ f = 330;}
-	else if ( d > 30 && d < 40){ f = 349;}
-	else if ( d > 40 && d < 50){ f = 392;}
-	else if ( d > 50 && d < 60){ f = 440;}
-        else if ( d > 60 && d < 70){ f = 494;}
-	
-	for (int i = 0; i < 251; i++)
-	{
-	    for (int i = 0; i < 86; i++)		//recorre cada una de las muestras (85 tercera octava)
-            {
-                t = ((1/f)/85)*1e9;
-                r = t/85;
-                x = i*r;
-                y = t-x;
+	if (c1 > 2 && c1 < 10){b1 = 170; c3 = 132; c2 = 22452;}		//selección de la nota dependiendo la distancia
+        else if (c1 > 10 && c1 < 20){b1 = 170; c3 = 118; c2 = 20008;}
+	else if (c1 > 20 && c1 < 30){b1 = 170; c3 = 105; c2 = 17825;}
+	else if (c1 > 30 && c1 < 40){b1 = 170; c3 = 99; c2 = 16855;}
+	else if (c1 > 40 && c1 < 50){b1 = 170; c3 = 88; c2 = 15006;}
+	else if (c1 > 50 && c1 < 60){b1 = 170; c3 = 79; c2 = 13369;}
+        else if (c1 > 60 && c1 < 70){b1 = 170; c3 = 70; c2 = 11908;}
+    
 
-    	        set_pin(1,8);			//se asigna el ciclo util por tiempo
-   	        nsleep(x);
-	        set_pin(0,8);
-	        nsleep(y);
+    	for (i=0; i<63;i++)
+	    {
+	        b2 = b1+1;
 
+	        for (j=0; j<b2; j++)					//recorre cada una de las muestras (b1 tercera octava)
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
+
+    	            set_pin(1,1);					//se asigna el ciclo util por tiempo
+   	            nsleep(c4);
+	            set_pin(0,1);
+	            nsleep(c5);
+                }
             }
-        }
     }
-    else if ( p == 2)				//selección cuarta octava
+
+    else if ( p == 2)							//selección cuarta octava
     {
-        if ( d > 2 && d < 10){ f = 262;}	//selección de la nota dependiendo la distancia
-        else if ( d > 10 && d < 20){ f = 294;}
-	else if ( d > 20 && d < 30){ f = 330;}
-	else if ( d > 30 && d < 40){ f = 349;}
-	else if ( d > 40 && d < 50){ f = 392;}
-	else if ( d > 50 && d < 60){ f = 440;}
-        else if ( d > 60 && d < 70){ f = 494;}
+        if (c1 > 2 && c1 < 8){b1 = 170; c3 = 132; c2 = 22452;}		//selección de la nota dependiendo la distancia
+        else if (c1 > 8 && c1 < 14){b1 = 170; c3 = 118; c2 = 20008;}
+	else if (c1 > 14 && c1 < 20){b1 = 170; c3 = 105; c2 = 17825;}
+	else if (c1 > 20 && c1 < 26){b1 = 170; c3 = 99; c2 = 16855;}
+	else if (c1 > 26 && c1 < 32){b1 = 170; c3 = 88; c2 = 15006;}
+	else if (c1 > 32 && c1 < 38){b1 = 170; c3 = 79; c2 = 13369;}
+        else if (c1 > 38 && c1 < 44){b1 = 170; c3 = 70; c2 = 11908;}
+	else if (c1 > 44 && c1 < 50){b1 = 170; c3 = 33; c2 = 5613;}
+        else if (c1 > 50 && c1 < 56){b1 = 170; c3 = 29; c2 = 5002;}
+	else if (c1 > 56 && c1 < 62){b1 = 170; c3 = 26; c2 = 4456;}
+	else if (c1 > 62 && c1 < 68){b1 = 170; c3 = 25; c2 = 4214;}
+	else if (c1 > 68 && c1 < 74){b1 = 170; c3 = 22; c2 = 3752;}
+	else if (c1 > 74 && c1 < 80){b1 = 170; c3 = 20; c2 = 3342;}
+        else if (c1 > 80 && c1 < 86){b1 = 170; c3 = 18; c2 = 2977;}
+    
 
-	for (int i = 0; i < 251; i++)
-	{        
-	    for (int i = 0; i < 171; i++)		//recorre cada una de las muestras (170 cuarta octava)
-            {
-                t = ((1/f)/170)*1e9;
-                r = t/170;
-                x = i*r;
-                y = t-x;
+    	for (i=0; i<63;i++)
+	    {
+	        b2 = b1+1;
 
-	        set_pin(1,8);			//se asigna el ciclo util por tiempo
-	        nsleep(x);
-	        set_pin(0,8);
-	        nsleep(y);
+	        for (j=0; j<b2; j++)					//recorre cada una de las muestras (b1 tercera octava)
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
 
+    	            set_pin(1,1);					//se asigna el ciclo util por tiempo
+   	            nsleep(c4);
+	            set_pin(0,1);
+	            nsleep(c5);
+                }
             }
-        }
     }
 }
 */

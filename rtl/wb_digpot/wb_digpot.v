@@ -27,7 +27,7 @@ module wb_digpot(
 wire dp_busy, clk_out0;
 
 reg [7:0] set_digpot= 8'b00000000; //Primer bit indica el sentido de movimiento Wiper: 0-Abajo, 1-Arriba
-											  //Ultimos 7 bits indican el numero de pasos del wiper
+				   //Ultimos 7 bits indican el numero de pasos del wiper
 
 reg [7:0] set2= 8'b00000000;
 

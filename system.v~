@@ -7,8 +7,8 @@
 module system
 #(
 	parameter   bootram_file     = "../firmware/hw-test/image.ram",
-	parameter   clk_freq         = 100000000,
-        //parameter   clk_freq         = 50000000,
+	//parameter   clk_freq         = 100000000,
+        parameter   clk_freq         = 50000000,
 	parameter   uart_baud_rate   = 1152000
 ) (
 	input             clk,
