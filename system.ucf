@@ -47,7 +47,7 @@ NET "uart_rxd"	LOC = "N18"	| IOSTANDARD = "LVCMOS33";
 		
 # === GPIO === puertos PMOD JA
 
-NET "gpio_io<0>"          LOC = "T12" | IOSTANDARD = "LVCMOS33";   #PIN1
+NET "gpio_io<0>"          LOC = "J1" | IOSTANDARD = "LVCMOS33";   #PIN1
 NET "gpio_io<1>"          LOC = "V12" | IOSTANDARD = "LVCMOS33";   #PIN2  
 NET "gpio_io<2>"          LOC = "N10" | IOSTANDARD = "LVCMOS33";   #PIN3
 NET "gpio_io<3>"          LOC = "P11" | IOSTANDARD = "LVCMOS33";   #PIN4
@@ -71,14 +71,15 @@ NET "gpio_io<7>"          LOC = "V11" | IOSTANDARD = "LVCMOS33";   #PIN10
 
 # ==== DIGPOT ==== Puertos PMOD JC
 
-NET "digpot_INC"	   LOC = "H3"	| IOSTANDARD = "LVCMOS33"; #PIN1
-NET "digpot_UDn"	   LOC = "L7"	| IOSTANDARD = "LVCMOS33"; #PIN2
-NET "digpot_CSn"    	   LOC = "K6"	| IOSTANDARD = "LVCMOS33"; #PIN3
+NET "digpot_INC"	   LOC = "K2"	| IOSTANDARD = "LVCMOS33"; #PIN1
+NET "digpot_UDn"	   LOC = "K1"	| IOSTANDARD = "LVCMOS33"; #PIN2
+NET "digpot_CSn"    	   LOC = "K5"	| IOSTANDARD = "LVCMOS33"; #PIN10
 
 # ==== TRIGGER ==== Puertos PMOD JB
 
 NET "trigger_o"	   LOC = "J3"  | IOSTANDARD = "LVCMOS33"; #PIN7 
-NET "echo_in"	   LOC = "K5"   | IOSTANDARD = "LVCMOS33"; #PIN10 
+NET "echo_in"	   LOC = "G1"   | IOSTANDARD = "LVCMOS33"; #PIN7C
+ 
 
 
 
