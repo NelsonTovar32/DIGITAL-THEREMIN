@@ -1,17 +1,17 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Dec 07 16:53:30 2015
+// Written by: Map P.20131013 on Tue Dec 08 11:32:09 2015
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "led" LOCATE = SITE "U16" LEVEL 1;
 COMP "rst" LOCATE = SITE "C4" LEVEL 1;
-COMP "echo_in" LOCATE = SITE "K5" LEVEL 1;
-COMP "digpot_INC" LOCATE = SITE "H3" LEVEL 1;
-COMP "digpot_CSn" LOCATE = SITE "K6" LEVEL 1;
-COMP "digpot_UDn" LOCATE = SITE "L7" LEVEL 1;
+COMP "echo_in" LOCATE = SITE "G1" LEVEL 1;
+COMP "digpot_INC" LOCATE = SITE "K2" LEVEL 1;
+COMP "digpot_CSn" LOCATE = SITE "K5" LEVEL 1;
+COMP "digpot_UDn" LOCATE = SITE "K1" LEVEL 1;
 COMP "trigger_o" LOCATE = SITE "J3" LEVEL 1;
-COMP "gpio_io<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "gpio_io<0>" LOCATE = SITE "J1" LEVEL 1;
 COMP "gpio_io<1>" LOCATE = SITE "V12" LEVEL 1;
 COMP "gpio_io<2>" LOCATE = SITE "N10" LEVEL 1;
 COMP "gpio_io<3>" LOCATE = SITE "P11" LEVEL 1;
