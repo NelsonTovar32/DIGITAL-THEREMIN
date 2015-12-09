@@ -6,8 +6,8 @@
 module trigger_pulse(
    input t_long,        //Entrada del pulso de periodo mas largo
    input t_short,       //Entrada del pulso de periodo mas corto
-   input clr,           //Clear
-   output t_out         //Salida
+   input clr,        //Clear
+   output t_out       //Salida
    );
 
 reg [2:0] delay;     //Declaramos el registro auxiliar de 3 bits delay

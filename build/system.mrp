@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (lin64)
+Release 13.4 Map O.87xd (lin64)
 Xilinx Mapping Report File for Design 'system'
 
 Design Information
@@ -8,23 +8,23 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Dec  8 11:31:37 2015
+Mapped Date    : Wed Dec  9 04:06:02 2015
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    3
+Number of warnings:    8
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,268 out of  18,224    6%
-    Number used as Flip Flops:               1,267
+  Number of Slice Registers:                 1,430 out of  18,224    7%
+    Number used as Flip Flops:               1,429
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      1,580 out of   9,112   17%
-    Number used as logic:                    1,491 out of   9,112   16%
-      Number using O6 output only:           1,081
-      Number using O5 output only:             159
-      Number using O5 and O6:                  251
+  Number of Slice LUTs:                      1,819 out of   9,112   19%
+    Number used as logic:                    1,705 out of   9,112   18%
+      Number using O6 output only:           1,062
+      Number using O5 output only:             256
+      Number using O5 and O6:                  387
       Number used as ROM:                        0
     Number used as Memory:                      68 out of   2,176    3%
       Number used as Dual Port RAM:             68
@@ -33,21 +33,21 @@ Slice Logic Utilization:
         Number using O5 and O6:                 60
       Number used as Single Port RAM:            0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:     21
-      Number with same-slice register load:     15
-      Number with same-slice carry load:         6
+    Number used exclusively as route-thrus:     46
+      Number with same-slice register load:     36
+      Number with same-slice carry load:        10
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   636 out of   2,278   27%
-  Number of MUXCYs used:                       404 out of   4,556    8%
-  Number of LUT Flip Flop pairs used:        2,027
-    Number with an unused Flip Flop:           854 out of   2,027   42%
-    Number with an unused LUT:                 447 out of   2,027   22%
-    Number of fully used LUT-FF pairs:         726 out of   2,027   35%
-    Number of unique control sets:              41
+  Number of occupied Slices:                   668 out of   2,278   29%
+  Nummber of MUXCYs used:                      592 out of   4,556   12%
+  Number of LUT Flip Flop pairs used:        2,237
+    Number with an unused Flip Flop:           985 out of   2,237   44%
+    Number with an unused LUT:                 418 out of   2,237   18%
+    Number of fully used LUT-FF pairs:         834 out of   2,237   37%
+    Number of unique control sets:              40
     Number of slice register sites lost
-      to control set restrictions:              93 out of  18,224    1%
+      to control set restrictions:              75 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -58,20 +58,18 @@ Slice Logic Distribution:
 IO Utilization:
   Number of bonded IOBs:                        18 out of     232    7%
     Number of LOCed IOBs:                       18 out of      18  100%
-    IOB Flip Flops:                             11
+    IOB Flip Flops:                             10
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         2 out of      32    6%
   Number of RAMB8BWERs:                          0 out of      64    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
-    Number used as BUFGs:                        1
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
-  Number of ILOGIC2/ISERDES2s:                   1 out of     248    1%
-    Number used as ILOGIC2s:                     1
-    Number used as ISERDES2s:                    0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
   Number of OLOGIC2/OSERDES2s:                  10 out of     248    4%
     Number used as OLOGIC2s:                    10
@@ -89,11 +87,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.77
+Average Fanout of Non-Clock Nets:                3.55
 
-Peak Memory Usage:  719 MB
-Total REAL time to MAP completion:  32 secs 
-Total CPU time to MAP completion:   32 secs 
+Peak Memory Usage:  701 MB
+Total REAL time to MAP completion:  45 secs 
+Total CPU time to MAP completion:   45 secs 
 
 Table of Contents
 -----------------
@@ -116,20 +114,56 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <echo_in1> is placed at site <F2>. The corresponding BUFG
+   component <echo_in1_IBUF_BUFG> is placed at site <BUFGMUX_X2Y2>. There is
+   only a select set of IOBs that can use the fast path to the Clocker buffer,
+   and they are not being used. You may want to analyze why this problem exists
+   and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE
+   constraint was applied on COMP.PIN <echo_in1.PAD> allowing your design to
+   continue. This constraint disables all clock placer rules related to the
+   specified COMP.PIN. The use of this override is highly discouraged as it may
+   lead to very poor timing results. It is recommended that this error condition
+   be corrected in the design.
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <echo_in0> is placed at site <G3>. The corresponding BUFG
+   component <echo_in0_IBUF_BUFG> is placed at site <BUFGMUX_X2Y10>. There is
+   only a select set of IOBs that can use the fast path to the Clocker buffer,
+   and they are not being used. You may want to analyze why this problem exists
+   and correct it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE
+   constraint was applied on COMP.PIN <echo_in0.PAD> allowing your design to
+   continue. This constraint disables all clock placer rules related to the
+   specified COMP.PIN. The use of this override is highly discouraged as it may
+   lead to very poor timing results. It is recommended that this error condition
+   be corrected in the design.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net digpot_INC_OBUF is sourced
    by a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net digpot0/divider0/clk_out is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   trigger_1/echo0/div1/clk_out is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   trigger_0/echo0/div1/clk_out is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   trigger_1/trigger0/div2/clk_out is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    trigger_0/trigger0/div2/clk_out is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net digpot0/divider0/clk_out is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network echo_in_IBUF has no load.
+INFO:LIT:243 - Logical network led has no load.
 INFO:LIT:395 - The above info message is repeated 64 more times for the
    following (max. 5 shown):
    lm0/Mram_registers141/SPO,
@@ -152,9 +186,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   6 block(s) removed
+  14 block(s) removed
    2 block(s) optimized away
-   6 signal(s) removed
+  14 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -168,6 +202,14 @@ The signal "digpot0/divider0/rst" is unused and has been removed.
  Unused block "digpot0/divider0/rst" (LATCH) removed.
   The signal "digpot0/divider0/rst_G" is unused and has been removed.
    Unused block "digpot0/divider0/rst_inv1_INV_0" (BUF) removed.
+The signal "trigger_1/echo0/div1/rst" is unused and has been removed.
+ Unused block "trigger_1/echo0/div1/rst" (LATCH) removed.
+  The signal "trigger_1/echo0/div1/rst_G" is unused and has been removed.
+   Unused block "trigger_1/echo0/div1/rst_inv1_INV_0" (BUF) removed.
+The signal "trigger_0/echo0/div1/rst" is unused and has been removed.
+ Unused block "trigger_0/echo0/div1/rst" (LATCH) removed.
+  The signal "trigger_0/echo0/div1/rst_G" is unused and has been removed.
+   Unused block "trigger_0/echo0/div1/rst_inv1_INV_0" (BUF) removed.
 The signal "trigger_0/trigger0/div1/rst" is unused and has been removed.
  Unused block "trigger_0/trigger0/div1/rst" (LATCH) removed.
   The signal "trigger_0/trigger0/div1/rst_G" is unused and has been removed.
@@ -176,6 +218,14 @@ The signal "trigger_0/trigger0/div2/rst" is unused and has been removed.
  Unused block "trigger_0/trigger0/div2/rst" (LATCH) removed.
   The signal "trigger_0/trigger0/div2/rst_G" is unused and has been removed.
    Unused block "trigger_0/trigger0/div2/rst_inv1_INV_0" (BUF) removed.
+The signal "trigger_1/trigger0/div1/rst" is unused and has been removed.
+ Unused block "trigger_1/trigger0/div1/rst" (LATCH) removed.
+  The signal "trigger_1/trigger0/div1/rst_G" is unused and has been removed.
+   Unused block "trigger_1/trigger0/div1/rst_inv1_INV_0" (BUF) removed.
+The signal "trigger_1/trigger0/div2/rst" is unused and has been removed.
+ Unused block "trigger_1/trigger0/div2/rst" (LATCH) removed.
+  The signal "trigger_1/trigger0/div2/rst_G" is unused and has been removed.
+   Unused block "trigger_1/trigger0/div2/rst_inv1_INV_0" (BUF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -196,7 +246,8 @@ Section 6 - IOB Properties
 | digpot_CSn                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | digpot_INC                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | digpot_UDn                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
-| echo_in                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| echo_in0                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| echo_in1                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | gpio_io<0>                         | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | gpio_io<1>                         | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | gpio_io<2>                         | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
@@ -205,11 +256,10 @@ Section 6 - IOB Properties
 | gpio_io<5>                         | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | gpio_io<6>                         | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | gpio_io<7>                         | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
-| led                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| gpio_io<8>                         | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | rst                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| trigger_o                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| uart_rxd                           | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
-| uart_txd                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| trigger_o0                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| trigger_o1                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

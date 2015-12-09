@@ -12,8 +12,8 @@ module div_frec(clk,clk_out);
 	 //Internal Registers & Parameters
     reg rst;
     reg [25:0] counter;
-	 //parameter k=26'd49;// 1 us para 100Mhz
-	 parameter k=26'd24;// 1 us para 50Mhz
+	 parameter k=26'd49;// 1 us para 100Mhz
+	 //parameter k=26'd24;// 1 us para 50Mhz
 	 
 //F_out= (F_in / 2k)
 

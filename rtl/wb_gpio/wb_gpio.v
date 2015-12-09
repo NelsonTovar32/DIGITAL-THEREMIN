@@ -38,7 +38,7 @@ module wb_gpio(
 	    gpio_io);
 
 
-   parameter gpio_io_width = 8;
+   parameter gpio_io_width = 9;
 
    parameter gpio_dir_reset_val = 0;
    parameter gpio_o_reset_val = 0;
@@ -71,7 +71,7 @@ module wb_gpio(
 
    wire [gpio_io_width-1:0]  gpio_i; 
    
-   //Wisbone logical Interface
+//Wisbone logical Interface
 
    
    wire wb_rd = wb_stb_i & wb_cyc_i & ~wb_we_i;
@@ -119,8 +119,8 @@ module wb_gpio(
          ack<=1;
          case(wb_adr_i[3:2])
           2'b00:begin  
-            wb_dat_o[31:8]<=0;
-            wb_dat_o[7:0] <= gpio_i;
+            wb_dat_o[31:9]<=0;
+            wb_dat_o[8:0] <= gpio_i;
           end
           default: wb_dat_o <= 32'b0; 
          endcase
@@ -130,8 +130,8 @@ module wb_gpio(
             ack <= 1;                          //Write cycle: Selección de dirección y escritura de los pines output del GPIO
             case(wb_adr_i[3:2])
 	     // 2'b00 - No operation
-             2'b01: gpio_o   <= wb_dat_i[7:0]; 
-             2'b10: gpio_dir <= wb_dat_i[7:0];
+             2'b01: gpio_o   <= wb_dat_i[8:0]; 
+             2'b10: gpio_dir <= wb_dat_i[8:0];
             endcase
         end
      end        

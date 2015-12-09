@@ -29,11 +29,11 @@
 module conbus #(
 	parameter s_addr_w = 3,
 	parameter s0_addr = 3'h0,
-	parameter s1_addr = 3'h1,
-	parameter s2_addr = 3'h2,
-	parameter s3_addr = 3'h3,
-	parameter s4_addr = 3'h4,
-	parameter s5_addr = 3'h5
+	parameter s1_addr = 3'h2,
+	parameter s2_addr = 3'h3,
+	parameter s3_addr = 3'h4,
+	parameter s4_addr = 3'h5,
+	parameter s5_addr = 3'h6
 ) (
 	input sys_clk,
 	input sys_rst,
@@ -189,7 +189,8 @@ assign i_dat_s =
 		|({32{slave_sel[ 3]}} & s3_dat_i)
 		|({32{slave_sel[ 4]}} & s4_dat_i)
 		|({32{slave_sel[ 5]}} & s5_dat_i);
-
+		//|({32{slave_sel[ 6]}} & s6_dat_i);
+		
 wire [6:0] req = {m1_cyc_i, m0_cyc_i};
 
 conbus_arb conbus_arb(
@@ -205,5 +206,6 @@ assign slave_sel[2] = (i_bus_m[`mbusw_ls-2 : `mbusw_ls-3-1] == s2_addr);
 assign slave_sel[3] = (i_bus_m[`mbusw_ls-2 : `mbusw_ls-3-1] == s3_addr);
 assign slave_sel[4] = (i_bus_m[`mbusw_ls-2 : `mbusw_ls-3-1] == s4_addr);
 assign slave_sel[5] = (i_bus_m[`mbusw_ls-2 : `mbusw_ls-3-1] == s5_addr);
+//assign slave_sel[6] = (i_bus_m[`mbusw_ls-2 : `mbusw_ls-3-1] == s6_addr);
 
 endmodule

@@ -34,6 +34,7 @@ SRC=                                      \
 	../rtl/wb_bram/wb_bram.v           \
 	../rtl/wb_uart/wb_uart.v           \
 	../rtl/wb_timer/wb_timer.v         \
+	../rtl/wb_timer/wb_timer1.v         \
 	../rtl/wb_gpio/wb_gpio.v           \
 	../rtl/wb_conbus/conbus.v          \
 	../rtl/wb_conbus/conbus_arb.v      \
@@ -47,7 +48,7 @@ SRC=                                      \
 	../rtl/wb_digpot/wb_digpot.v \
 	../rtl/wb_digpot/inc_pulse.v \
 	../rtl/wb_digpot/div_frecp.v  	
-        #../rtl/wb_spi/spi_top.v          \
+        #../rtl/wb_timer/spi_top.v          \
 	#../rtl/wb_spi/spi_shift.v	\
 	#../rtl/wb_spi/spi_clgen.v	\    	
 	#../rtl/wb_spi/spi_defines.v	\	

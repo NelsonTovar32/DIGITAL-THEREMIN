@@ -18,6 +18,7 @@ verilog work ../rtl/lm32/lm32_ram.v
 verilog work ../rtl/wb_bram/wb_bram.v
 verilog work ../rtl/wb_uart/wb_uart.v
 verilog work ../rtl/wb_timer/wb_timer.v
+verilog work ../rtl/wb_timer/wb_timer1.v
 verilog work ../rtl/wb_gpio/wb_gpio.v
 verilog work ../rtl/wb_conbus/conbus.v
 verilog work ../rtl/wb_conbus/conbus_arb.v

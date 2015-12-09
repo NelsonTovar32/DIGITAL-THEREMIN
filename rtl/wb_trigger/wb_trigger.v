@@ -50,7 +50,7 @@ trigger_top trigger0(
 echo_top echo0(
 	.clk( clk ),
 	.reset( reset ),
-	.echo_in( echo_in ),
+	.echo_in( echo_i ),
 	.c_out( c_out )
 );
 
@@ -94,7 +94,7 @@ begin
 			    wb_dat_o[31:16]<=0;
 			    wb_dat_o[15:0] <= c_out;
 			      end
-          		 default: wb_dat_o <= 32'b0; 
+          		 default: wb_dat_o <= 32'b100; 
         		endcase
 			end
 		end

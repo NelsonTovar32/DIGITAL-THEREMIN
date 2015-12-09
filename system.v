@@ -6,9 +6,11 @@
 
 module system
 #(
-	parameter   bootram_file     = "../firmware/hw-test/image.ram",
+	//parameter   bootram_file     = "../firmware/hw-test/image.ram",
+        //parameter   bootram_file     = "../firmware/timer-test/image.ram",
+        parameter   bootram_file     = "../firmware/pwm-test/image.ram",
 	parameter   clk_freq         = 100000000,
-        //parameter   clk_freq         = 50000000,
+        //parameter   clk_freq       = 50000000,
 	parameter   uart_baud_rate   = 1152000
 ) (
 	input             clk,
@@ -18,20 +20,19 @@ module system
 	// GPIO
 	//input [7:0]	 gpio_ik,
 	//output [7:0]	 gpio_ok,
-	inout [7:0] gpio_io,
-	// UART
-	input             uart_rxd, 
-	output            uart_txd,
+	inout [8:0] gpio_io,
+	
 	// DIGPOT
 	output 		  digpot_INC,
 	output		  digpot_UDn,
 	output            digpot_CSn,
-	// TRIGGER-ECHO
-	output		  trigger_o,
-	input		  echo_in
+	// TRIGGER-ECHO 0 NOTA
+	output		  trigger_o0,
+	input		  echo_in0,
+	// TRIGGER-ECHO 1 VOLUMEN
+	output		  trigger_o1,
+	input		  echo_in1
 	
-	
-
 );
 
 
@@ -50,7 +51,7 @@ wire  [31:0] gnd32 = 32'h00000000;
  
 wire [31:0]  lm32i_adr,
              lm32d_adr,
-             uart0_adr,
+//             timer1_adr,
              spi0_adr,
              i2c0_adr,
              timer0_adr,
@@ -59,6 +60,7 @@ wire [31:0]  lm32i_adr,
              bram0_adr,
              sram0_adr,
 	     trigger0_adr,
+	     trigger1_adr,
 	     digpot0_adr;
 
 
@@ -66,8 +68,8 @@ wire [31:0]  lm32i_dat_r,
              lm32i_dat_w,
              lm32d_dat_r,
              lm32d_dat_w,
-             uart0_dat_r,
-             uart0_dat_w,
+//	     timer1_dat_r,
+//           timer1_dat_w,
              spi0_dat_r,
              spi0_dat_w,
              i2c0_dat_r,
@@ -84,12 +86,14 @@ wire [31:0]  lm32i_dat_r,
              ddr0_dat_r,
 	     trigger0_dat_w,
 	     trigger0_dat_r,
+	     trigger1_dat_w,
+	     trigger1_dat_r,
 	     digpot0_dat_w,
  	     digpot0_dat_r;
 
 wire [3:0]   lm32i_sel,
              lm32d_sel,
-             uart0_sel,
+//             timer1_sel,
              spi0_sel,
              i2c0_sel,
              timer0_sel,
@@ -98,12 +102,13 @@ wire [3:0]   lm32i_sel,
              sram0_sel,
              ddr0_sel,
 	     trigger0_sel,
+	     trigger1_sel,
 	     digpot0_sel;
 
 
 wire         lm32i_we,
              lm32d_we,
-             uart0_we,
+//             timer1_we,
              spi0_we,
              i2c0_we,
              timer0_we,
@@ -112,12 +117,13 @@ wire         lm32i_we,
              sram0_we,
              ddr0_we,
 	     trigger0_we,
+	     trigger1_we,
 	     digpot0_we;
 
 
 wire         lm32i_cyc,
              lm32d_cyc,
-             uart0_cyc,
+//             timer1_cyc,
              spi0_cyc,
              i2c0_cyc,
              timer0_cyc,
@@ -126,12 +132,13 @@ wire         lm32i_cyc,
              sram0_cyc,
              ddr0_cyc,
 	     trigger0_cyc,
+	     trigger1_cyc,
 	     digpot0_cyc;
 
 
 wire         lm32i_stb,
              lm32d_stb,
-             uart0_stb,
+//             timer1_stb,
              spi0_stb,
              i2c0_stb,
              timer0_stb,
@@ -140,11 +147,12 @@ wire         lm32i_stb,
              sram0_stb,
              ddr0_stb,
 	     trigger0_stb,
+	     trigger1_stb,
 	     digpot0_stb;
 
 wire         lm32i_ack,
              lm32d_ack,
-             uart0_ack,
+//             timer1_ack,
              spi0_ack,
              i2c0_ack,
              timer0_ack,
@@ -153,6 +161,7 @@ wire         lm32i_ack,
              sram0_ack,
              ddr0_ack,
 	     trigger0_ack,
+	     trigger1_ack,
 	     digpot0_ack;
 
 
@@ -187,11 +196,12 @@ assign intr_n = { 28'hFFFFFFF, ~timer0_intr[1], ~gpio0_intr, ~timer0_intr[0], ~u
 conbus #(
 	.s_addr_w(3),
 	.s0_addr(3'b000),	// bram     0x00000000 
-	.s1_addr(3'b010),	// uart0    0x20000000 
-	.s2_addr(3'b011),	// timer    0x30000000 
-	.s3_addr(3'b100),   	// gpio     0x40000000 
-	.s4_addr(3'b101),	// digpot   0x50000000 
-	.s5_addr(3'b110)	// trigger  0x60000000 
+//	.s1_addr(3'b010),	// timer1   0x10000000 
+	.s1_addr(3'b010),	// timer    0x20000000 
+	.s2_addr(3'b011),   	// gpio     0x30000000 
+	.s3_addr(3'b100),	// digpot   0x40000000 
+	.s4_addr(3'b101),	// trigger0  0x50000000 
+        .s5_addr(3'b110)	// trigger1  0x60000000 
 ) conbus0(
 	.sys_clk( clk ),
 	.sys_rst( rst ),
@@ -214,7 +224,6 @@ conbus #(
 	.m1_stb_i(  lm32d_stb    ),
 	.m1_ack_o(  lm32d_ack    ),
 
-
 	// Slave0  bram
 	.s0_dat_i(  bram0_dat_r ),
 	.s0_dat_o(  bram0_dat_w ),
@@ -224,51 +233,60 @@ conbus #(
 	.s0_cyc_o(  bram0_cyc   ),
 	.s0_stb_o(  bram0_stb   ),
 	.s0_ack_i(  bram0_ack   ),
-	// Slave1  uart
-	.s1_dat_i(  uart0_dat_r ),
-	.s1_dat_o(  uart0_dat_w ),
-	.s1_adr_o(  uart0_adr   ),
-	.s1_sel_o(  uart0_sel   ),
-	.s1_we_o(   uart0_we    ),
-	.s1_cyc_o(  uart0_cyc   ),
-	.s1_stb_o(  uart0_stb   ),
-	.s1_ack_i(  uart0_ack   ),
-	// Slave2  timer
-	.s2_dat_i(  timer0_dat_r ),
-	.s2_dat_o(  timer0_dat_w ),
-	.s2_adr_o(  timer0_adr   ),
-	.s2_sel_o(  timer0_sel   ),
-	.s2_we_o(   timer0_we    ),
-	.s2_cyc_o(  timer0_cyc   ),
-	.s2_stb_o(  timer0_stb   ),
-	.s2_ack_i(  timer0_ack   ),
-	// Slave3  gpio
-	.s3_dat_i(  gpio0_dat_r ),
-	.s3_dat_o(  gpio0_dat_w ),
-	.s3_adr_o(  gpio0_adr   ),
-	.s3_sel_o(  gpio0_sel   ),
-	.s3_we_o(   gpio0_we    ),
-	.s3_cyc_o(  gpio0_cyc   ),
-	.s3_stb_o(  gpio0_stb   ),
-	.s3_ack_i(  gpio0_ack   ),
-	// Slave4  digpot
-	.s4_dat_i(  digpot0_dat_r ),
-	.s4_dat_o(  digpot0_dat_w ),
-	.s4_adr_o(  digpot0_adr   ),
-	.s4_sel_o(  digpot0_sel   ),
-	.s4_we_o(   digpot0_we    ),
-	.s4_cyc_o(  digpot0_cyc   ),
-	.s4_stb_o(  digpot0_stb   ),
-	.s4_ack_i(  digpot0_ack   ),
-	// Slave5   trigger
-	.s5_dat_i(  trigger0_dat_r ),
-	.s5_dat_o(  trigger0_dat_w ),
-	.s5_adr_o(  trigger0_adr   ),
-	.s5_sel_o(  trigger0_sel   ),
-	.s5_we_o(   trigger0_we    ),
-	.s5_cyc_o(  trigger0_cyc   ),
-	.s5_stb_o(  trigger0_stb   ),
-	.s5_ack_i(  trigger0_ack   )
+/*	// Slave1  timer1
+	.s1_dat_i(  timer1_dat_r ),
+	.s1_dat_o(  timer1_dat_w ),
+	.s1_adr_o(  timer1_adr   ),
+	.s1_sel_o(  timer1_sel   ),
+	.s1_we_o(   timer1_we    ),
+	.s1_cyc_o(  timer1_cyc   ),
+	.s1_stb_o(  timer1_stb   ),
+	.s1_ack_i(  timer1_ack   ), */
+	// Slave1  timer
+	.s1_dat_i(  timer0_dat_r ),
+	.s1_dat_o(  timer0_dat_w ),
+	.s1_adr_o(  timer0_adr   ),
+	.s1_sel_o(  timer0_sel   ),
+	.s1_we_o(   timer0_we    ),
+	.s1_cyc_o(  timer0_cyc   ),
+	.s1_stb_o(  timer0_stb   ),
+	.s1_ack_i(  timer0_ack   ),
+	// Slave2  gpio
+	.s2_dat_i(  gpio0_dat_r ),
+	.s2_dat_o(  gpio0_dat_w ),
+	.s2_adr_o(  gpio0_adr   ),
+	.s2_sel_o(  gpio0_sel   ),
+	.s2_we_o(   gpio0_we    ),
+	.s2_cyc_o(  gpio0_cyc   ),
+	.s2_stb_o(  gpio0_stb   ),
+	.s2_ack_i(  gpio0_ack   ),
+	// Slave3  digpot
+	.s3_dat_i(  digpot0_dat_r ),
+	.s3_dat_o(  digpot0_dat_w ),
+	.s3_adr_o(  digpot0_adr   ),
+	.s3_sel_o(  digpot0_sel   ),
+	.s3_we_o(   digpot0_we    ),
+	.s3_cyc_o(  digpot0_cyc   ),
+	.s3_stb_o(  digpot0_stb   ),
+	.s3_ack_i(  digpot0_ack   ),
+	// Slave4   trigger0
+	.s4_dat_i(  trigger0_dat_r ),
+	.s4_dat_o(  trigger0_dat_w ),
+	.s4_adr_o(  trigger0_adr   ),
+	.s4_sel_o(  trigger0_sel   ),
+	.s4_we_o(   trigger0_we    ),
+	.s4_cyc_o(  trigger0_cyc   ),
+	.s4_stb_o(  trigger0_stb   ),
+	.s4_ack_i(  trigger0_ack   ),
+	// Slave5   trigger1
+	.s5_dat_i(  trigger1_dat_r ),
+	.s5_dat_o(  trigger1_dat_w ),
+	.s5_adr_o(  trigger1_adr   ),
+	.s5_sel_o(  trigger1_sel   ),
+	.s5_we_o(   trigger1_we    ),
+	.s5_cyc_o(  trigger1_cyc   ),
+	.s5_stb_o(  trigger1_stb   ),
+	.s5_ack_i(  trigger1_ack   )
 	
 );
 
@@ -333,33 +351,7 @@ wb_bram #(
 
 
 //---------------------------------------------------------------------------
-// Block UART  SLAVE1
-//---------------------------------------------------------------------------
-wire uart0_rxd;
-wire uart0_txd;
-
-wb_uart #(
-	.clk_freq( clk_freq        ),
-	.baud(     uart_baud_rate  )
-) uart0 (
-	.clk( clk ),
-	.reset( rst ),
-	//
-	.wb_adr_i( uart0_adr ),
-	.wb_dat_i( uart0_dat_w ),
-	.wb_dat_o( uart0_dat_r ),
-	.wb_stb_i( uart0_stb ),
-	.wb_cyc_i( uart0_cyc ),
-	.wb_we_i(  uart0_we ),
-	.wb_sel_i( uart0_sel ),
-	.wb_ack_o( uart0_ack ), 
-//	.intr(       uart0_intr ),
-	.uart_rxd( uart0_rxd ),
-	.uart_txd( uart0_txd )
-);
-
-//---------------------------------------------------------------------------
-// Block DIGPOT SLAVE4
+// Block DIGPOT SLAVE3
 //---------------------------------------------------------------------------
 wire digpot0_INC;
 wire digpot0_UDn;
@@ -384,7 +376,7 @@ wb_digpot digpot0 (
 );
 
 //---------------------------------------------------------------------------
-// Block TIMER0 SLAVE2
+// Block TIMER0 SLAVE1
 //---------------------------------------------------------------------------
 wb_timer #(
 	.clk_freq(   clk_freq  )
@@ -404,10 +396,10 @@ wb_timer #(
 );
 
 //---------------------------------------------------------------------------
-// Block General Purpose IO1 SLAVE3
+// Block General Purpose IO1 SLAVE2
 //---------------------------------------------------------------------------
 
-wire [7:0] gpio0_io;
+wire [8:0] gpio0_io;
 //wire       gpio0_irq;
 
 wb_gpio gpio0 (
@@ -425,7 +417,7 @@ wb_gpio gpio0 (
 	.gpio_io(gpio0_io)
 );
 //---------------------------------------------------------------------------
-// Block trigger0  SLAVE6
+// Block trigger0  SLAVE4
 //---------------------------------------------------------------------------
 wire trig0_o;
 wire echo0_i;
@@ -447,24 +439,46 @@ wb_trigger trigger_0 (
 	.echo_i( echo0_i )
 
 );
+//---------------------------------------------------------------------------
+// Block trigger1  SLAVE5
+//---------------------------------------------------------------------------
+wire trig1_o;
+wire echo1_i;
 
-//-
+wb_trigger trigger_1 (
+	.clk( clk ),
+	.reset( rst ),
+	//
+	.wb_adr_i( trigger1_adr ),
+	.wb_dat_i( trigger1_dat_w ),
+	.wb_dat_o( trigger1_dat_r ),
+	.wb_stb_i( trigger1_stb ),
+	.wb_cyc_i( trigger1_cyc ),
+	.wb_we_i(  trigger1_we ),
+	.wb_sel_i( trigger1_sel ),
+	.wb_ack_o( trigger1_ack ), 
+
+	.trig_o( trig1_o ),
+	.echo_i( echo1_i )
+
+);
+
 
 
 
 //----------------------------------------------------------------------------
 // Mux UART wires according to sw[0]
 //----------------------------------------------------------------------------
-assign uart_txd  = uart0_txd;
-assign uart0_rxd = uart_rxd;
-assign led       = ~uart_txd;
 
 assign digpot_INC = digpot0_INC;
 assign digpot_UDn = digpot0_UDn;
 assign digpot_CSn = digpot0_CSn;
 
-assign trigger_o = trig0_o;
-assign echo0_i = echo_in;
+assign trigger_o0 = trig0_o;
+assign echo0_i = echo_in0;
+
+assign trigger_o1 = trig1_o;
+assign echo1_i = echo_in1;
 
 assign gpio_io= gpio0_io;
 

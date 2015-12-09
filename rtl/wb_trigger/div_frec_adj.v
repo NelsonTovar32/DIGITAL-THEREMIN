@@ -20,7 +20,7 @@ rst=0;
 			
 			
 			 //clk 50Mhz
-			case (num)
+			/*case (num)
 			4'b0000: begin p <= 26'd249; end // 10us
 			4'b0001: begin p <= 26'd499; end // 20us
 			4'b0010: begin p <= 26'd1249999; end // 50ms
@@ -38,10 +38,10 @@ rst=0;
 			4'b1110: begin	p <= 26'd16249999; end  // 650ms
 			4'b1111: begin	p <= 26'd17499999; end // 700ms
 			default: begin	p <= 26'd1249999;end // 50ms
-			endcase
+			endcase*/
 			
 
-			/*
+			
 			//clk 100MHz
 			case (num)
 			4'b0000: begin p <= 26'd499; end // 10us
@@ -62,7 +62,7 @@ rst=0;
 			4'b1111: begin p <= 26'd34999999; end // 700ms
 			default: begin p <= 26'd2499999;end // 50ms
 			endcase
-			*/
+			
 
 		
 				if(!rst)
