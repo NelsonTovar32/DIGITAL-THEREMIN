@@ -8,7 +8,7 @@ module system
 #(
 	//parameter   bootram_file     = "../firmware/hw-test/image.ram",
         //parameter   bootram_file     = "../firmware/timer-test/image.ram",
-        parameter   bootram_file     = "../firmware/pwm-test/image.ram",
+        parameter   bootram_file     = "../firmware/digpot_test/image.ram",
 	parameter   clk_freq         = 100000000,
         //parameter   clk_freq       = 50000000,
 	parameter   uart_baud_rate   = 1152000

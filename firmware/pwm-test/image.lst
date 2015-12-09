@@ -15,23 +15,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   5 .debug_info   000008dd  00000000  00000000  00000dfe  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   00000712  00000000  00000000  000016db  2**0
+  6 .debug_line   0000070f  00000000  00000000  000016db  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  00000190  00000000  00000000  00001df0  2**2
+  7 .debug_frame  00000190  00000000  00000000  00001dec  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    0000054a  00000000  00000000  00001f80  2**0
+  8 .debug_loc    0000054a  00000000  00000000  00001f7c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 000001bb  00000000  00000000  000024ca  2**0
+  9 .debug_pubnames 000001bb  00000000  00000000  000024c6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 000000be  00000000  00000000  00002685  2**0
+ 10 .debug_pubtypes 000000be  00000000  00000000  00002681  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00000040  00000000  00000000  00002743  2**0
+ 11 .debug_aranges 00000040  00000000  00000000  0000273f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_str    0000026b  00000000  00000000  00002783  2**0
+ 12 .debug_str    0000026b  00000000  00000000  0000277f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .comment      00000011  00000000  00000000  000029ee  2**0
+ 13 .comment      00000011  00000000  00000000  000029ea  2**0
                   CONTENTS, READONLY
- 14 .debug_ranges 00000018  00000000  00000000  000029ff  2**0
+ 14 .debug_ranges 00000018  00000000  00000000  000029fb  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -565,13 +565,13 @@ int main()
  478:	5b 99 00 0c 	sw (sp+12),r25
  47c:	5b 9b 00 08 	sw (sp+8),fp
  480:	5b 9d 00 04 	sw (sp+4),ra
-    mod=1;//Modo si mod=1 una octava, si mod=2 2octavas.
-    m=&mod; */
+    
+
 
 //Inicializacion de perifericos
 
-gpio_init(0x04); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
- 484:	34 01 00 04 	mvi r1,4
+gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 484:	34 01 00 01 	mvi r1,1
  488:	f8 00 01 0a 	calli 8b0 <gpio_init>
 /*trigger_set0(pitch); // 10us a 50 ms
 trigger_set1(pitch); // 10us a 50 ms*/
@@ -695,7 +695,7 @@ int main()
  580:	c8 0f 80 00 	sub r16,r0,r15
 //Inicializacion de perifericos
 
-gpio_init(0x04); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
 /*trigger_set0(pitch); // 10us a 50 ms
 trigger_set1(pitch); // 10us a 50 ms*/
 set_digpot(0x64); //0  Ohms
@@ -803,8 +803,8 @@ int main()
  5f4:	56 51 ff e9 	bgu r18,r17,598 <main+0x15c>
  5f8:	36 73 00 06 	addi r19,r19,6
  5fc:	22 73 00 ff 	andi r19,r19,0xff
-	    msleep(500);
-}*/
+va=0; //Volumen actual
+
 
 
         
@@ -816,7 +816,7 @@ int main()
 
 
 
-}// main close
+}
  608:	2b 9d 00 04 	lw ra,(sp+4)
  60c:	2b 8b 00 44 	lw r11,(sp+68)
  610:	2b 8c 00 40 	lw r12,(sp+64)

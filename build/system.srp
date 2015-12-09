@@ -199,8 +199,8 @@ WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 324:
 WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 325: Assignment to lm32d_lock ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "/home/manu/LM32/DIGITAL_THEREMIN/system.v" Line 326: Assignment to lm32d_bte ignored, since the identifier is never used
 
-Elaborating module <wb_bram(adr_width=12,mem_file_name="../firmware/pwm-test/image.ram")>.
-Reading initialization file \"../firmware/pwm-test/image.ram\".
+Elaborating module <wb_bram(adr_width=12,mem_file_name="../firmware/digpot_test/image.ram")>.
+Reading initialization file \"../firmware/digpot_test/image.ram\".
 
 Elaborating module <wb_digpot>.
 
@@ -244,7 +244,7 @@ WARNING:Xst:2972 - "/home/manu/LM32/DIGITAL_THEREMIN/rtl/lm32/lm32_cpu.v" line 4
 
 Synthesizing Unit <system>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/system.v".
-        bootram_file = "../firmware/pwm-test/image.ram"
+        bootram_file = "../firmware/digpot_test/image.ram"
         clk_freq = 100000000
         uart_baud_rate = 1152000
 WARNING:Xst:2898 - Port 'm0_cti_i', unconnected in block instance 'conbus0', is tied to GND.
@@ -588,7 +588,7 @@ Unit <lm32_interrupt> synthesized.
 
 Synthesizing Unit <wb_bram>.
     Related source file is "/home/manu/LM32/DIGITAL_THEREMIN/rtl/wb_bram/wb_bram.v".
-        mem_file_name = "../firmware/pwm-test/image.ram"
+        mem_file_name = "../firmware/digpot_test/image.ram"
         adr_width = 12
 WARNING:Xst:647 - Input <wb_adr_i<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <wb_adr_i<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2251,13 +2251,13 @@ trigger_1/trigger0/div2/rst|    2.568|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.96 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.92 secs
  
 --> 
 
 
-Total memory usage is 410572 kilobytes
+Total memory usage is 410632 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  304 (   0 filtered)

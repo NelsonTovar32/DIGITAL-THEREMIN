@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Wed Dec  9 04:07:17 2015
+Wed Dec  9 10:50:37 2015
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -164,7 +164,7 @@ Pinout by Pin Number:
 |H16       |           |IOBS     |IO_L37N_A6_M1A1_1            |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H17       |           |IOBM     |IO_L43P_GCLK5_M1DQ4_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H18       |           |IOBS     |IO_L43N_GCLK4_M1DQ5_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|J1        |gpio_io<2> |IOB      |IO_L40N_M3DQ7_3              |BIDIR    |LVCMOS33   |3             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
+|J1        |gpio_io<0> |IOB      |IO_L40N_M3DQ7_3              |BIDIR    |LVCMOS33   |3             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
 |J2        |           |         |VCCO_3                       |         |           |3             |          |         |           |         |3.30     |          |           |                |
 |J3        |digpot_UDn |IOB      |IO_L40P_M3DQ6_3              |OUTPUT   |LVCMOS33   |3             |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
 |J4        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
@@ -203,7 +203,7 @@ Pinout by Pin Number:
 |L1        |           |IOBS     |IO_L37N_M3DQ1_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L2        |           |IOBM     |IO_L37P_M3DQ0_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L3        |gpio_io<1> |IOB      |IO_L39N_M3LDQSN_3            |BIDIR    |LVCMOS33   |3             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
-|L4        |gpio_io<0> |IOB      |IO_L39P_M3LDQS_3             |BIDIR    |LVCMOS33   |3             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
+|L4        |gpio_io<2> |IOB      |IO_L39P_M3LDQS_3             |BIDIR    |LVCMOS33   |3             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
 |L5        |           |IOBM     |IO_L43P_GCLK23_M3RASN_3      |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L6        |           |IOBM     |IO_L31P_3                    |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |L7        |gpio_io<5> |IOB      |IO_L45P_M3A3_3               |BIDIR    |LVCMOS33   |3             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |

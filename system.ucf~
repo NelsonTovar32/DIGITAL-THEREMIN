@@ -12,9 +12,9 @@ NET "rst"	LOC = "B8"	| IOSTANDARD = "LVCMOS33";
 		
 # === GPIO === puertos
 
-NET "gpio_io<0>"          LOC = "J1" | IOSTANDARD = "LVCMOS33";   #PWM JB8 real =J1
+NET "gpio_io<0>"          LOC = "L4" | IOSTANDARD = "LVCMOS33";   #PWM JB8 real =J1
 NET "gpio_io<1>"          LOC = "L3" | IOSTANDARD = "LVCMOS33";   #LEDS MODO JB4
-NET "gpio_io<2>"          LOC = "L4" | IOSTANDARD = "LVCMOS33";   #LED BLANCO JB3 real =L4
+NET "gpio_io<2>"          LOC = "J1" | IOSTANDARD = "LVCMOS33";   #LED BLANCO JB3 real =L4
 
 NET "gpio_io<3>"          LOC = "J7" | IOSTANDARD = "LVCMOS33";   #PAUSA JC8
 NET "gpio_io<4>"          LOC = "J6" | IOSTANDARD = "LVCMOS33";   #MODO JC9

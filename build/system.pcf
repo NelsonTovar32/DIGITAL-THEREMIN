@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.87xd on Wed Dec 09 04:06:46 2015
+// Written by: Map O.87xd on Wed Dec 09 10:50:08 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,9 +16,9 @@ PIN "echo_in0_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "echo_in1" LOCATE = SITE "F2" LEVEL 1;
 PIN echo_in1_pin<0> = BEL "echo_in1" PINNAME PAD;
 PIN "echo_in1_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
-COMP "gpio_io<0>" LOCATE = SITE "L4" LEVEL 1;
+COMP "gpio_io<0>" LOCATE = SITE "J1" LEVEL 1;
 COMP "gpio_io<1>" LOCATE = SITE "L3" LEVEL 1;
-COMP "gpio_io<2>" LOCATE = SITE "J1" LEVEL 1;
+COMP "gpio_io<2>" LOCATE = SITE "L4" LEVEL 1;
 COMP "gpio_io<3>" LOCATE = SITE "J7" LEVEL 1;
 COMP "gpio_io<4>" LOCATE = SITE "J6" LEVEL 1;
 COMP "gpio_io<5>" LOCATE = SITE "L7" LEVEL 1;

@@ -136,45 +136,15 @@ int main()
 	uint8_t c1, c2, c3, c4, c5, valor;
     
 
-  /*  struct music{
-        uint16_t t_mt;
-        uint16_t sp;
-        uint8_t n_mt;
-        uint8_t t_fm;
-    } tone;
-
-    uint8_t vol,pitch,mod;
-    int *v,*p,*m;
-
-    va=0;
-    vs=0;
-    boton=0x0000;
-    rc_nota=0;
-    rc_vol=0;
-    vol=0; //volumen base
-    v=&vol;
-    pitch=0x0002;
-    p=&pitch;
-    mod=1;//Modo si mod=1 una octava, si mod=2 2octavas.
-    m=&mod; */
 
 //Inicializacion de perifericos
 
-gpio_init(0x04); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
 /*trigger_set0(pitch); // 10us a 50 ms
 trigger_set1(pitch); // 10us a 50 ms*/
 set_digpot(0x64); //0  Ohms
 va=0; //Volumen actual
 
-/*for(j=1;j<=14;j++)
-{
-	    tone.t_mt=t_muestra(note);
-            tone.sp=step(note);
-            tone.n_mt=n_muestra(note);
-            tone.t_fm=time_for(note);
-            play_note(tone.n_mt, tone.sp, tone.t_mt, tone.t_fm); //Reproduce la nota
-	    msleep(500);
-}*/
 
 
         
@@ -221,7 +191,6 @@ va=0; //Volumen actual
 
 
 
-}// main close
-
+}
 
 
