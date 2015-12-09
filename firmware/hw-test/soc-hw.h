@@ -99,10 +99,12 @@ void tic_isr();
  * GPIO0
  */
 
-#define PIN1 0x01
-#define PIN2 0x02
-#define PIN3 0x04
-#define PIN4 0x08
+#define PAUSE 0x01 //Pause
+#define MODO 0x02 //Modo
+#define VOLUP 0x04 //VolUP
+#define VOLDW 0x08 //VolDW
+#define PITCHUP 0x10 //PitchUp
+#define PITCHDW 0x20 //PitchDw
 
 typedef struct {
 	volatile uint32_t read;
@@ -115,6 +117,7 @@ uint32_t gpio_read();
 void gpio_write();
 
 void set_pin(uint8_t value, uint8_t npin);
+uint8_t get_pin(uint8_t npin);
 void pin_inv(uint8_t npin);
 
 
