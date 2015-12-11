@@ -1,0 +1,1490 @@
+
+image:     formato del fichero elf32-lm32
+
+Secciones:
+Ind Nombre        Tamaño    VMA       LMA       Desp fich Alin
+  0 .text         00000978  00000000  00000000  00000054  2**2
+                  CONTENTS, ALLOC, LOAD, CODE
+  1 .rodata       00000004  00000978  00000978  000009cc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .data         00000014  0000097c  0000097c  000009d0  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000084  00000990  00000990  000009e4  2**2
+                  ALLOC
+  4 .debug_abbrev 000002b8  00000000  00000000  000009e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000086b  00000000  00000000  00000c9c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   000007b4  00000000  00000000  00001507  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  00000190  00000000  00000000  00001cbc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00000541  00000000  00000000  00001e4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_pubnames 000001ba  00000000  00000000  0000238d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_pubtypes 000000b3  00000000  00000000  00002547  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_aranges 00000040  00000000  00000000  000025fa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str    0000027b  00000000  00000000  0000263a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .comment      00000011  00000000  00000000  000028b5  2**0
+                  CONTENTS, READONLY
+ 14 .debug_ranges 00000018  00000000  00000000  000028c6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Desensamblado de la sección .text:
+
+00000000 <_ftext>:
+   0:	98 00 00 00 	xor r0,r0,r0
+   4:	d0 00 00 00 	wcsr IE,r0
+   8:	78 01 00 00 	mvhi r1,0x0
+   c:	38 21 00 00 	ori r1,r1,0x0
+  10:	d0 e1 00 00 	wcsr EBA,r1
+  14:	f8 00 00 3b 	calli 100 <_crt0>
+  18:	34 00 00 00 	nop
+  1c:	34 00 00 00 	nop
+
+00000020 <_breakpoint_handler>:
+  20:	34 00 00 00 	nop
+  24:	34 00 00 00 	nop
+  28:	34 00 00 00 	nop
+  2c:	34 00 00 00 	nop
+  30:	34 00 00 00 	nop
+  34:	34 00 00 00 	nop
+  38:	34 00 00 00 	nop
+  3c:	34 00 00 00 	nop
+
+00000040 <_ibuserror_handler>:
+  40:	34 00 00 00 	nop
+  44:	34 00 00 00 	nop
+  48:	34 00 00 00 	nop
+  4c:	34 00 00 00 	nop
+  50:	34 00 00 00 	nop
+  54:	34 00 00 00 	nop
+  58:	34 00 00 00 	nop
+  5c:	34 00 00 00 	nop
+
+00000060 <_watchpoint_handler>:
+  60:	34 00 00 00 	nop
+  64:	34 00 00 00 	nop
+  68:	34 00 00 00 	nop
+  6c:	34 00 00 00 	nop
+  70:	34 00 00 00 	nop
+  74:	34 00 00 00 	nop
+  78:	34 00 00 00 	nop
+  7c:	34 00 00 00 	nop
+
+00000080 <_dbuserror_handler>:
+  80:	34 00 00 00 	nop
+  84:	34 00 00 00 	nop
+  88:	34 00 00 00 	nop
+  8c:	34 00 00 00 	nop
+  90:	34 00 00 00 	nop
+  94:	34 00 00 00 	nop
+  98:	34 00 00 00 	nop
+  9c:	34 00 00 00 	nop
+
+000000a0 <_divzero_handler>:
+  a0:	34 00 00 00 	nop
+  a4:	34 00 00 00 	nop
+  a8:	34 00 00 00 	nop
+  ac:	34 00 00 00 	nop
+  b0:	34 00 00 00 	nop
+  b4:	34 00 00 00 	nop
+  b8:	34 00 00 00 	nop
+  bc:	34 00 00 00 	nop
+
+000000c0 <_interrupt_handler>:
+  c0:	5b 9d 00 00 	sw (sp+0),ra
+  c4:	f8 00 00 2b 	calli 170 <_save_all>
+  c8:	90 40 08 00 	rcsr r1,IP
+  cc:	f8 00 01 84 	calli 6dc <irq_handler>
+  d0:	78 01 ff ff 	mvhi r1,0xffff
+  d4:	38 21 ff ff 	ori r1,r1,0xffff
+  d8:	d0 41 00 00 	wcsr IP,r1
+  dc:	e0 00 00 38 	bi 1bc <_restore_all_and_eret>
+
+000000e0 <_scall_handler>:
+  e0:	34 00 00 00 	nop
+  e4:	34 00 00 00 	nop
+  e8:	34 00 00 00 	nop
+  ec:	34 00 00 00 	nop
+  f0:	34 00 00 00 	nop
+  f4:	34 00 00 00 	nop
+  f8:	34 00 00 00 	nop
+  fc:	34 00 00 00 	nop
+
+00000100 <_crt0>:
+ 100:	78 1c 00 00 	mvhi sp,0x0
+ 104:	3b 9c 0f fc 	ori sp,sp,0xffc
+ 108:	78 1a 00 00 	mvhi gp,0x0
+ 10c:	3b 5a 09 90 	ori gp,gp,0x990
+ 110:	78 01 00 00 	mvhi r1,0x0
+ 114:	38 21 09 90 	ori r1,r1,0x990
+ 118:	78 03 00 00 	mvhi r3,0x0
+ 11c:	38 63 0a 14 	ori r3,r3,0xa14
+
+00000120 <.clearBSS>:
+ 120:	44 23 00 04 	be r1,r3,130 <.callMain>
+ 124:	58 20 00 00 	sw (r1+0),r0
+ 128:	34 21 00 04 	addi r1,r1,4
+ 12c:	e3 ff ff fd 	bi 120 <.clearBSS>
+
+00000130 <.callMain>:
+ 130:	34 01 00 00 	mvi r1,0
+ 134:	34 02 00 00 	mvi r2,0
+ 138:	34 03 00 00 	mvi r3,0
+ 13c:	f8 00 00 9f 	calli 3b8 <main>
+
+00000140 <irq_enable>:
+ 140:	34 01 00 01 	mvi r1,1
+ 144:	d0 01 00 00 	wcsr IE,r1
+ 148:	c3 a0 00 00 	ret
+
+0000014c <irq_disable>:
+ 14c:	34 01 00 00 	mvi r1,0
+ 150:	d0 01 00 00 	wcsr IE,r1
+ 154:	c3 a0 00 00 	ret
+
+00000158 <irq_set_mask>:
+ 158:	d0 21 00 00 	wcsr IM,r1
+ 15c:	c3 a0 00 00 	ret
+
+00000160 <irq_get_mask>:
+ 160:	90 20 08 00 	rcsr r1,IM
+ 164:	c3 a0 00 00 	ret
+
+00000168 <jump>:
+ 168:	c0 20 00 00 	b r1
+
+0000016c <halt>:
+ 16c:	e0 00 00 00 	bi 16c <halt>
+
+00000170 <_save_all>:
+ 170:	37 9c ff 80 	addi sp,sp,-128
+ 174:	5b 81 00 04 	sw (sp+4),r1
+ 178:	5b 82 00 08 	sw (sp+8),r2
+ 17c:	5b 83 00 0c 	sw (sp+12),r3
+ 180:	5b 84 00 10 	sw (sp+16),r4
+ 184:	5b 85 00 14 	sw (sp+20),r5
+ 188:	5b 86 00 18 	sw (sp+24),r6
+ 18c:	5b 87 00 1c 	sw (sp+28),r7
+ 190:	5b 88 00 20 	sw (sp+32),r8
+ 194:	5b 89 00 24 	sw (sp+36),r9
+ 198:	5b 8a 00 28 	sw (sp+40),r10
+ 19c:	5b 9e 00 78 	sw (sp+120),ea
+ 1a0:	5b 9f 00 7c 	sw (sp+124),ba
+ 1a4:	2b 81 00 80 	lw r1,(sp+128)
+ 1a8:	5b 81 00 74 	sw (sp+116),r1
+ 1ac:	bb 80 08 00 	mv r1,sp
+ 1b0:	34 21 00 80 	addi r1,r1,128
+ 1b4:	5b 81 00 70 	sw (sp+112),r1
+ 1b8:	c3 a0 00 00 	ret
+
+000001bc <_restore_all_and_eret>:
+ 1bc:	2b 81 00 04 	lw r1,(sp+4)
+ 1c0:	2b 82 00 08 	lw r2,(sp+8)
+ 1c4:	2b 83 00 0c 	lw r3,(sp+12)
+ 1c8:	2b 84 00 10 	lw r4,(sp+16)
+ 1cc:	2b 85 00 14 	lw r5,(sp+20)
+ 1d0:	2b 86 00 18 	lw r6,(sp+24)
+ 1d4:	2b 87 00 1c 	lw r7,(sp+28)
+ 1d8:	2b 88 00 20 	lw r8,(sp+32)
+ 1dc:	2b 89 00 24 	lw r9,(sp+36)
+ 1e0:	2b 8a 00 28 	lw r10,(sp+40)
+ 1e4:	2b 9d 00 74 	lw ra,(sp+116)
+ 1e8:	2b 9e 00 78 	lw ea,(sp+120)
+ 1ec:	2b 9f 00 7c 	lw ba,(sp+124)
+ 1f0:	2b 9c 00 70 	lw sp,(sp+112)
+ 1f4:	c3 c0 00 00 	eret
+
+000001f8 <get_sp>:
+ 1f8:	bb 80 08 00 	mv r1,sp
+ 1fc:	c3 a0 00 00 	ret
+
+00000200 <get_gp>:
+ 200:	bb 40 08 00 	mv r1,gp
+ 204:	c3 a0 00 00 	ret
+
+00000208 <vsig_pot>:
+//********************************************************************************************
+// Funciones Volumen - Potenciometro
+//********************************************************************************************
+
+uint8_t vsig_pot(uint16_t tvol, uint8_t vm)
+{
+ 208:	20 23 00 ff 	andi r3,r1,0xff
+ 20c:	20 41 00 ff 	andi r1,r2,0xff
+    uint16_t tmax=4000; //4ms - 4000ns - 70 cms aprox
+    uint16_t mdiv7=872; //Pent(tmax/7)
+    if(tvol>=300 && tvol<(mdiv7)){if(vm==0){return 0;}else if(vm>0){return vm;}}
+    else if(tvol>=mdiv7 && tvol<(mdiv7*2)){if(vm<=15){return 15;}else if(vm>15){return vm;}}
+ 210:	34 02 00 67 	mvi r2,103
+ 214:	50 43 00 0a 	bgeu r2,r3,23c <vsig_pot+0x34>
+ 218:	34 02 00 cf 	mvi r2,207
+ 21c:	48 62 00 05 	bg r3,r2,230 <vsig_pot+0x28>
+ 220:	34 02 00 0f 	mvi r2,15
+ 224:	50 22 00 06 	bgeu r1,r2,23c <vsig_pot+0x34>
+ 228:	34 01 00 0f 	mvi r1,15
+ 22c:	c3 a0 00 00 	ret
+ 230:	34 02 00 1e 	mvi r2,30
+ 234:	50 22 00 02 	bgeu r1,r2,23c <vsig_pot+0x34>
+ 238:	34 01 00 1e 	mvi r1,30
+    else if(tvol>=(mdiv7*3) && tvol<(mdiv7*4)){if(vm<=45){return 45;}else if(vm>45){return vm;}}
+    else if(tvol>=(mdiv7*4) && tvol<(mdiv7*5)){if(vm<=60){return 60;}else if(vm>60){return vm;}}
+    else if(tvol>=(mdiv7*5) && tvol<(mdiv7*6)){if(vm<=75){return 75;}else if(vm>75){return vm;}}
+    else if(tvol>=(mdiv7*6) && tvol<(mdiv7*7)){if(vm<=99){return 99;}else if(vm>99){return vm;}}
+    else {return vm;}
+}
+ 23c:	c3 a0 00 00 	ret
+
+00000240 <volumen>:
+
+void volumen(uint8_t va, uint8_t vs)
+{
+ 240:	37 9c ff fc 	addi sp,sp,-4
+ 244:	5b 9d 00 04 	sw (sp+4),ra
+ 248:	20 21 00 ff 	andi r1,r1,0xff
+ 24c:	20 42 00 ff 	andi r2,r2,0xff
+    int r1=va-vs;
+ 250:	c8 22 18 00 	sub r3,r1,r2
+    int r2=vs-va;
+    uint32_t set=0;
+
+    if(r1<0)
+ 254:	4c 60 00 05 	bge r3,r0,268 <volumen+0x28>
+}
+
+void volumen(uint8_t va, uint8_t vs)
+{
+    int r1=va-vs;
+    int r2=vs-va;
+ 258:	c8 41 08 00 	sub r1,r2,r1
+    uint32_t set=0;
+
+    if(r1<0)
+        {
+            set=r2+128-1;
+            set_digpot(set);
+ 25c:	34 21 00 7f 	addi r1,r1,127
+ 260:	f8 00 01 c1 	calli 964 <set_digpot>
+ 264:	e0 00 00 04 	bi 274 <volumen+0x34>
+        }
+    else if(r1>0)
+ 268:	44 60 00 03 	be r3,r0,274 <volumen+0x34>
+        {
+            set=r1-1;
+            set_digpot(set);
+ 26c:	34 61 ff ff 	addi r1,r3,-1
+ 270:	f8 00 01 bd 	calli 964 <set_digpot>
+        }
+    else if(r1==0){;}
+}
+ 274:	2b 9d 00 04 	lw ra,(sp+4)
+ 278:	37 9c 00 04 	addi sp,sp,4
+ 27c:	c3 a0 00 00 	ret
+
+00000280 <sel_nota>:
+//**************************************************************************************************
+// Función principal del codigo - Inicialización de Perifericos
+//**************************************************************************************************
+
+uint8_t sel_nota(uint32_t dist, uint8_t mode)
+{
+ 280:	20 42 00 ff 	andi r2,r2,0xff
+    uint16_t mdiv7;
+    if(mode==1)
+ 284:	34 03 00 01 	mvi r3,1
+ 288:	44 43 00 32 	be r2,r3,350 <sel_nota+0xd0>
+                else if(dist>=(mdiv7*4) && dist<(mdiv7*5)){return 5;}//Sol4}
+                else if(dist>=(mdiv7*5) && dist<(mdiv7*6)){return 6;}//La4}
+                else if(dist>=(mdiv7*6) && dist<(mdiv7*7)){return 7;}//Si4}
+                else {return 0;}
+        }
+    else if(mode==2)
+ 28c:	34 03 00 02 	mvi r3,2
+ 290:	44 43 00 02 	be r2,r3,298 <sel_nota+0x18>
+ 294:	c3 a0 00 00 	ret
+        {
+            mdiv7=658; //(5000/14)
+                if(dist>=300 && dist<(mdiv7)){return 1;}//Do4}
+ 298:	34 02 01 2b 	mvi r2,299
+ 29c:	54 22 00 07 	bgu r1,r2,2b8 <sel_nota+0x38>
+                else if(dist>=mdiv7 && dist<(mdiv7*2)){return 2;}//Re4}
+ 2a0:	34 03 00 91 	mvi r3,145
+                else if(dist>=(mdiv7*9) && dist<(mdiv7*10)){return 10;}//Mi5}
+                else if(dist>=(mdiv7*10) && dist<(mdiv7*11)){return 11;}//Fa5}
+                else if(dist>=(mdiv7*11) && dist<(mdiv7*12)){return 12;}//Sol5}
+                else if(dist>=(mdiv7*12) && dist<(mdiv7*13)){return 13;}//La5}
+                else if(dist>=(mdiv7*13) && dist<(mdiv7*14)){return 14;}//Si5}
+                else {return 0;}
+ 2a4:	34 02 00 00 	mvi r2,0
+        }
+    else if(mode==2)
+        {
+            mdiv7=658; //(5000/14)
+                if(dist>=300 && dist<(mdiv7)){return 1;}//Do4}
+                else if(dist>=mdiv7 && dist<(mdiv7*2)){return 2;}//Re4}
+ 2a8:	50 61 00 2e 	bgeu r3,r1,360 <sel_nota+0xe0>
+ 2ac:	34 03 01 23 	mvi r3,291
+ 2b0:	34 02 00 02 	mvi r2,2
+ 2b4:	50 61 00 2b 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*2) && dist<(mdiv7*3)){return 3;}//Mi4}
+ 2b8:	34 03 01 b5 	mvi r3,437
+ 2bc:	34 02 00 03 	mvi r2,3
+ 2c0:	50 61 00 28 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*3) && dist<(mdiv7*4)){return 4;}//Fa4}
+ 2c4:	34 03 02 47 	mvi r3,583
+ 2c8:	34 02 00 04 	mvi r2,4
+ 2cc:	50 61 00 25 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*4) && dist<(mdiv7*5)){return 5;}//Sol4}
+ 2d0:	34 03 02 d9 	mvi r3,729
+ 2d4:	34 02 00 05 	mvi r2,5
+ 2d8:	50 61 00 22 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*5) && dist<(mdiv7*6)){return 6;}//La4}
+ 2dc:	34 03 03 6b 	mvi r3,875
+ 2e0:	34 02 00 06 	mvi r2,6
+ 2e4:	50 61 00 1f 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*6) && dist<(mdiv7*7)){return 7;}//Si4}
+ 2e8:	34 03 03 fd 	mvi r3,1021
+ 2ec:	34 02 00 07 	mvi r2,7
+ 2f0:	50 61 00 1c 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*7) && dist<(mdiv7*8)){return 8;}//Do5}
+ 2f4:	34 03 04 8f 	mvi r3,1167
+ 2f8:	34 02 00 08 	mvi r2,8
+ 2fc:	50 61 00 19 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*8) && dist<(mdiv7*9)){return 9;}//Re5}
+ 300:	34 03 05 21 	mvi r3,1313
+ 304:	34 02 00 09 	mvi r2,9
+ 308:	50 61 00 16 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*9) && dist<(mdiv7*10)){return 10;}//Mi5}
+ 30c:	34 03 05 b3 	mvi r3,1459
+ 310:	34 02 00 0a 	mvi r2,10
+ 314:	50 61 00 13 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*10) && dist<(mdiv7*11)){return 11;}//Fa5}
+ 318:	34 03 06 45 	mvi r3,1605
+ 31c:	34 02 00 0b 	mvi r2,11
+ 320:	50 61 00 10 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*11) && dist<(mdiv7*12)){return 12;}//Sol5}
+ 324:	34 03 06 d7 	mvi r3,1751
+ 328:	34 02 00 0c 	mvi r2,12
+ 32c:	50 61 00 0d 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*12) && dist<(mdiv7*13)){return 13;}//La5}
+ 330:	34 03 07 69 	mvi r3,1897
+ 334:	34 02 00 0d 	mvi r2,13
+ 338:	50 61 00 0a 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*13) && dist<(mdiv7*14)){return 14;}//Si5}
+ 33c:	34 02 07 fb 	mvi r2,2043
+                else {return 0;}
+ 340:	f0 41 08 00 	cmpgeu r1,r2,r1
+ 344:	c8 01 10 00 	sub r2,r0,r1
+ 348:	20 42 00 0e 	andi r2,r2,0xe
+ 34c:	e0 00 00 05 	bi 360 <sel_nota+0xe0>
+{
+    uint16_t mdiv7;
+    if(mode==1)
+        {
+            mdiv7=2000; //(4000/7)
+                if(dist>=300 && dist<(mdiv7)){return 1;}//Do4}
+ 350:	34 02 01 2b 	mvi r2,299
+ 354:	54 22 00 05 	bgu r1,r2,368 <sel_nota+0xe8>
+                else if(dist>=(mdiv7*2) && dist<(mdiv7*3)){return 3;}//Mi4}
+                else if(dist>=(mdiv7*3) && dist<(mdiv7*4)){return 4;}//Fa4}
+                else if(dist>=(mdiv7*4) && dist<(mdiv7*5)){return 5;}//Sol4}
+                else if(dist>=(mdiv7*5) && dist<(mdiv7*6)){return 6;}//La4}
+                else if(dist>=(mdiv7*6) && dist<(mdiv7*7)){return 7;}//Si4}
+                else {return 0;}
+ 358:	74 22 00 cf 	cmpgui r2,r1,0xcf
+ 35c:	3c 42 00 01 	sli r2,r2,1
+                else if(dist>=(mdiv7*11) && dist<(mdiv7*12)){return 12;}//Sol5}
+                else if(dist>=(mdiv7*12) && dist<(mdiv7*13)){return 13;}//La5}
+                else if(dist>=(mdiv7*13) && dist<(mdiv7*14)){return 14;}//Si5}
+                else {return 0;}
+        }
+}
+ 360:	b8 40 08 00 	mv r1,r2
+ 364:	c3 a0 00 00 	ret
+    uint16_t mdiv7;
+    if(mode==1)
+        {
+            mdiv7=2000; //(4000/7)
+                if(dist>=300 && dist<(mdiv7)){return 1;}//Do4}
+                else if(dist>=mdiv7 && dist<(mdiv7*2)){return 2;}//Re4}
+ 368:	34 03 01 9f 	mvi r3,415
+ 36c:	34 02 00 02 	mvi r2,2
+ 370:	50 61 ff fc 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*2) && dist<(mdiv7*3)){return 3;}//Mi4}
+ 374:	34 03 02 6f 	mvi r3,623
+ 378:	34 02 00 03 	mvi r2,3
+ 37c:	50 61 ff f9 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*3) && dist<(mdiv7*4)){return 4;}//Fa4}
+ 380:	34 03 03 3f 	mvi r3,831
+ 384:	34 02 00 04 	mvi r2,4
+ 388:	50 61 ff f6 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*4) && dist<(mdiv7*5)){return 5;}//Sol4}
+ 38c:	34 03 04 0f 	mvi r3,1039
+ 390:	34 02 00 05 	mvi r2,5
+ 394:	50 61 ff f3 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*5) && dist<(mdiv7*6)){return 6;}//La4}
+ 398:	34 03 04 df 	mvi r3,1247
+ 39c:	34 02 00 06 	mvi r2,6
+ 3a0:	50 61 ff f0 	bgeu r3,r1,360 <sel_nota+0xe0>
+                else if(dist>=(mdiv7*6) && dist<(mdiv7*7)){return 7;}//Si4}
+ 3a4:	34 02 05 af 	mvi r2,1455
+                else {return 0;}
+ 3a8:	f0 41 10 00 	cmpgeu r2,r2,r1
+ 3ac:	c8 02 10 00 	sub r2,r0,r2
+ 3b0:	20 42 00 07 	andi r2,r2,0x7
+ 3b4:	e3 ff ff eb 	bi 360 <sel_nota+0xe0>
+
+000003b8 <main>:
+        }
+}
+
+
+int main()
+{
+ 3b8:	37 9c ff c0 	addi sp,sp,-64
+ 3bc:	5b 8b 00 40 	sw (sp+64),r11
+ 3c0:	5b 8c 00 3c 	sw (sp+60),r12
+ 3c4:	5b 8d 00 38 	sw (sp+56),r13
+ 3c8:	5b 8e 00 34 	sw (sp+52),r14
+ 3cc:	5b 8f 00 30 	sw (sp+48),r15
+ 3d0:	5b 90 00 2c 	sw (sp+44),r16
+ 3d4:	5b 91 00 28 	sw (sp+40),r17
+ 3d8:	5b 92 00 24 	sw (sp+36),r18
+ 3dc:	5b 93 00 20 	sw (sp+32),r19
+ 3e0:	5b 94 00 1c 	sw (sp+28),r20
+ 3e4:	5b 95 00 18 	sw (sp+24),r21
+ 3e8:	5b 96 00 14 	sw (sp+20),r22
+ 3ec:	5b 97 00 10 	sw (sp+16),r23
+ 3f0:	5b 98 00 0c 	sw (sp+12),r24
+ 3f4:	5b 99 00 08 	sw (sp+8),r25
+ 3f8:	5b 9d 00 04 	sw (sp+4),ra
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 3fc:	34 01 00 01 	mvi r1,1
+ 400:	f8 00 00 e7 	calli 79c <gpio_init>
+			    nsleep(c5);
+		        }
+             }
+	}
+		
+        else if (c6 == 2){b1 = 162; b3 = 18; c3 = 130; c2 = 20987;
+ 404:	34 15 00 02 	mvi r21,2
+		    nsleep(c5);
+		}
+	}
+    }
+
+	else if (c6 == 3){b1 = 144; b3 = 36; c3 = 146; c2 = 20741;
+ 408:	34 17 00 03 	mvi r23,3
+	            nsleep(c5);
+                }
+	}
+    }
+	
+	else if (c6 == 4){b1 = 138; b3 = 42; c3 = 150; c2 = 20741;
+ 40c:	34 16 00 04 	mvi r22,4
+	            nsleep(c5);
+                }
+            }
+	}
+
+	else if (c6 == 5){b1 = 124; b3 = 56; c3 = 166; c2 = 20741;
+ 410:	34 0d 00 05 	mvi r13,5
+	            nsleep(c5);
+                }
+            }
+	}
+	
+	else if (c6 == 6){b1 = 112; b3 = 68; c3 = 181; c2 = 20495;
+ 414:	34 19 00 06 	mvi r25,6
+	            nsleep(c5);
+                }
+            }
+	}
+
+	else if (c6 == 7){b1 = 100; b3 = 80; c3 = 202; c2 = 20495;
+ 418:	34 18 00 07 	mvi r24,7
+                    c5 = c2-c4;
+	 
+                    set_pin(1,1);			
+   	            nsleep(c4);
+	            set_pin(0,1);
+	            nsleep(c5);
+ 41c:	34 0f 00 0f 	mvi r15,15
+	else if (c6 == 7){b1 = 100; b3 = 80; c3 = 202; c2 = 20495;
+	for (i=1; i<10;i++)
+	{
+		b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 420:	34 12 00 e0 	mvi r18,224
+	else if (c6 == 6){b1 = 112; b3 = 68; c3 = 181; c2 = 20495;
+	for (i=1; i<10;i++)
+	{
+		b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 424:	34 11 00 ec 	mvi r17,236
+	else if (c6 == 5){b1 = 124; b3 = 56; c3 = 166; c2 = 20741;
+	for (i=1; i<10;i++)
+	{
+	        b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 428:	34 10 00 b0 	mvi r16,176
+		    c5 = c2-c4;
+	 
+		    set_pin(1,1);			
+		    nsleep(c4);
+		    set_pin(0,1);
+		    nsleep(c5);
+ 42c:	34 0e ff fb 	mvi r14,-5
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+	v=1; //Volumen actual
+	vol=0;
+	for(;;)
+	{
+		rc_vol=read_count1(); //Obtiene el valor de tiempo de lectura del sensor de volumen
+ 430:	f8 00 01 48 	calli 950 <read_count1>
+		vs=vsig_pot(rc_vol, vol); //Calcula el valor siguiente del potenciometro
+ 434:	34 02 00 00 	mvi r2,0
+ 438:	20 21 00 ff 	andi r1,r1,0xff
+ 43c:	fb ff ff 73 	calli 208 <vsig_pot>
+ 440:	b8 20 a0 00 	mv r20,r1
+		volumen(va, vs); //Asigna el potenciometro al valor siguiente
+ 444:	ba 80 10 00 	mv r2,r20
+ 448:	b9 60 08 00 	mv r1,r11
+ 44c:	fb ff ff 7d 	calli 240 <volumen>
+		va=vs; //Actualiza el valor presente
+
+	
+		c1 = read_count0();
+ 450:	f8 00 01 36 	calli 928 <read_count0>
+		c6 = sel_nota(c1,v);	
+ 454:	34 02 00 01 	mvi r2,1
+ 458:	fb ff ff 8a 	calli 280 <sel_nota>
+	
+		if (c6 == 1){b1 = 180; b3 = 0; c3 = 118; c2 = 20987;
+ 45c:	34 02 00 01 	mvi r2,1
+ 460:	44 22 00 0a 	be r1,r2,488 <main+0xd0>
+			    nsleep(c5);
+		        }
+             }
+	}
+		
+        else if (c6 == 2){b1 = 162; b3 = 18; c3 = 130; c2 = 20987;
+ 464:	44 35 00 0b 	be r1,r21,490 <main+0xd8>
+		    nsleep(c5);
+		}
+	}
+    }
+
+	else if (c6 == 3){b1 = 144; b3 = 36; c3 = 146; c2 = 20741;
+ 468:	44 37 00 22 	be r1,r23,4f0 <main+0x138>
+	            nsleep(c5);
+                }
+	}
+    }
+	
+	else if (c6 == 4){b1 = 138; b3 = 42; c3 = 150; c2 = 20741;
+ 46c:	44 36 00 39 	be r1,r22,550 <main+0x198>
+	            nsleep(c5);
+                }
+            }
+	}
+
+	else if (c6 == 5){b1 = 124; b3 = 56; c3 = 166; c2 = 20741;
+ 470:	44 2d 00 50 	be r1,r13,5b0 <main+0x1f8>
+	            nsleep(c5);
+                }
+            }
+	}
+	
+	else if (c6 == 6){b1 = 112; b3 = 68; c3 = 181; c2 = 20495;
+ 474:	44 39 00 79 	be r1,r25,658 <main+0x2a0>
+	            nsleep(c5);
+                }
+            }
+	}
+
+	else if (c6 == 7){b1 = 100; b3 = 80; c3 = 202; c2 = 20495;
+ 478:	44 38 00 63 	be r1,r24,604 <main+0x24c>
+	            set_pin(0,1);
+	            nsleep(c5);
+                }
+            }
+	}
+	else if(c6==0){msleep(100);}
+ 47c:	5c 20 00 03 	bne r1,r0,488 <main+0xd0>
+ 480:	34 01 00 64 	mvi r1,100
+ 484:	f8 00 00 f8 	calli 864 <msleep>
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 488:	ba 80 58 00 	mv r11,r20
+ 48c:	e3 ff ff e9 	bi 430 <main+0x78>
+			    nsleep(c5);
+		        }
+             }
+	}
+		
+        else if (c6 == 2){b1 = 162; b3 = 18; c3 = 130; c2 = 20987;
+ 490:	34 13 00 09 	mvi r19,9
+        }
+}
+
+
+int main()
+{
+ 494:	34 0b 00 16 	mvi r11,22
+ 498:	34 0c 00 a3 	mvi r12,163
+		for (j=75; j<b2; j++)			
+		{
+		    c4 = j*c3;
+		    c5 = c2-c4;
+	 
+		    set_pin(1,1);			
+ 49c:	34 02 00 01 	mvi r2,1
+ 4a0:	34 01 00 01 	mvi r1,1
+ 4a4:	f8 00 00 cd 	calli 7d8 <set_pin>
+		    nsleep(c4);
+ 4a8:	b9 60 08 00 	mv r1,r11
+ 4ac:	f8 00 00 fd 	calli 8a0 <nsleep>
+		    set_pin(0,1);
+ 4b0:	34 01 00 00 	mvi r1,0
+ 4b4:	34 02 00 01 	mvi r2,1
+ 4b8:	f8 00 00 c8 	calli 7d8 <set_pin>
+		    nsleep(c5);
+ 4bc:	c9 cb 08 00 	sub r1,r14,r11
+ 4c0:	35 8c ff ff 	addi r12,r12,-1
+ 4c4:	20 21 00 ff 	andi r1,r1,0xff
+ 4c8:	35 6b ff 82 	addi r11,r11,-126
+ 4cc:	21 8c 00 ff 	andi r12,r12,0xff
+ 4d0:	f8 00 00 f4 	calli 8a0 <nsleep>
+ 4d4:	21 6b 00 ff 	andi r11,r11,0xff
+        else if (c6 == 2){b1 = 162; b3 = 18; c3 = 130; c2 = 20987;
+	for (i=1; i<10;i++)
+    	{
+		b2 = b1+76;
+
+		for (j=75; j<b2; j++)			
+ 4d8:	5d 80 ff f1 	bne r12,r0,49c <main+0xe4>
+ 4dc:	36 73 ff ff 	addi r19,r19,-1
+ 4e0:	22 73 00 ff 	andi r19,r19,0xff
+		        }
+             }
+	}
+		
+        else if (c6 == 2){b1 = 162; b3 = 18; c3 = 130; c2 = 20987;
+	for (i=1; i<10;i++)
+ 4e4:	5e 6c ff ec 	bne r19,r12,494 <main+0xdc>
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 4e8:	ba 80 58 00 	mv r11,r20
+ 4ec:	e3 ff ff d1 	bi 430 <main+0x78>
+		    nsleep(c5);
+		}
+	}
+    }
+
+	else if (c6 == 3){b1 = 144; b3 = 36; c3 = 146; c2 = 20741;
+ 4f0:	34 13 00 09 	mvi r19,9
+			    nsleep(c5);
+		        }
+             }
+	}
+		
+        else if (c6 == 2){b1 = 162; b3 = 18; c3 = 130; c2 = 20987;
+ 4f4:	34 0b 00 c6 	mvi r11,198
+ 4f8:	34 0c 00 91 	mvi r12,145
+	        for (j=75; j<b2; j++)			
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
+	 
+                    set_pin(1,1);			
+ 4fc:	34 02 00 01 	mvi r2,1
+ 500:	34 01 00 01 	mvi r1,1
+ 504:	f8 00 00 b5 	calli 7d8 <set_pin>
+   	            nsleep(c4);
+ 508:	b9 60 08 00 	mv r1,r11
+ 50c:	f8 00 00 e5 	calli 8a0 <nsleep>
+	            set_pin(0,1);
+ 510:	34 01 00 00 	mvi r1,0
+ 514:	34 02 00 01 	mvi r2,1
+ 518:	f8 00 00 b0 	calli 7d8 <set_pin>
+	            nsleep(c5);
+ 51c:	c9 ab 08 00 	sub r1,r13,r11
+ 520:	35 8c ff ff 	addi r12,r12,-1
+ 524:	20 21 00 ff 	andi r1,r1,0xff
+ 528:	35 6b ff 92 	addi r11,r11,-110
+ 52c:	21 8c 00 ff 	andi r12,r12,0xff
+ 530:	f8 00 00 dc 	calli 8a0 <nsleep>
+ 534:	21 6b 00 ff 	andi r11,r11,0xff
+	else if (c6 == 3){b1 = 144; b3 = 36; c3 = 146; c2 = 20741;
+	for (i=1; i<10;i++)
+	{
+		b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 538:	5d 80 ff f1 	bne r12,r0,4fc <main+0x144>
+ 53c:	36 73 ff ff 	addi r19,r19,-1
+ 540:	22 73 00 ff 	andi r19,r19,0xff
+		}
+	}
+    }
+
+	else if (c6 == 3){b1 = 144; b3 = 36; c3 = 146; c2 = 20741;
+	for (i=1; i<10;i++)
+ 544:	5e 6c ff ec 	bne r19,r12,4f4 <main+0x13c>
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 548:	ba 80 58 00 	mv r11,r20
+ 54c:	e3 ff ff b9 	bi 430 <main+0x78>
+	            nsleep(c5);
+                }
+	}
+    }
+	
+	else if (c6 == 4){b1 = 138; b3 = 42; c3 = 150; c2 = 20741;
+ 550:	34 13 00 09 	mvi r19,9
+		    nsleep(c5);
+		}
+	}
+    }
+
+	else if (c6 == 3){b1 = 144; b3 = 36; c3 = 146; c2 = 20741;
+ 554:	34 0b 00 f2 	mvi r11,242
+ 558:	34 0c 00 8b 	mvi r12,139
+	        for (j=75; j<b2; j++)			
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
+	 
+                    set_pin(1,1);			
+ 55c:	34 02 00 01 	mvi r2,1
+ 560:	34 01 00 01 	mvi r1,1
+ 564:	f8 00 00 9d 	calli 7d8 <set_pin>
+   	            nsleep(c4);
+ 568:	b9 60 08 00 	mv r1,r11
+ 56c:	f8 00 00 cd 	calli 8a0 <nsleep>
+	            set_pin(0,1);
+ 570:	34 01 00 00 	mvi r1,0
+ 574:	34 02 00 01 	mvi r2,1
+ 578:	f8 00 00 98 	calli 7d8 <set_pin>
+	            nsleep(c5);
+ 57c:	c9 ab 08 00 	sub r1,r13,r11
+ 580:	35 8c ff ff 	addi r12,r12,-1
+ 584:	20 21 00 ff 	andi r1,r1,0xff
+ 588:	35 6b ff 96 	addi r11,r11,-106
+ 58c:	21 8c 00 ff 	andi r12,r12,0xff
+ 590:	f8 00 00 c4 	calli 8a0 <nsleep>
+ 594:	21 6b 00 ff 	andi r11,r11,0xff
+	else if (c6 == 4){b1 = 138; b3 = 42; c3 = 150; c2 = 20741;
+	for (i=1; i<10;i++)
+	{
+		b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 598:	5d 80 ff f1 	bne r12,r0,55c <main+0x1a4>
+ 59c:	36 73 ff ff 	addi r19,r19,-1
+ 5a0:	22 73 00 ff 	andi r19,r19,0xff
+                }
+	}
+    }
+	
+	else if (c6 == 4){b1 = 138; b3 = 42; c3 = 150; c2 = 20741;
+	for (i=1; i<10;i++)
+ 5a4:	5e 6c ff ec 	bne r19,r12,554 <main+0x19c>
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 5a8:	ba 80 58 00 	mv r11,r20
+ 5ac:	e3 ff ff a1 	bi 430 <main+0x78>
+	            nsleep(c5);
+                }
+            }
+	}
+
+	else if (c6 == 5){b1 = 124; b3 = 56; c3 = 166; c2 = 20741;
+ 5b0:	34 0c 00 09 	mvi r12,9
+	            nsleep(c5);
+                }
+	}
+    }
+	
+	else if (c6 == 4){b1 = 138; b3 = 42; c3 = 150; c2 = 20741;
+ 5b4:	34 0b 00 a2 	mvi r11,162
+	        for (j=75; j<b2; j++)			
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
+	 
+                    set_pin(1,1);			
+ 5b8:	34 02 00 01 	mvi r2,1
+ 5bc:	34 01 00 01 	mvi r1,1
+ 5c0:	f8 00 00 86 	calli 7d8 <set_pin>
+   	            nsleep(c4);
+ 5c4:	b9 60 08 00 	mv r1,r11
+ 5c8:	f8 00 00 b6 	calli 8a0 <nsleep>
+	            set_pin(0,1);
+ 5cc:	34 01 00 00 	mvi r1,0
+ 5d0:	34 02 00 01 	mvi r2,1
+ 5d4:	f8 00 00 81 	calli 7d8 <set_pin>
+	            nsleep(c5);
+ 5d8:	c9 ab 08 00 	sub r1,r13,r11
+ 5dc:	35 6b ff a6 	addi r11,r11,-90
+ 5e0:	20 21 00 ff 	andi r1,r1,0xff
+ 5e4:	21 6b 00 ff 	andi r11,r11,0xff
+ 5e8:	f8 00 00 ae 	calli 8a0 <nsleep>
+	else if (c6 == 5){b1 = 124; b3 = 56; c3 = 166; c2 = 20741;
+	for (i=1; i<10;i++)
+	{
+	        b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 5ec:	5d 70 ff f3 	bne r11,r16,5b8 <main+0x200>
+ 5f0:	35 8c ff ff 	addi r12,r12,-1
+ 5f4:	21 8c 00 ff 	andi r12,r12,0xff
+                }
+            }
+	}
+
+	else if (c6 == 5){b1 = 124; b3 = 56; c3 = 166; c2 = 20741;
+	for (i=1; i<10;i++)
+ 5f8:	5d 80 ff ef 	bne r12,r0,5b4 <main+0x1fc>
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 5fc:	ba 80 58 00 	mv r11,r20
+ 600:	e3 ff ff 8c 	bi 430 <main+0x78>
+	            nsleep(c5);
+                }
+            }
+	}
+
+	else if (c6 == 7){b1 = 100; b3 = 80; c3 = 202; c2 = 20495;
+ 604:	34 0c 00 09 	mvi r12,9
+	            nsleep(c5);
+                }
+            }
+	}
+	
+	else if (c6 == 6){b1 = 112; b3 = 68; c3 = 181; c2 = 20495;
+ 608:	34 0b 00 2e 	mvi r11,46
+	        for (j=75; j<b2; j++)			
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
+	 
+                    set_pin(1,1);			
+ 60c:	34 02 00 01 	mvi r2,1
+ 610:	34 01 00 01 	mvi r1,1
+ 614:	f8 00 00 71 	calli 7d8 <set_pin>
+   	            nsleep(c4);
+ 618:	b9 60 08 00 	mv r1,r11
+ 61c:	f8 00 00 a1 	calli 8a0 <nsleep>
+	            set_pin(0,1);
+ 620:	34 01 00 00 	mvi r1,0
+ 624:	34 02 00 01 	mvi r2,1
+ 628:	f8 00 00 6c 	calli 7d8 <set_pin>
+	            nsleep(c5);
+ 62c:	c9 eb 08 00 	sub r1,r15,r11
+ 630:	35 6b ff ca 	addi r11,r11,-54
+ 634:	20 21 00 ff 	andi r1,r1,0xff
+ 638:	21 6b 00 ff 	andi r11,r11,0xff
+ 63c:	f8 00 00 99 	calli 8a0 <nsleep>
+	else if (c6 == 7){b1 = 100; b3 = 80; c3 = 202; c2 = 20495;
+	for (i=1; i<10;i++)
+	{
+		b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 640:	5d 72 ff f3 	bne r11,r18,60c <main+0x254>
+ 644:	35 8c ff ff 	addi r12,r12,-1
+ 648:	21 8c 00 ff 	andi r12,r12,0xff
+                }
+            }
+	}
+
+	else if (c6 == 7){b1 = 100; b3 = 80; c3 = 202; c2 = 20495;
+	for (i=1; i<10;i++)
+ 64c:	5d 80 ff ef 	bne r12,r0,608 <main+0x250>
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 650:	ba 80 58 00 	mv r11,r20
+ 654:	e3 ff ff 77 	bi 430 <main+0x78>
+	            nsleep(c5);
+                }
+            }
+	}
+	
+	else if (c6 == 6){b1 = 112; b3 = 68; c3 = 181; c2 = 20495;
+ 658:	34 0c 00 09 	mvi r12,9
+	            nsleep(c5);
+                }
+            }
+	}
+
+	else if (c6 == 5){b1 = 124; b3 = 56; c3 = 166; c2 = 20741;
+ 65c:	34 0b 00 07 	mvi r11,7
+	        for (j=75; j<b2; j++)			
+                {
+                    c4 = j*c3;
+                    c5 = c2-c4;
+	 
+                    set_pin(1,1);			
+ 660:	34 02 00 01 	mvi r2,1
+ 664:	34 01 00 01 	mvi r1,1
+ 668:	f8 00 00 5c 	calli 7d8 <set_pin>
+   	            nsleep(c4);
+ 66c:	b9 60 08 00 	mv r1,r11
+ 670:	f8 00 00 8c 	calli 8a0 <nsleep>
+	            set_pin(0,1);
+ 674:	34 01 00 00 	mvi r1,0
+ 678:	34 02 00 01 	mvi r2,1
+ 67c:	f8 00 00 57 	calli 7d8 <set_pin>
+	            nsleep(c5);
+ 680:	c9 eb 08 00 	sub r1,r15,r11
+ 684:	35 6b ff b5 	addi r11,r11,-75
+ 688:	20 21 00 ff 	andi r1,r1,0xff
+ 68c:	21 6b 00 ff 	andi r11,r11,0xff
+ 690:	f8 00 00 84 	calli 8a0 <nsleep>
+	else if (c6 == 6){b1 = 112; b3 = 68; c3 = 181; c2 = 20495;
+	for (i=1; i<10;i++)
+	{
+		b2 = b1+76;
+
+	        for (j=75; j<b2; j++)			
+ 694:	5d 71 ff f3 	bne r11,r17,660 <main+0x2a8>
+ 698:	35 8c ff ff 	addi r12,r12,-1
+ 69c:	21 8c 00 ff 	andi r12,r12,0xff
+                }
+            }
+	}
+	
+	else if (c6 == 6){b1 = 112; b3 = 68; c3 = 181; c2 = 20495;
+	for (i=1; i<10;i++)
+ 6a0:	5d 80 ff ef 	bne r12,r0,65c <main+0x2a4>
+    
+
+
+	//Inicializacion de perifericos
+
+	gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
+ 6a4:	ba 80 58 00 	mv r11,r20
+ 6a8:	e3 ff ff 62 	bi 430 <main+0x78>
+
+000006ac <isr_null>:
+/***************************************************************************
+ * IRQ handling
+ */
+void isr_null()
+{
+}
+ 6ac:	c3 a0 00 00 	ret
+
+000006b0 <tic_isr>:
+
+uint32_t tic_msec;
+
+void tic_isr()
+{
+	tic_msec++;
+ 6b0:	78 01 00 00 	mvhi r1,0x0
+ 6b4:	38 21 0a 10 	ori r1,r1,0xa10
+ 6b8:	28 23 00 00 	lw r3,(r1+0)
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+ 6bc:	78 02 00 00 	mvhi r2,0x0
+ 6c0:	38 42 09 7c 	ori r2,r2,0x97c
+ 6c4:	28 42 00 00 	lw r2,(r2+0)
+
+uint32_t tic_msec;
+
+void tic_isr()
+{
+	tic_msec++;
+ 6c8:	34 63 00 01 	addi r3,r3,1
+ 6cc:	58 23 00 00 	sw (r1+0),r3
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+ 6d0:	34 01 00 0e 	mvi r1,14
+ 6d4:	58 41 00 00 	sw (r2+0),r1
+}
+ 6d8:	c3 a0 00 00 	ret
+
+000006dc <irq_handler>:
+void isr_null()
+{
+}
+
+void irq_handler(uint32_t pending)
+{
+ 6dc:	37 9c ff f0 	addi sp,sp,-16
+ 6e0:	5b 8b 00 10 	sw (sp+16),r11
+ 6e4:	5b 8c 00 0c 	sw (sp+12),r12
+ 6e8:	5b 8d 00 08 	sw (sp+8),r13
+ 6ec:	5b 9d 00 04 	sw (sp+4),ra
+ 6f0:	78 0b 00 00 	mvhi r11,0x0
+ 6f4:	39 6b 09 90 	ori r11,r11,0x990
+ 6f8:	b8 20 60 00 	mv r12,r1
+ */
+void isr_null()
+{
+}
+
+void irq_handler(uint32_t pending)
+ 6fc:	35 6d 00 80 	addi r13,r11,128
+ 700:	e0 00 00 04 	bi 710 <irq_handler+0x34>
+{
+	int i;
+
+	for(i=0; i<32; i++) {
+		if (pending & 0x01) (*isr_table[i])();
+ 704:	35 6b 00 04 	addi r11,r11,4
+
+void irq_handler(uint32_t pending)
+{
+	int i;
+
+	for(i=0; i<32; i++) {
+ 708:	45 6d 00 08 	be r11,r13,728 <irq_handler+0x4c>
+		if (pending & 0x01) (*isr_table[i])();
+		pending >>= 1;
+ 70c:	01 8c 00 01 	srui r12,r12,1
+void irq_handler(uint32_t pending)
+{
+	int i;
+
+	for(i=0; i<32; i++) {
+		if (pending & 0x01) (*isr_table[i])();
+ 710:	21 81 00 01 	andi r1,r12,0x1
+ 714:	44 20 ff fc 	be r1,r0,704 <irq_handler+0x28>
+ 718:	29 61 00 00 	lw r1,(r11+0)
+ 71c:	35 6b 00 04 	addi r11,r11,4
+ 720:	d8 20 00 00 	call r1
+
+void irq_handler(uint32_t pending)
+{
+	int i;
+
+	for(i=0; i<32; i++) {
+ 724:	5d 6d ff fa 	bne r11,r13,70c <irq_handler+0x30>
+		if (pending & 0x01) (*isr_table[i])();
+		pending >>= 1;
+	}
+}
+ 728:	2b 9d 00 04 	lw ra,(sp+4)
+ 72c:	2b 8b 00 10 	lw r11,(sp+16)
+ 730:	2b 8c 00 0c 	lw r12,(sp+12)
+ 734:	2b 8d 00 08 	lw r13,(sp+8)
+ 738:	37 9c 00 10 	addi sp,sp,16
+ 73c:	c3 a0 00 00 	ret
+
+00000740 <isr_init>:
+
+void isr_init()
+{
+ 740:	78 01 00 00 	mvhi r1,0x0
+ 744:	78 02 00 00 	mvhi r2,0x0
+ 748:	38 21 09 90 	ori r1,r1,0x990
+ 74c:	38 42 06 ac 	ori r2,r2,0x6ac
+		if (pending & 0x01) (*isr_table[i])();
+		pending >>= 1;
+	}
+}
+
+void isr_init()
+ 750:	34 23 00 80 	addi r3,r1,128
+{
+	int i;
+	for(i=0; i<32; i++)
+		isr_table[i] = &isr_null;
+ 754:	58 22 00 00 	sw (r1+0),r2
+ 758:	34 21 00 04 	addi r1,r1,4
+}
+
+void isr_init()
+{
+	int i;
+	for(i=0; i<32; i++)
+ 75c:	5c 23 ff fe 	bne r1,r3,754 <isr_init+0x14>
+		isr_table[i] = &isr_null;
+}
+ 760:	c3 a0 00 00 	ret
+
+00000764 <isr_register>:
+
+void isr_register(int irq, isr_ptr_t isr)
+{
+	isr_table[irq] = isr;
+ 764:	78 03 00 00 	mvhi r3,0x0
+ 768:	3c 21 00 02 	sli r1,r1,2
+ 76c:	38 63 09 90 	ori r3,r3,0x990
+ 770:	b4 61 18 00 	add r3,r3,r1
+ 774:	58 62 00 00 	sw (r3+0),r2
+}
+ 778:	c3 a0 00 00 	ret
+
+0000077c <isr_unregister>:
+
+void isr_unregister(int irq)
+{
+	isr_table[irq] = &isr_null;
+ 77c:	78 03 00 00 	mvhi r3,0x0
+ 780:	3c 21 00 02 	sli r1,r1,2
+ 784:	38 63 09 90 	ori r3,r3,0x990
+ 788:	78 02 00 00 	mvhi r2,0x0
+ 78c:	b4 61 18 00 	add r3,r3,r1
+ 790:	38 42 06 ac 	ori r2,r2,0x6ac
+ 794:	58 62 00 00 	sw (r3+0),r2
+}
+ 798:	c3 a0 00 00 	ret
+
+0000079c <gpio_init>:
+// Estructura del periferico GPIO
+//*************************************************************************
+
+void gpio_init(uint32_t k)
+{
+	gpio0->dir=k; //todo lo que sea 0 es puerto lectura, 1 es puerto escritura o salida
+ 79c:	78 02 00 00 	mvhi r2,0x0
+ 7a0:	38 42 09 80 	ori r2,r2,0x980
+ 7a4:	28 42 00 00 	lw r2,(r2+0)
+ 7a8:	58 41 00 08 	sw (r2+8),r1
+}
+ 7ac:	c3 a0 00 00 	ret
+
+000007b0 <gpio_read>:
+
+uint32_t gpio_read()
+{
+	return gpio0->read;
+ 7b0:	78 01 00 00 	mvhi r1,0x0
+ 7b4:	38 21 09 80 	ori r1,r1,0x980
+ 7b8:	28 21 00 00 	lw r1,(r1+0)
+ 7bc:	28 21 00 00 	lw r1,(r1+0)
+}
+ 7c0:	c3 a0 00 00 	ret
+
+000007c4 <gpio_write>:
+
+void gpio_write(uint32_t k)
+{
+	gpio0->write=k;
+ 7c4:	78 02 00 00 	mvhi r2,0x0
+ 7c8:	38 42 09 80 	ori r2,r2,0x980
+ 7cc:	28 42 00 00 	lw r2,(r2+0)
+ 7d0:	58 41 00 04 	sw (r2+4),r1
+}
+ 7d4:	c3 a0 00 00 	ret
+
+000007d8 <set_pin>:
+
+
+void set_pin(uint8_t value, uint8_t npin)
+{
+ 7d8:	20 21 00 ff 	andi r1,r1,0xff
+ 7dc:	20 42 00 ff 	andi r2,r2,0xff
+     if (value)
+ 7e0:	5c 20 00 09 	bne r1,r0,804 <set_pin+0x2c>
+		gpio0->write = gpio0->read | npin;
+	else
+		gpio0->write = gpio0->read & (~npin);
+ 7e4:	78 01 00 00 	mvhi r1,0x0
+ 7e8:	38 21 09 80 	ori r1,r1,0x980
+ 7ec:	28 21 00 00 	lw r1,(r1+0)
+ 7f0:	a4 40 10 00 	not r2,r2
+ 7f4:	28 23 00 00 	lw r3,(r1+0)
+ 7f8:	a0 43 10 00 	and r2,r2,r3
+ 7fc:	58 22 00 04 	sw (r1+4),r2
+ 800:	c3 a0 00 00 	ret
+
+
+void set_pin(uint8_t value, uint8_t npin)
+{
+     if (value)
+		gpio0->write = gpio0->read | npin;
+ 804:	78 01 00 00 	mvhi r1,0x0
+ 808:	38 21 09 80 	ori r1,r1,0x980
+ 80c:	28 21 00 00 	lw r1,(r1+0)
+ 810:	28 23 00 00 	lw r3,(r1+0)
+ 814:	b8 43 10 00 	or r2,r2,r3
+ 818:	58 22 00 04 	sw (r1+4),r2
+ 81c:	c3 a0 00 00 	ret
+
+00000820 <pin_inv>:
+}
+
+void pin_inv(uint8_t npin)
+{
+	uint32_t val;
+	val = (~gpio0->read) & npin;
+ 820:	78 02 00 00 	mvhi r2,0x0
+ 824:	38 42 09 80 	ori r2,r2,0x980
+ 828:	28 42 00 00 	lw r2,(r2+0)
+		gpio0->write = gpio0->read & (~npin);
+
+}
+
+void pin_inv(uint8_t npin)
+{
+ 82c:	20 21 00 ff 	andi r1,r1,0xff
+	uint32_t val;
+	val = (~gpio0->read) & npin;
+ 830:	28 43 00 00 	lw r3,(r2+0)
+ 834:	a4 60 18 00 	not r3,r3
+}
+
+
+void set_pin(uint8_t value, uint8_t npin)
+{
+     if (value)
+ 838:	a0 23 18 00 	and r3,r1,r3
+ 83c:	5c 60 00 06 	bne r3,r0,854 <pin_inv+0x34>
+		gpio0->write = gpio0->read | npin;
+	else
+		gpio0->write = gpio0->read & (~npin);
+ 840:	28 43 00 00 	lw r3,(r2+0)
+ 844:	a4 20 08 00 	not r1,r1
+ 848:	a0 23 08 00 	and r1,r1,r3
+ 84c:	58 41 00 04 	sw (r2+4),r1
+ 850:	c3 a0 00 00 	ret
+
+
+void set_pin(uint8_t value, uint8_t npin)
+{
+     if (value)
+		gpio0->write = gpio0->read | npin;
+ 854:	28 43 00 00 	lw r3,(r2+0)
+ 858:	b8 23 08 00 	or r1,r1,r3
+ 85c:	58 41 00 04 	sw (r2+4),r1
+ 860:	c3 a0 00 00 	ret
+
+00000864 <msleep>:
+void msleep(uint32_t msec)
+{
+	uint32_t tcr;
+
+	// Use timer0.1
+	timer0->compare1 = (FCPU/1000)*msec;
+ 864:	78 04 00 00 	mvhi r4,0x0
+ 868:	38 84 09 78 	ori r4,r4,0x978
+ 86c:	28 83 00 00 	lw r3,(r4+0)
+ 870:	78 02 00 00 	mvhi r2,0x0
+ 874:	38 42 09 7c 	ori r2,r2,0x97c
+ 878:	28 42 00 00 	lw r2,(r2+0)
+ 87c:	88 23 08 00 	mul r1,r1,r3
+ 880:	58 41 00 10 	sw (r2+16),r1
+	timer0->counter1 = 0;
+ 884:	58 40 00 14 	sw (r2+20),r0
+	timer0->tcr1 = TIMER_EN;
+ 888:	34 01 00 08 	mvi r1,8
+ 88c:	58 41 00 0c 	sw (r2+12),r1
+
+	do {
+ 		tcr = timer0->tcr1;
+ 890:	28 41 00 0c 	lw r1,(r2+12)
+ 	} while ( ! (tcr & TIMER_TRIG) );
+ 894:	20 21 00 01 	andi r1,r1,0x1
+ 898:	44 20 ff fe 	be r1,r0,890 <msleep+0x2c>
+}
+ 89c:	c3 a0 00 00 	ret
+
+000008a0 <nsleep>:
+void nsleep(uint32_t nsec)
+{
+	uint32_t tcr;
+
+	// Use timer0.1
+	timer0->compare1 = (FCPU/1000000)*nsec;
+ 8a0:	78 02 00 00 	mvhi r2,0x0
+ 8a4:	38 42 09 7c 	ori r2,r2,0x97c
+ 8a8:	28 42 00 00 	lw r2,(r2+0)
+ 8ac:	08 21 00 64 	muli r1,r1,100
+ 8b0:	58 41 00 10 	sw (r2+16),r1
+	timer0->counter1 = 0;
+ 8b4:	58 40 00 14 	sw (r2+20),r0
+	timer0->tcr1 = TIMER_EN;
+ 8b8:	34 01 00 08 	mvi r1,8
+ 8bc:	58 41 00 0c 	sw (r2+12),r1
+
+	do {
+		//halt();
+ 		tcr = timer0->tcr1;
+ 8c0:	28 41 00 0c 	lw r1,(r2+12)
+ 	} while ( ! (tcr & TIMER_TRIG) );
+ 8c4:	20 21 00 01 	andi r1,r1,0x1
+ 8c8:	44 20 ff fe 	be r1,r0,8c0 <nsleep+0x20>
+}
+ 8cc:	c3 a0 00 00 	ret
+
+000008d0 <tic_init>:
+void tic_init()
+{
+	tic_msec = 0;
+
+	// Setup timer0.0
+	timer0->compare0 = (FCPU/10000);
+ 8d0:	78 01 00 00 	mvhi r1,0x0
+ 8d4:	38 21 09 7c 	ori r1,r1,0x97c
+ 8d8:	28 23 00 00 	lw r3,(r1+0)
+ 8dc:	34 02 27 10 	mvi r2,10000
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+}
+
+void tic_init()
+{
+	tic_msec = 0;
+ 8e0:	78 01 00 00 	mvhi r1,0x0
+
+	// Setup timer0.0
+	timer0->compare0 = (FCPU/10000);
+ 8e4:	58 62 00 04 	sw (r3+4),r2
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+}
+
+void tic_init()
+{
+	tic_msec = 0;
+ 8e8:	38 21 0a 10 	ori r1,r1,0xa10
+
+	// Setup timer0.0
+	timer0->compare0 = (FCPU/10000);
+	timer0->counter0 = 0;
+ 8ec:	58 60 00 08 	sw (r3+8),r0
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+}
+
+void tic_init()
+{
+	tic_msec = 0;
+ 8f0:	58 20 00 00 	sw (r1+0),r0
+		isr_table[i] = &isr_null;
+}
+
+void isr_register(int irq, isr_ptr_t isr)
+{
+	isr_table[irq] = isr;
+ 8f4:	78 02 00 00 	mvhi r2,0x0
+ 8f8:	78 01 00 00 	mvhi r1,0x0
+	tic_msec = 0;
+
+	// Setup timer0.0
+	timer0->compare0 = (FCPU/10000);
+	timer0->counter0 = 0;
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+ 8fc:	34 04 00 0e 	mvi r4,14
+ 900:	58 64 00 00 	sw (r3+0),r4
+		isr_table[i] = &isr_null;
+}
+
+void isr_register(int irq, isr_ptr_t isr)
+{
+	isr_table[irq] = isr;
+ 904:	38 21 09 90 	ori r1,r1,0x990
+ 908:	38 42 06 b0 	ori r2,r2,0x6b0
+ 90c:	58 22 00 04 	sw (r1+4),r2
+	timer0->compare0 = (FCPU/10000);
+	timer0->counter0 = 0;
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+
+	isr_register(1, &tic_isr);
+}
+ 910:	c3 a0 00 00 	ret
+
+00000914 <trigger_set0>:
+//***************************************************************************
+// Estructura del periferico TRIGGER 0 
+//***************************************************************************
+void trigger_set0(uint32_t st)
+{
+    trigger0->set_trig = st;
+ 914:	78 02 00 00 	mvhi r2,0x0
+ 918:	38 42 09 88 	ori r2,r2,0x988
+ 91c:	28 42 00 00 	lw r2,(r2+0)
+ 920:	58 41 00 00 	sw (r2+0),r1
+}
+ 924:	c3 a0 00 00 	ret
+
+00000928 <read_count0>:
+
+uint32_t read_count0()
+{
+    return trigger0->c_out;
+ 928:	78 01 00 00 	mvhi r1,0x0
+ 92c:	38 21 09 88 	ori r1,r1,0x988
+ 930:	28 21 00 00 	lw r1,(r1+0)
+ 934:	28 21 00 04 	lw r1,(r1+4)
+}
+ 938:	c3 a0 00 00 	ret
+
+0000093c <trigger_set1>:
+//***************************************************************************
+// Estructura del periferico TRIGGER 1
+//***************************************************************************
+void trigger_set1(uint32_t st)
+{
+    trigger1->set_trig = st;
+ 93c:	78 02 00 00 	mvhi r2,0x0
+ 940:	38 42 09 8c 	ori r2,r2,0x98c
+ 944:	28 42 00 00 	lw r2,(r2+0)
+ 948:	58 41 00 00 	sw (r2+0),r1
+}
+ 94c:	c3 a0 00 00 	ret
+
+00000950 <read_count1>:
+
+uint32_t read_count1()
+{
+    return trigger1->c_out;
+ 950:	78 01 00 00 	mvhi r1,0x0
+ 954:	38 21 09 8c 	ori r1,r1,0x98c
+ 958:	28 21 00 00 	lw r1,(r1+0)
+ 95c:	28 21 00 04 	lw r1,(r1+4)
+}
+ 960:	c3 a0 00 00 	ret
+
+00000964 <set_digpot>:
+// Estructura del periferico DIGPOT
+//***************************************************************************
+
+void set_digpot(uint32_t dp)
+{
+    digpot0->set_digpot = dp;
+ 964:	78 02 00 00 	mvhi r2,0x0
+ 968:	38 42 09 84 	ori r2,r2,0x984
+ 96c:	28 42 00 00 	lw r2,(r2+0)
+ 970:	58 41 00 00 	sw (r2+0),r1
+
+}
+ 974:	c3 a0 00 00 	ret

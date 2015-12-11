@@ -57,65 +57,6 @@ void volumen(uint8_t va, uint8_t vs)
     else if(r1==0){;}
 }
 
-//********************************************************************************************
-// Funciones GPIO
-//********************************************************************************************
-
-
-void ajustment(int *p, int *v, int *m)
-{
-    uint16_t seteo=0;
-    uint8_t aux;
-    while(seteo!=PAUSE)
-        {
-	    set_pin(1,3); //Prender el LED BLANCO
-            if(seteo==MODO){
-                if(*m==1){*m=2;set_pin(0,2);}
-                else if(*m==2){*m=1;set_pin(1,2);}
-                            }
-            else if(seteo==VOLUP){
-                    aux=*v;
-                    if(aux>=0 && aux<=60){aux=aux+15;}
-                    else if(aux==75){aux=99;}
-                    else if(aux==99){;}
-                    *v=aux;
-                    aux=0;
-                                }
-            else if(seteo==VOLDW){
-                    aux=*v;
-                    if(aux==99){aux=75;}
-                    else if(aux<=75 && aux>=15){aux=aux-15;}
-                    else if(aux==0){;}
-                    *v=aux;
-                    aux=0;
-                                }
-            else if(seteo==PITCHUP){
-                    aux=*p;
-                    if(aux>=0x002 && aux<=0x00E){aux++;}
-                    else if(aux==0x00F){;}
-                    *p=aux;
-                    trigger_set0(aux);
-                    aux=0;
-                                }
-            else if(seteo==PITCHDW){
-                    aux=*p;
-                    if(aux>0x002 && aux<=0x00F){aux--;}
-                    else if(aux==0x002){;}
-                    *p=aux;
-                    trigger_set0(aux);
-                    aux=0;
-                                }
-            nsleep(2000);        //Para el rebote
-            seteo=gpio0->read;
-            seteo=seteo>>3;
-            nsleep(2000);       //Para el rebote
-
-        }
-		set_pin(0,3); //Apagar el LED BLANCO
-
-}
-
-
 
 //**************************************************************************************************
 // Función principal del codigo - Inicialización de Perifericos
@@ -140,8 +81,6 @@ int main()
 //Inicializacion de perifericos
 
 gpio_init(0x01); //9BITS  6 ENTRADAS(BOTONES) 3 SALIDAS(2 LEDS Y PWM) PIN1:PWM - PIN2:MODO - PIN3: LEDBLANCO
-/*trigger_set0(pitch); // 10us a 50 ms
-trigger_set1(pitch); // 10us a 50 ms*/
 set_digpot(0x64); //0  Ohms
 va=0; //Volumen actual
 
@@ -151,9 +90,10 @@ va=0; //Volumen actual
 	for (l = 1; l < 15; l++)
 	{
 	    //c1 = 6+(l*10);		//Escala a una octava (7)	     
-	    c1 = l*6;			//Escala a dos octavas (14)
+	   
+	    c1 = 4+(l*6);			//Escala a dos octavas (14)
 	    msleep(500);
-
+	
 	if (c1 > 2 && c1 < 8){b1 = 180; b3 = 0; c3 = 118; c2 = 20987;}		//selección de la nota dependiendo la distancia
         else if (c1 > 8 && c1 < 14){b1 = 162; b3 = 18; c3 = 130; c2 = 20987;}
 	else if (c1 > 14 && c1 < 20){b1 = 144; b3 = 36; c3 = 146; c2 = 20741;}

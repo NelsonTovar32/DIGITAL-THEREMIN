@@ -1,4 +1,4 @@
-Release 13.4 Map O.87xd (lin64)
+Release 14.7 Map P.20131013 (lin64)
 Xilinx Mapping Report File for Design 'system'
 
 Design Information
@@ -8,7 +8,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Dec  9 10:49:27 2015
+Mapped Date    : Fri Dec 11 08:32:38 2015
 
 Design Summary
 --------------
@@ -40,7 +40,7 @@ Slice Logic Utilization:
 
 Slice Logic Distribution:
   Number of occupied Slices:                   665 out of   2,278   29%
-  Nummber of MUXCYs used:                      592 out of   4,556   12%
+  Number of MUXCYs used:                       592 out of   4,556   12%
   Number of LUT Flip Flop pairs used:        2,246
     Number with an unused Flip Flop:           967 out of   2,246   43%
     Number with an unused LUT:                 454 out of   2,246   20%
@@ -89,9 +89,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.55
 
-Peak Memory Usage:  701 MB
-Total REAL time to MAP completion:  42 secs 
-Total CPU time to MAP completion:   41 secs 
+Peak Memory Usage:  723 MB
+Total REAL time to MAP completion:  33 secs 
+Total CPU time to MAP completion:   33 secs 
 
 Table of Contents
 -----------------

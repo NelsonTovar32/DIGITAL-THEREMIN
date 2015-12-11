@@ -218,21 +218,23 @@ uint16_t step(uint8_t nota) // =t/n muestra
 
 uint8_t time_for(uint8_t nota) //
 {
+	uint8_t D = 10;	
+
         if(nota==0){return 0;}
-        else if(nota==1){return 63;}
-        else if(nota==2){return 81;}
-        else if(nota==3){return 99;}
-        else if(nota==4){return 105;}
-        else if(nota==5){return 119;}
-        else if(nota==6){return 131;}
-        else if(nota==7){return 143;}
-        else if(nota==8){return 153;}
-        else if(nota==9){return 162;}
-        else if(nota==10){return 171;}
-        else if(nota==11){return 174;}
-        else if(nota==12){return 181;}
-        else if(nota==13){return 187;}
-        else if(nota==14){return 193;}
+        else if(nota==1){return D;}
+        else if(nota==2){return D+18;}
+        else if(nota==3){return D+36;}
+        else if(nota==4){return D+42;}
+        else if(nota==5){return D+56;}
+        else if(nota==6){return D+68;}
+        else if(nota==7){return D+80;}
+        else if(nota==8){return D+90;}
+        else if(nota==9){return D+99;}
+        else if(nota==10){return D+108;}
+        else if(nota==11){return D+111;}
+        else if(nota==12){return D+118;}
+        else if(nota==13){return D+124;}
+        else if(nota==14){return D+130;}
 }
 
 void play_note(uint8_t n_mt, uint16_t sp, uint16_t t_mt, uint8_t t_f) //mt := muestra ....

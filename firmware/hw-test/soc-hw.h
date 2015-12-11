@@ -92,7 +92,7 @@ void prueba();
 void tic_init();
 void tic_isr();
 
-void counter();
+int counter();
 
 /***************************************************************************
  * GPIO0
